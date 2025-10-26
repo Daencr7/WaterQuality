@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Giám Sát Chất Lượng Nước</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* =================== CẤU HÌNH GIAO DIỆN CHUNG =================== */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow-y: scroll;
+      background: #f9f9f9;
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .container {
+      display: flex; /* Chia bố cục ra thành 3 phần chính: trái - giữa - phải */
+    }
+
+    /* =================== PHẦN TRÁI: BIỂU ĐỒ =================== */
+    .left-panel {
+      width: 60%;               /* Chiếm 60% chiều rộng trang */
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-right: 2px solid #ccc; /* Đường kẻ chia giữa phần trái và giữa */
+      position: relative;
+    }
+
+    /* Đường kẻ dọc bên phải ô vuông hiển thị trạng thái */
+    .left-panel::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 32%;
+      width: 2px;
+      height: 100%;
+      background-color: #ccc;
+    }
+
+    /* Mỗi hàng biểu đồ */
+    .chart-section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      height: 25vh;
+      gap: 20px;
+      border-bottom: 1px dashed #ddd;
+    }
+
+    /* Biểu đồ bên trái */
+    .chart-box {
+      width: 55%;
+      height: 90%;
+      margin-left: 5%;
+      border-right: 2px solid #ccc;
+      padding-right: 20px;
+    }
+
+    /* Ô vuông hiển thị trạng thái (ON/OFF theo màu) */
+    .status-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      width: 15%;
+    }
+
+    .status-title {
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .status-light {
+      width: 80px;
+      height: 80px;
+      background-color: blue;
+      border: 2px solid #000;
+    }
+
+    /* =================== PHẦN GIỮA: LOGO + NÚT DỰ ĐOÁN =================== */
+    .middle-panel {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .logo-small {
+      width: 180px; /* Logo lớn gấp 3 lần bản gốc */
+      height: auto;
+      display: block;
+    }
+
+    .predict-btn {
+      background: #ffeb3b;
+      width: 120px;
+      height: 45px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: bold;
+      line-height: 45px;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    /* =================== PHẦN PHẢI: THÔNG TIN GIÁM SÁT =================== */
+    .right-panel {
+      width: 30%;
+      height: 100vh;
+      padding: 20px 0 20px 20px; /* Bỏ padding bên phải */
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* ==== Khối chung cho mỗi box ==== */
+    .section {
+      background: white;
+      padding: 15px 0 15px 15px; /* Bỏ padding phải */
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      margin-right: 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* BOX 1️⃣: Mức cảnh báo (chiếm 25% chiều cao trang) */
+    .section-alert {
+      flex: 1;
+      height: 25%;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    /* BOX 2️⃣: Giá trị đo hiện tại (chiếm 50%) */
+    .section-values {
+      flex: 2;
+      height: 50%;
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Tiêu đề của box “Giá trị đo hiện tại” */
+    .section-values h4 {
+      text-align: center;
+      font-size: 40px;
+      margin: 0 0 20px 0;
+    }
+
+    /* Hàng dữ liệu đo */
+    .value-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 80%;
+      margin: 12px 0;
+    }
+
+    /* Nhãn chữ (ví dụ: Turbidity, TDS, Temp...) */
+    .value-label {
+      width: 110px;
+      text-align: right;
+      margin-right: 25px;
+    }
+
+    /* Ô nhập giá trị */
+    .value-input {
+      font-size: 22px;
+      width: 180px;
+      height: 50px;
+      text-align: center;
+    }
+
+    /* BOX 3️⃣: Trạng thái ON/OFF (chiếm 25%) */
+    .section-buttons {
+      flex: 1;
+      height: 25%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .circle-btn {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- =================== PHẦN TRÁI: BIỂU ĐỒ =================== -->
+    <div class="left-panel">
+      <!-- Biểu đồ độ đục -->
+      <div class="chart-section">
+        <canvas id="chartTurbidity" class="chart-box"></canvas>
+        <div class="status-container">
+          <div class="status-title">TUR</div>
+          <div id="lightTurbidity" class="status-light"></div>
+        </div>
+      </div>
+
+      <!-- Biểu đồ TDS -->
+      <div class="chart-section">
+        <canvas id="chartTDS" class="chart-box"></canvas>
+        <div class="status-container">
+          <div class="status-title">TDS</div>
+          <div id="lightTDS" class="status-light"></div>
+        </div>
+      </div>
+
+      <!-- Biểu đồ Nhiệt độ -->
+      <div class="chart-section">
+        <canvas id="chartTemperature" class="chart-box"></canvas>
+        <div class="status-container">
+          <div class="status-title">TEMP</div>
+          <div id="lightTemperature" class="status-light"></div>
+        </div>
+      </div>
+
+      <!-- Biểu đồ pH -->
+      <div class="chart-section">
+        <canvas id="chartPH" class="chart-box"></canvas>
+        <div class="status-container">
+          <div class="status-title">PH</div>
+          <div id="lightPH" class="status-light"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =================== PHẦN GIỮA: LOGO + NÚT DỰ ĐOÁN =================== -->
+    <div class="middle-panel">
+      <img src="../assers/T1.png" class="logo-small" alt="logo">
+      <div class="predict-btn" onclick="location.href='predict.html'">DỰ ĐOÁN</div>
+
+    </div>
+
+    <!-- =================== PHẦN PHẢI: CẢNH BÁO, GIÁ TRỊ, TRẠNG THÁI =================== -->
+    <div class="right-panel">
+
+      <!-- BOX 1️⃣: Mức cảnh báo -->
+      <div class="section section-alert">
+        <h3 style="text-align:center; margin-top:0;">TÌNH TRẠNG CẢNH BÁO</h3>
+        <div style="display:flex; justify-content:center; gap:40px;">
+          <div class="circle-btn" style="background:#d5dfc7;">Mức 1</div>
+          <div class="circle-btn" style="background:#d5dfc7;">Mức 2</div>
+          <div class="circle-btn" style="background:#d5dfc7;">Mức 3</div>
+        </div>
+      </div>
+
+      <!-- BOX 2️⃣: Giá trị đo hiện tại -->
+      <div class="section section-values">
+        <h4>GIÁ TRỊ HIỆN TẠI</h4>
+        <div class="value-row"><div class="value-label">TUR:</div><input type="text" id="valTurbidity" class="value-input"></div>
+        <div class="value-row"><div class="value-label">TDS:</div><input type="text" id="valTDS" class="value-input"></div>
+        <div class="value-row"><div class="value-label">TEM:</div><input type="text" id="valTemperature" class="value-input"></div>
+        <div class="value-row"><div class="value-label">PH:</div><input type="text" id="valPH" class="value-input"></div>
+      </div>
+
+      <!-- BOX 3️⃣: Trạng thái ON/OFF -->
+      <div class="section section-buttons">
+        <div class="circle-btn" style="background:#8bc34a;">ON</div>
+        <div class="circle-btn" style="background:#8bc34a;">ON</div>
+        <div class="circle-btn" style="background:#8bc34a;">ON</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== SCRIPT VẼ BIỂU ĐỒ =================== -->
+  <script>
+    // Hàm tạo dữ liệu giả lập (ngẫu nhiên) cho mỗi biểu đồ
+    function generateData(label) {
+      const now = new Date();
+      const formattedTime = now.toLocaleTimeString([], { hour: '2-digit', hour12: true }).toUpperCase();
+      return {
+        labels: Array.from({length: 14}, (_, i) => i === 13 ? formattedTime : ''),
+        datasets: [{
+          label: label,
+          data: Array.from({length: 14}, () => Math.random() * 100),
+          borderColor: 'blue',
+          backgroundColor: 'rgba(0,0,255,0.1)',
+          tension: 0.3,
+          pointRadius: 2,
+          pointHoverRadius: 3
+        }]
+      }
+    }
+
+    // Hàm cấu hình biểu đồ và cập nhật trạng thái đèn báo
+    function setupChart(ctxId, label, limit, lightId, maxY) {
+      const ctx = document.getElementById(ctxId).getContext('2d');
+      const data = generateData(label);
+      const chart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: {
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, max: maxY, ticks: { font: { size: 10 } } },
+            x: {
+              ticks: {
+                callback: function(value, index) {
+                  return data.labels[index];
+                },
+                font: { style: 'normal', size: 10 }
+              }
+            }
+          }
+        }
+      });
+      // Cập nhật màu đèn theo ngưỡng cảnh báo
+      const latest = data.datasets[0].data.slice(-1)[0];
+      document.getElementById(lightId).style.backgroundColor = latest > limit ? 'red' : 'blue';
+      document.getElementById("val" + label).value = latest.toFixed(2);
+    }
+
+    // Khởi tạo 4 biểu đồ
+    setupChart('chartTurbidity', 'Turbidity', 2000, 'lightTurbidity', 3000);
+    setupChart('chartTDS', 'TDS', 800, 'lightTDS', 1000);
+    setupChart('chartTemperature', 'Temperature', 60, 'lightTemperature', 80);
+    setupChart('chartPH', 'PH', 10, 'lightPH', 14);
+    /* =================== CẬP NHẬT DỮ LIỆU TỪ SERVER =================== */
+    async function fetchRealData() {
+      try {
+        const res = await fetch("api/get_data.php");
+        const data = await res.json();
+        const latest = data[data.length - 1];
+
+        // Cập nhật giá trị
+        document.getElementById("valTurbidity").value = latest.turbidity;
+        document.getElementById("valTDS").value = latest.tds;
+        document.getElementById("valTemperature").value = latest.temperature;
+        document.getElementById("valPH").value = latest.ph;
+
+        // Cập nhật đèn báo
+        document.getElementById("lightTurbidity").style.backgroundColor =
+          latest.turbidity > 2000 ? "red" : "blue";
+        document.getElementById("lightTDS").style.backgroundColor =
+          latest.tds > 800 ? "red" : "blue";
+        document.getElementById("lightTemperature").style.backgroundColor =
+          latest.temperature > 60 ? "red" : "blue";
+        document.getElementById("lightPH").style.backgroundColor =
+          latest.ph < 6.5 || latest.ph > 8.5 ? "red" : "blue";
+      } catch (err) {
+        console.error("Lỗi lấy dữ liệu:", err);
+      }
+    }
+
+    setInterval(fetchRealData, 5000);
+    fetchRealData();
+  </script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+../Inc/driver/Adc/adc.c:13:6:ADC_Init_Scan_DMA	2
+../Inc/driver/Adc/adc.c:97:10:ADC_GetValue	2

@@ -1,0 +1,8 @@
+"./Inc/driver/Adc/adc.o"
+"./Inc/driver/SysTick/systick.o"
+"./Inc/driver/Uart/uart.o"
+"./Inc/sensor/sensor.o"
+"./Src/main.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Startup/startup_stm32f411vetx.o"

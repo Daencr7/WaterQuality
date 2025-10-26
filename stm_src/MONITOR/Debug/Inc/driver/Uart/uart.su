@@ -1,0 +1,5 @@
+../Inc/driver/Uart/uart.c:31:17:compute_uart_bd	16	static
+../Inc/driver/Uart/uart.c:37:13:uart_set_baudrate	16	static
+../Inc/driver/Uart/uart.c:43:13:uart_write	16	static
+../Inc/driver/Uart/uart.c:56:5:__io_putchar	16	static
+../Inc/driver/Uart/uart.c:66:6:uart_init	8	static

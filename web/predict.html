@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Dự đoán - Mô hình</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .header img {
+      width: 80px;
+      margin-right: 20px;
+    }
+    .header h2 {
+      color: orange;
+      margin: 0;
+    }
+    .main-content {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .chart-box {
+      width: 55%;
+      border: 1px solid #ccc;
+      height: 700px;
+      padding: 10px;
+    }
+    .chart-box canvas {
+      width: 100% !important;
+      height: 650px !important;
+    }
+    .info-box {
+      width: 40%;
+      border: 1px solid #ccc;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    .parameter {
+      display: flex;
+      flex-direction: column;
+    }
+    .parameter-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+    .parameter input {
+      margin-bottom: 25px;
+      padding: 8px;
+      font-size: 25px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="../assers/T1.png" alt="logo">
+      <h2>MÔ HÌNH DỰ ĐOÁN</h2>
+    </div>
+
+    <div class="main-content">
+      <!-- Biểu đồ dự đoán -->
+      <div class="chart-box">
+        <h4>ĐỒ THỊ DỰ ĐOÁN</h4>
+        <canvas id="predictChart"></canvas>
+      </div>
+
+      <!-- Khả năng biến thiên -->
+      <div class="info-box">
+        <div class="parameter">
+          <div class="parameter-name">TDS</div>
+          <input type="text" placeholder="Hiện tại">
+          <input type="text" placeholder="Dự đoán">
+        </div>
+        <div class="parameter">
+          <div class="parameter-name">TURBIDITY</div>
+          <input type="text" placeholder="Hiện tại">
+          <input type="text" placeholder="Dự đoán">
+        </div>
+        <div class="parameter">
+          <div class="parameter-name">TEMPERATURE</div>
+          <input type="text" placeholder="Hiện tại">
+          <input type="text" placeholder="Dự đoán">
+        </div>
+        <div class="parameter">
+          <div class="parameter-name">PH</div>
+          <input type="text" placeholder="Hiện tại">
+          <input type="text" placeholder="Dự đoán">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('predictChart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['0h', '1h', '2h', '3h', '4h'],
+        datasets: [
+          {
+            label: 'TDS hiện tại',
+            data: [300, 280, 290, 310, 305],
+            borderColor: 'blue',
+            borderWidth: 2
+          },
+          {
+            label: 'TDS dự đoán',
+            data: [305, 310, 315, 320, 325],
+            borderColor: 'orange',
+            borderWidth: 2,
+            borderDash: [5, 5]
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: false,
+            title: {
+              display: true,
+              text: 'Giá trị TDS (ppm)'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Thời gian'
+            }
+          }
+        }
+      }
+    });
+/* =================== CẬP NHẬT DỮ LIỆU DỰ ĐOÁN =================== */
+    async function loadPredict() {
+      const res = await fetch("api/get_predict.php");
+      const data = await res.json();
+
+      document.querySelectorAll(".parameter").forEach(param => {
+        const name = param.querySelector(".parameter-name").innerText.toLowerCase();
+        param.querySelectorAll("input")[0].value = data.now[name];
+        param.querySelectorAll("input")[1].value = data.predict[name];
+      });
+    }
+
+    loadPredict();
+    setInterval(loadPredict, 10000);
+  </script>
+</body>
+</html>

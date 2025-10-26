@@ -1,0 +1,6 @@
+../Inc/sensor/sensor.c:8:9:raw_to_v_fp	1
+../Inc/sensor/sensor.c:13:9:calc_temp_fp	1
+../Inc/sensor/sensor.c:23:9:calc_ph_fp	3
+../Inc/sensor/sensor.c:34:9:calc_tds_fp	2
+../Inc/sensor/sensor.c:45:9:calc_turb_fp	2
+../Inc/sensor/sensor.c:64:16:convert_fp_to_struct	1
