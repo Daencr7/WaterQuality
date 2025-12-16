@@ -1,2 +1,7 @@
-../Src/main.c:20:5:main	72	static
-../Src/main.c:51:6:Send_FixedPoint_JSON_To_ESP32	72	static
+/home/edna/Souce/STM_src/MONITOR/chip_headers/CMSIS/Include/core_cm4.h:1684:22:__NVIC_EnableIRQ	16	static,ignoring_inline_asm
+/home/edna/Souce/STM_src/MONITOR/chip_headers/CMSIS/Include/core_cm4.h:1814:22:__NVIC_SetPriority	16	static
+../Src/main.c:29:13:GPIO_Init_All	4	static
+../Src/main.c:49:13:EXTI0_Init	8	static
+../Src/main.c:63:6:EXTI0_IRQHandler	4	static
+../Src/main.c:73:5:main	72	static
+../Src/main.c:141:6:Send_FixedPoint_JSON_To_ESP32	72	static

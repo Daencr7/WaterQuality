@@ -598,9 +598,9 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
 C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS:INTERNAL=1
 //Details about finding Git
-FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.51.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.51.1()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/edna/.espressif/python_env/idf6.0_py3.13_env/bin/python][cfound components: Interpreter ][v3.13.7()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/edna/.espressif/python_env/idf6.0_py3.13_env/bin/python][cfound components: Interpreter ][v3.13.9()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GIT_EXECUTABLE
@@ -613,7 +613,7 @@ _Python3_Compiler_REASON_FAILURE:INTERNAL=
 _Python3_Development_REASON_FAILURE:INTERNAL=
 _Python3_EXECUTABLE:INTERNAL=/home/edna/.espressif/python_env/idf6.0_py3.13_env/bin/python
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;7;32;64;;;abi3;/usr/lib64/python3.13;/home/edna/.espressif/python_env/idf6.0_py3.13_env/lib64/python3.13;/home/edna/.espressif/python_env/idf6.0_py3.13_env/lib/python3.13/site-packages;/home/edna/.espressif/python_env/idf6.0_py3.13_env/lib64/python3.13/site-packages
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;9;32;64;;;abi3;/usr/lib64/python3.13;/home/edna/.espressif/python_env/idf6.0_py3.13_env/lib64/python3.13;/home/edna/.espressif/python_env/idf6.0_py3.13_env/lib/python3.13/site-packages;/home/edna/.espressif/python_env/idf6.0_py3.13_env/lib64/python3.13/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=28b4d870bcdd28f62ad79a27a9c26d6d
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=

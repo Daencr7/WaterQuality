@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS sensor_data;
+
+CREATE TABLE sensor_data (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    temperature FLOAT NOT NULL,
+    ph          FLOAT NOT NULL,
+    tds         FLOAT NOT NULL,
+    turbidity   FLOAT NOT NULL,
+    alert_level TINYINT NOT NULL DEFAULT 0,
+    alert_source VARCHAR(10) NULL,
+    `time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

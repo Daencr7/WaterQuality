@@ -1,0 +1,6 @@
+../Inc/driver/Rtc/rtc3231.c:4:16:BCD_To_Dec	1
+../Inc/driver/Rtc/rtc3231.c:8:16:Dec_To_BCD	1
+../Inc/driver/Rtc/rtc3231.c:13:6:RTC3231_Init	1
+../Inc/driver/Rtc/rtc3231.c:19:5:RTC3231_ReadTime	5
+../Inc/driver/Rtc/rtc3231.c:53:5:RTC3231_SetTime24	4
+../Inc/driver/Rtc/rtc3231.c:70:6:RTC3231_Force24hMode	4

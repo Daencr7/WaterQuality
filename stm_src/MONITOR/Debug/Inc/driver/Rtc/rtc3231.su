@@ -1,0 +1,6 @@
+../Inc/driver/Rtc/rtc3231.c:4:16:BCD_To_Dec	16	static
+../Inc/driver/Rtc/rtc3231.c:8:16:Dec_To_BCD	16	static
+../Inc/driver/Rtc/rtc3231.c:13:6:RTC3231_Init	4	static
+../Inc/driver/Rtc/rtc3231.c:19:5:RTC3231_ReadTime	24	static
+../Inc/driver/Rtc/rtc3231.c:53:5:RTC3231_SetTime24	24	static
+../Inc/driver/Rtc/rtc3231.c:70:6:RTC3231_Force24hMode	16	static

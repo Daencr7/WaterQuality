@@ -1,0 +1,2 @@
+source /home/edna/Souce/ESP_src/hello_world/build/bootloader/gdbinit/symbols
+source /home/edna/Souce/ESP_src/hello_world/build/bootloader/gdbinit/connect

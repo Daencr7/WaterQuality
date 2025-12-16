@@ -19,26 +19,28 @@ typedef struct {
 #define SCALE_FACTOR 1000L 
 #define ADC_MAX_VALUE 4095
 
-// 1. CHUNG: Điện áp tham chiếu V_REF = 5.0V
-#define V_REF_VOLTAGE_FIXED 5000L // 5.0V * 1000
-
-// 2. NHIỆT ĐỘ: T = (V_out_V * 1000) / T_SLOPE + T_OFFSET
-#define T_SLOPE_FIXED       10L     // 0.01 V/C * 1000
-#define T_OFFSET_FIXED      (-50000L) // -50 °C * 1000
+#define V_REF_VOLTAGE_FIXED 3300L   // VDDA 3.3V (mV)
+#define ADC_VDDA_MV_FIXED 3300L
 
 // 3. PH: pH = (V_out_V * 1000) / PH_SLOPE + PH_OFFSET
 #define PH_7_VOLTAGE_V_FIXED 3663L  // 3.663V * 1000
 #define PH_SLOPE_V_PER_PH_FIXED (-59L) // -0.059 V/pH * 1000
 
-// 4. TDS: TDS = TDS_SLOPE * V_out_Compensated (KHÔNG BÙ NHIỆT)
-#define TDS_SLOPE_FIXED     500000L // 500 PPM/V * 1000 
+// DFRobot TDS polynomial coefficients (scaled by 1000)
+#define TDS_A_FIXED   133420L    // 133.42 * 1000
+#define TDS_B_FIXED  -255860L    // -255.86 * 1000
+#define TDS_C_FIXED   857390L    // 857.39 * 1000
+#define TDS_TEMP_C_DEFAULT_FIXED 25000L  // 25.000°C * 1000 (nếu bạn lưu nhiệt độ dạng *1000)
 // Không cần TDS_TEMP_FACTOR_FIXED
 
-// 5. ĐỘ ĐỤC: NTU = TURB_SLOPE * V_out_V + TURB_OFFSET
-// Giả định: 0 NTU tại 3.0V (V_out cao khi trong)
-#define TURB_SLOPE_FIXED    (-1000000L) // Độ dốc ÂM: -1000 NTU/V * 1000
-#define TURB_OFFSET_FIXED   (3000000L) // Offset để 0 NTU tại 3.0V
-
+// TURBIDITY (DFRobot): NTU = -1120.4*V^2 + 5742.3*V - 4352.9
+// Fixed-point scale: NTU*1000, V*1000
+#define TURB_A_FIXED   (-1120400L)  // -1120.4 * 1000
+#define TURB_B_FIXED   ( 5742300L)  //  5742.3 * 1000
+#define TURB_C_FIXED   (-4352900L)  // -4352.9 * 1000
+#define TURB_VOUT_SCALE_NUM 30L
+#define TURB_VOUT_SCALE_DEN 20L
+#define ADC_SAT_THRESHOLD 4090
 // ====================================================================
 // KHAI BÁO HÀM (FIXED-POINT VÀ CHUYỂN ĐỔI)
 // ====================================================================
@@ -46,8 +48,6 @@ typedef struct {
 /** Chuyển ADC raw sang Điện áp Fixed-Point (Volt * 1000) */
 int32_t raw_to_v_fp(uint16_t adc_raw);
 
-/** Tính Nhiệt độ Fixed-Point (°C * 1000) */
-int32_t calc_temp_fp(uint16_t adc_raw);
 
 /** Tính pH Fixed-Point (pH * 1000) */
 int32_t calc_ph_fp(uint16_t adc_raw);

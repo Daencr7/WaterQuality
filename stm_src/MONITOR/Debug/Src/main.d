@@ -8,7 +8,10 @@ Src/main.o: ../Src/main.c \
  /home/edna/Souce/STM_src/MONITOR/chip_headers/CMSIS/Include/mpu_armv7.h \
  /home/edna/Souce/STM_src/MONITOR/chip_headers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h \
  ../Inc/./driver/SysTick/systick.h ../Inc/./driver/Uart/uart.h \
- ../Inc/./driver/Adc/adc.h ../Inc/./sensor/sensor.h
+ ../Inc/./driver/Adc/adc.h ../Inc/./driver/Onewire/ds18b20.h \
+ ../Inc/./driver/I2c/i2c1.h ../Inc/./driver/I2c/i2c3.h \
+ ../Inc/./driver/Oled/oled.h ../Inc/./driver/Oled/../Rtc/rtc3231.h \
+ ../Inc/./driver/Rtc/rtc3231.h ../Inc/./sensor/sensor.h
 /home/edna/Souce/STM_src/MONITOR/chip_headers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
 /home/edna/Souce/STM_src/MONITOR/chip_headers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h:
 /home/edna/Souce/STM_src/MONITOR/chip_headers/CMSIS/Include/core_cm4.h:
@@ -20,4 +23,10 @@ Src/main.o: ../Src/main.c \
 ../Inc/./driver/SysTick/systick.h:
 ../Inc/./driver/Uart/uart.h:
 ../Inc/./driver/Adc/adc.h:
+../Inc/./driver/Onewire/ds18b20.h:
+../Inc/./driver/I2c/i2c1.h:
+../Inc/./driver/I2c/i2c3.h:
+../Inc/./driver/Oled/oled.h:
+../Inc/./driver/Oled/../Rtc/rtc3231.h:
+../Inc/./driver/Rtc/rtc3231.h:
 ../Inc/./sensor/sensor.h:

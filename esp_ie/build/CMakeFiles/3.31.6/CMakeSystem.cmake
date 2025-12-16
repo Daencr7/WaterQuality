@@ -1,6 +1,6 @@
-set(CMAKE_HOST_SYSTEM "Linux-6.16.12-200.fc42.x86_64")
+set(CMAKE_HOST_SYSTEM "Linux-6.17.6-200.fc42.x86_64")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "6.16.12-200.fc42.x86_64")
+set(CMAKE_HOST_SYSTEM_VERSION "6.17.6-200.fc42.x86_64")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
 include("/home/edna/Souce/ESP_src/esp-idf/tools/cmake/toolchain-esp32.cmake")

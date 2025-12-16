@@ -1,0 +1,636 @@
+Command: /home/edna/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/edna/Souce/ESP_src/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/edna/Souce/ESP_src/esp_ie/build/esp_ie.elf /home/edna/Souce/ESP_src/esp_ie/build/bootloader/bootloader.elf -m '/home/edna/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/edna/Souce/ESP_src/esp-idf/tools/idf.py'
+������ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2873-g51d5e8fd08-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 11 2025 17:17:21[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21784h (137092) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=000317ac vaddr=3ffb0000 size=0454ch ( 17740) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=00035d00 vaddr=40080000 size=0a318h ( 41752) load[0m
+[0;32mI (163) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=ae280h (713344) map[0m
+[0;32mI (418) esp_image: segment 4: paddr=000ee2a8 vaddr=4008a318 size=0c5f4h ( 50676) load[0m
+[0;32mI (439) esp_image: segment 5: paddr=000fa8a4 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (450) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (450) boot: Disabling RNG early entropy source...[0m
+[0;32mI (461) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     esp_ie[0m
+[0;32mI (479) app_init: App version:      d037f65-dirty[0m
+[0;32mI (483) app_init: Compile time:     Nov 11 2025 17:16:39[0m
+[0;32mI (488) app_init: ELF file SHA256:  781ed7a14...[0m
+[0;32mI (493) app_init: ESP-IDF:          v6.0-dev-2873-g51d5e8fd08-dirty[0m
+[0;32mI (499) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (506) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (510) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (517) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (522) heap_init: At 3FFB8F10 len 000270F0 (156 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (532) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 4009690C len 000096F4 (37 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;32mI (551) main_task: Started on CPU0[0m
+[0;32mI (561) main_task: Calling app_main()[0m
+[0;32mI (591) wifi:wifi driver task: 3ffc0cf4, prio:23, stack:6656, core=0[0m
+[0;32mI (591) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (601) wifi:wifi certification version: v7.0[0m
+[0;32mI (601) wifi:config NVS flash: enabled[0m
+[0;32mI (601) wifi:config nano formatting: disabled[0m
+[0;32mI (601) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (601) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (611) wifi:Init management short buffer num: 32[0m
+[0;32mI (611) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (621) wifi:Init static rx buffer num: 10[0m
+[0;32mI (621) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (631) wifi_init: rx ba win: 6[0m
+[0;32mI (631) wifi_init: accept mbox: 6[0m
+[0;32mI (631) wifi_init: tcpip mbox: 32[0m
+[0;32mI (641) wifi_init: udp mbox: 6[0m
+[0;32mI (641) wifi_init: tcp mbox: 6[0m
+[0;32mI (641) wifi_init: tcp tx win: 5760[0m
+[0;32mI (651) wifi_init: tcp rx win: 5760[0m
+[0;32mI (651) wifi_init: tcp mss: 1440[0m
+[0;32mI (651) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (661) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (681) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;33mW (681) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+�K"�37f65-dirty
+[0;32mI (511) app_init: Compile time:     Nov 11 2025 17:16:39[0m
+[0;32mI (516) app_init: ELF file SHA256:  781ed7a14...[0m
+[0;32mI (521) app_init: ESP-IDF:          v6.0-dev-2873-g51d5e8fd08-dirty[0m
+[0;32mI (527) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (530) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (534) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (539) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (545) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFB8F10 len 000270F0 (156 KiB): DRAM[0m
+[0;32mI (555) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (560) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (566) heap_init: At 4009690C len 000096F4 (37 KiB): IRAM[0m
+[0;32mI (573) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;32mI (579) main_task: Started on CPU0[0m
+[0;32mI (589) main_task: Calling app_main()[0m
+[0;32mI (629) wifi:wifi driver task: 3ffc0d98, prio:23, stack:6656, core=0[0m
+[0;32mI (639) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (639) wifi:wifi certification version: v7.0[0m
+[0;32mI (639) wifi:config NVS flash: enabled[0m
+[0;32mI (639) wifi:config nano formatting: disabled[0m
+[0;32mI (649) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (649) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (659) wifi:Init management short buffer num: 32[0m
+[0;32mI (659) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (669) wifi:Init static rx buffer num: 10[0m
+[0;32mI (669) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (679) wifi_init: rx ba win: 6[0m
+[0;32mI (679) wifi_init: accept mbox: 6[0m
+[0;32mI (679) wifi_init: tcpip mbox: 32[0m
+[0;32mI (689) wifi_init: udp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (699) wifi_init: tcp mss: 1440[0m
+[0;32mI (699) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (699) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (709) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;33mW (709) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+��� Compile time:     Nov 11 2025 17:16:39
+[0;32mI (516) app_init: ELF file SHA256:  781ed7a14...[0m
+[0;32mI (521) app_init: ESP-IDF:          v6.0-dev-2873-g51d5e8fd08-dirty[0m
+[0;32mI (527) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (530) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (534) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (539) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (545) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFB8F10 len 000270F0 (156 KiB): DRAM[0m
+[0;32mI (555) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (560) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (566) heap_init: At 4009690C len 000096F4 (37 KiB): IRAM[0m
+[0;32mI (573) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;32mI (579) main_task: Started on CPU0[0m
+[0;32mI (589) main_task: Calling app_main()[0m
+[0;32mI (629) wifi:wifi driver task: 3ffc0d98, prio:23, stack:6656, core=0[0m
+[0;32mI (639) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (639) wifi:wifi certification version: v7.0[0m
+[0;32mI (639) wifi:config NVS flash: enabled[0m
+[0;32mI (639) wifi:config nano formatting: disabled[0m
+[0;32mI (649) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (649) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (659) wifi:Init management short buffer num: 32[0m
+[0;32mI (659) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (669) wifi:Init static rx buffer num: 10[0m
+[0;32mI (669) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (679) wifi_init: rx ba win: 6[0m
+[0;32mI (679) wifi_init: accept mbox: 6[0m
+[0;32mI (679) wifi_init: tcpip mbox: 32[0m
+[0;32mI (689) wifi_init: udp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (699) wifi_init: tcp mss: 1440[0m
+[0;32mI (699) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (699) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (709) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;33mW (709) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+��le time:     Nov 11 2025 17:16:39
+[0;32mI (516) app_init: ELF file SHA256:  781ed7a14...[0m
+[0;32mI (521) app_init: ESP-IDF:          v6.0-dev-2873-g51d5e8fd08-dirty[0m
+[0;32mI (527) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (530) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (534) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (539) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (545) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFB8F10 len 000270F0 (156 KiB): DRAM[0m
+[0;32mI (555) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (560) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (566) heap_init: At 4009690C len 000096F4 (37 KiB): IRAM[0m
+[0;32mI (573) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;32mI (579) main_task: Started on CPU0[0m
+[0;32mI (589) main_task: Calling app_main()[0m
+[0;32mI (629) wifi:wifi driver task: 3ffc0d98, prio:23, stack:6656, core=0[0m
+[0;32mI (639) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (639) wifi:wifi certification version: v7.0[0m
+[0;32mI (639) wifi:config NVS flash: enabled[0m
+[0;32mI (639) wifi:config nano formatting: disabled[0m
+[0;32mI (649) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (649) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (659) wifi:Init management short buffer num: 32[0m
+[0;32mI (659) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (669) wifi:Init static rx buffer num: 10[0m
+[0;32mI (669) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (679) wifi_init: rx ba win: 6[0m
+[0;32mI (679) wifi_init: accept mbox: 6[0m
+[0;32mI (679) wifi_init: tcpip mbox: 32[0m
+[0;32mI (689) wifi_init: udp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (699) wifi_init: tcp mss: 1440[0m
+[0;32mI (699) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (699) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (709) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;33mW (709) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+H"�37f65-dirty
+[0;32mI (511) app_init: Compile time:     Nov 11 2025 17:16:39[0m
+[0;32mI (516) app_init: ELF file SHA256:  781ed7a14...[0m
+[0;32mI (521) app_init: ESP-IDF:          v6.0-dev-2873-g51d5e8fd08-dirty[0m
+[0;32mI (527) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (530) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (534) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (539) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (545) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFB8F10 len 000270F0 (156 KiB): DRAM[0m
+[0;32mI (555) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (560) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (566) heap_init: At 4009690C len 000096F4 (37 KiB): IRAM[0m
+[0;32mI (573) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;32mI (579) main_task: Started on CPU0[0m
+[0;32mI (589) main_task: Calling app_main()[0m
+[0;32mI (629) wifi:wifi driver task: 3ffc0d98, prio:23, stack:6656, core=0[0m
+[0;32mI (639) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (639) wifi:wifi certification version: v7.0[0m
+[0;32mI (639) wifi:config NVS flash: enabled[0m
+[0;32mI (639) wifi:config nano formatting: disabled[0m
+[0;32mI (649) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (649) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (659) wifi:Init management short buffer num: 32[0m
+[0;32mI (659) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (669) wifi:Init static rx buffer num: 10[0m
+[0;32mI (669) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (679) wifi_init: rx ba win: 6[0m
+[0;32mI (679) wifi_init: accept mbox: 6[0m
+[0;32mI (679) wifi_init: tcpip mbox: 32[0m
+[0;32mI (689) wifi_init: udp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (699) wifi_init: tcp mss: 1440[0m
+[0;32mI (699) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (699) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (709) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;33mW (709) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+YW��J���ɵ�ѥ���
+[0;32mI (503) app_init: Project name:     esp_ie[0m
+[0;32mI (507) app_init: App version:      d037f65-dirty[0m
+[0;32mI (511) app_init: Compile time:     Nov 11 2025 17:16:39[0m
+[0;32mI (516) app_init: ELF file SHA256:  781ed7a14...[0m
+[0;32mI (521) app_init: ESP-IDF:          v6.0-dev-2873-g51d5e8fd08-dirty[0m
+[0;32mI (527) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (530) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (534) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (539) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (545) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFB8F10 len 000270F0 (156 KiB): DRAM[0m
+[0;32mI (555) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (560) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (566) heap_init: At 4009690C len 000096F4 (37 KiB): IRAM[0m
+[0;32mI (573) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;32mI (579) main_task: Started on CPU0[0m
+[0;32mI (589) main_task: Calling app_main()[0m
+[0;32mI (629) wifi:wifi driver task: 3ffc0d98, prio:23, stack:6656, core=0[0m
+[0;32mI (639) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (639) wifi:wifi certification version: v7.0[0m
+[0;32mI (639) wifi:config NVS flash: enabled[0m
+[0;32mI (639) wifi:config nano formatting: disabled[0m
+[0;32mI (649) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (649) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (659) wifi:Init management short buffer num: 32[0m
+[0;32mI (659) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (669) wifi:Init static rx buffer num: 10[0m
+[0;32mI (669) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (679) wifi_init: rx ba win: 6[0m
+[0;32mI (679) wifi_init: accept mbox: 6[0m
+[0;32mI (679) wifi_init: tcpip mbox: 32[0m
+[0;32mI (689) wifi_init: udp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (699) wifi_init: tcp mss: 1440[0m
+[0;32mI (699) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (699) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (709) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;33mW (709) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[�K"�37f65-dirty
+[0;32mI (511) app_init: Compile time:     Nov 11 2025 17:16:39[0m
+[0;32mI (516) app_init: ELF file SHA256:  781ed7a14...[0m
+[0;32mI (521) app_init: ESP-IDF:          v6.0-dev-2873-g51d5e8fd08-dirty[0m
+[0;32mI (527) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (530) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (534) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (539) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (545) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFB8F10 len 000270F0 (156 KiB): DRAM[0m
+[0;32mI (555) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (560) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (566) heap_init: At 4009690C len 000096F4 (37 KiB): IRAM[0m
+[0;32mI (573) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;32mI (579) main_task: Started on CPU0[0m
+[0;32mI (589) main_task: Calling app_main()[0m
+[0;32mI (629) wifi:wifi driver task: 3ffc0d98, prio:23, stack:6656, core=0[0m
+[0;32mI (639) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (639) wifi:wifi certification version: v7.0[0m
+[0;32mI (639) wifi:config NVS flash: enabled[0m
+[0;32mI (639) wifi:config nano formatting: disabled[0m
+[0;32mI (649) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (649) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (659) wifi:Init management short buffer num: 32[0m
+[0;32mI (659) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (669) wifi:Init static rx buffer num: 10[0m
+[0;32mI (669) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (679) wifi_init: rx ba win: 6[0m
+[0;32mI (679) wifi_init: accept mbox: 6[0m
+[0;32mI (679) wifi_init: tcpip mbox: 32[0m
+[0;32mI (689) wifi_init: udp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (699) wifi_init: tcp mss: 1440[0m
+[0;32mI (699) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (699) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (709) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;33mW (709) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+ͥ���      d037f65-dirty
+[0;32mI (511) app_init: Compile time:     Nov 11 2025 17:16:39[0m
+[0;32mI (516) app_init: ELF file SHA256:  781ed7a14...[0m
+[0;32mI (521) app_init: ESP-IDF:          v6.0-dev-2873-g51d5e8fd08-dirty[0m
+[0;32mI (527) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (530) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (534) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (539) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (545) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFB8F10 len 000270F0 (156 KiB): DRAM[0m
+[0;32mI (555) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (560) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (566) heap_init: At 4009690C len 000096F4 (37 KiB): IRAM[0m
+[0;32mI (573) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;32mI (579) main_task: Started on CPU0[0m
+[0;32mI (589) main_task: Calling app_main()[0m
+[0;32mI (629) wifi:wifi driver task: 3ffc0d98, prio:23, stack:6656, core=0[0m
+[0;32mI (639) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (639) wifi:wifi certification version: v7.0[0m
+[0;32mI (639) wifi:config NVS flash: enabled[0m
+[0;32mI (639) wifi:config nano formatting: disabled[0m
+[0;32mI (649) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (649) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (659) wifi:Init management short buffer num: 32[0m
+[0;32mI (659) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (669) wifi:Init static rx buffer num: 10[0m
+[0;32mI (669) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (679) wifi_init: rx ba win: 6[0m
+[0;32mI (679) wifi_init: accept mbox: 6[0m
+[0;32mI (679) wifi_init: tcpip mbox: 32[0m
+[0;32mI (689) wifi_init: udp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp mbox: 6[0m
+[0;32mI (689) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (699) wifi_init: tcp mss: 1440[0m
+[0;32mI (699) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (699) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (709) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;33mW (709) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;32mI (1819) Wifi: Wifi is connecting!...[0m
+[0;32mI (2819) Wifi: Wifi is connecting!...[0m
+[0;33mW (3239) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (4819) Wifi: Wifi is connecting!...[0m
+[0;33mW (5649) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (5819) Wifi: Wifi is connecting!...[0m
+[0;32mI (6819) Wifi: Wifi is connecting!...[0m
+[0;32mI (7139) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (7139) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (7819) Wifi: Wifi is connecting!...[0m
+[0;32mI (8499) esp_netif_handlers: sta ip: 192.168.1.92, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (8499) WiFi: Got IP: 192.168.1.92[0m
+[0;32mI (8819) Wifi: Ready to start other task![0m
+[0;33mW (8819) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=0.0, ntu=0.0)[0m
+[0;32mI (8829) wifi:<ba-add>idx:0 (ifx:0, 7c:a1:07:9e:9b:a8), tid:0, ssn:2, winSize:64[0m
+[0;32mI (8829) SSD1306: New i2c driver is used[0m
+[0;32mI (8829) SSD1306: OLED configured successfully[0m
+[0;32mI (8829) main_task: Returned from app_main()[0m
+[0;32mI (8839) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":0,"ntu":0}[0m
+[0;32mI (8849) wifi:<ba-add>idx:1 (ifx:0, 7c:a1:07:9e:9b:a8), tid:7, ssn:2, winSize:64[0m
+[0;32mI (9469) HTTP: POST success![0m
+[0;32mI (9469) HTTP: Status: 200[0m
+[0;32mI (9469) HTTP: Content length: 7[0m
+[0;32mI (9469) MAIL: Mail POST success, status=200[0m
+[0;32mI (11129) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (11479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (13329) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (13479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;33mW (15479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (16629) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (17479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (18829) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (19469) HTTP: Sending JSON: {"temp":0,"ph":1.2000000476837158,"tds":12.5,"ntu":0}[0m
+[0;33mW (21479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.2, tds=12.5, ntu=0.0)[0m
+[0;32mI (22129) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (24329) GateIoT: Temp=0.0 -- pH=0.1 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (27479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.1, tds=13.0, ntu=0.0)[0m
+[0;32mI (27629) GateIoT: Temp=0.0 -- pH=1.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (29479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.1, tds=12.5, ntu=0.0)[0m
+[0;32mI (29589) HTTP: Sending JSON: {"temp":0,"ph":1.1000000238418579,"tds":12.5,"ntu":0}[0m
+[0;33mW (31479) ALERT: Muc canh bao 1! (temp=0.0, ph=3.7, tds=12.5, ntu=0.0)[0m
+[0;32mI (33189) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (33479) ALERT: Muc canh bao 1! (temp=0.0, ph=4.1, tds=13.0, ntu=0.0)[0m
+[0;33mW (35479) ALERT: Muc canh bao 1! (temp=0.0, ph=4.1, tds=13.0, ntu=0.0)[0m
+[0;32mI (36489) GateIoT: Temp=0.0 -- pH=1.9 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (37479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.9, tds=12.5, ntu=0.0)[0m
+[0;32mI (38689) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (39479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (39669) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;33mW (41479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (41989) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (43479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (44189) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (45479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;33mW (47479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (47489) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (49479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (49689) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (49749) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;33mW (51479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (52989) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (53479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (55189) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (55479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.7, tds=13.0, ntu=0.0)[0m
+[0;33mW (57479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.7, tds=13.0, ntu=0.0)[0m
+[0;32mI (58489) GateIoT: Temp=0.0 -- pH=1.1 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (59479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.1, tds=11.5, ntu=0.0)[0m
+[0;32mI (59879) HTTP: Sending JSON: {"temp":0,"ph":1.1000000238418579,"tds":11.5,"ntu":0}[0m
+[0;32mI (59959) HTTP: POST success![0m
+[0;32mI (59959) HTTP: Status: 200[0m
+[0;32mI (59959) HTTP: Content length: 7[0m
+[0;33mW (61479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.1, tds=11.5, ntu=0.0)[0m
+[0;32mI (61789) GateIoT: Temp=0.0 -- pH=1.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (63479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (63989) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (65479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (67289) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (67479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;33mW (69479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (69489) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (69969) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;33mW (71479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (72789) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (73479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (74989) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;33mW (75479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=14.0, ntu=0.0)[0m
+[0;33mW (77479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=14.0, ntu=0.0)[0m
+[0;32mI (78289) GateIoT: Temp=0.0 -- pH=1.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (79479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (80049) HTTP: Sending JSON: {"temp":0,"ph":1,"tds":12.5,"ntu":0}[0m
+[0;33mW (81479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.8, tds=15.5, ntu=0.0)[0m
+[0;32mI (82689) GateIoT: Temp=0.0 -- pH=1.9 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (83479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.9, tds=12.5, ntu=0.0)[0m
+[0;33mW (85479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.9, tds=12.5, ntu=0.0)[0m
+[0;32mI (85989) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;33mW (87479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=14.0, ntu=0.0)[0m
+[0;32mI (88189) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (89479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (90139) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":10.5,"ntu":0}[0m
+[0;33mW (91479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (91489) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (93479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (93739) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (95479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (97039) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (97479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;33mW (99479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (100239) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (100309) HTTP: POST success![0m
+[0;32mI (100309) HTTP: Status: 200[0m
+[0;32mI (100309) HTTP: Content length: 7[0m
+[0;32mI (100339) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (101479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (102539) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (103479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;33mW (105479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (105839) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (107479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (108039) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (109479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (110309) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (110369) HTTP: POST success![0m
+[0;32mI (110379) HTTP: Status: 200[0m
+[0;32mI (110379) HTTP: Content length: 7[0m
+[0;32mI (111339) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (111479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;33mW (113479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (113539) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (115479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (116839) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (117479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (119039) GateIoT: Temp=0.0 -- pH=2.1 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (119479) ALERT: Muc canh bao 1! (temp=0.0, ph=2.1, tds=12.0, ntu=0.0)[0m
+[0;32mI (120379) HTTP: Sending JSON: {"temp":0,"ph":2.0999999046325684,"tds":12,"ntu":0}[0m
+[0;32mI (120459) HTTP: POST success![0m
+[0;32mI (120459) HTTP: Status: 200[0m
+[0;32mI (120459) HTTP: Content length: 7[0m
+[0;32mI (121239) GateIoT: Temp=0.0 -- pH=3.1 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (121479) ALERT: Muc canh bao 1! (temp=0.0, ph=3.1, tds=10.5, ntu=0.0)[0m
+[0;33mW (123479) ALERT: Muc canh bao 1! (temp=0.0, ph=3.1, tds=10.5, ntu=0.0)[0m
+[0;32mI (124539) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (125479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (126739) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (127479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;33mW (129479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (130039) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (130459) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (130529) HTTP: POST success![0m
+[0;32mI (130529) HTTP: Status: 200[0m
+[0;32mI (130529) HTTP: Content length: 7[0m
+[0;33mW (131479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (132289) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (133479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;33mW (135479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (135589) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (137479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (138889) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (139479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (140529) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (140599) HTTP: POST success![0m
+[0;32mI (140599) HTTP: Status: 200[0m
+[0;32mI (140599) HTTP: Content length: 7[0m
+[0;32mI (141089) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (141479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;33mW (143479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (144389) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (145479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (146589) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (147479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;33mW (149479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (149889) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (150609) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (150669) HTTP: POST success![0m
+[0;32mI (150679) HTTP: Status: 200[0m
+[0;32mI (150679) HTTP: Content length: 7[0m
+[0;33mW (151479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (152089) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=15.0 -- NTU=0.0[0m
+[0;33mW (153479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=15.0, ntu=0.0)[0m
+[0;32mI (155389) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=15.0 -- NTU=0.0[0m
+[0;33mW (155479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=15.0, ntu=0.0)[0m
+[0;33mW (157479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=15.0, ntu=0.0)[0m
+[0;32mI (157589) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (159479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (159789) GateIoT: Temp=0.0 -- pH=2.1 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (160679) HTTP: Sending JSON: {"temp":0,"ph":2.0999999046325684,"tds":12,"ntu":0}[0m
+[0;32mI (160789) HTTP: POST success![0m
+[0;32mI (160789) HTTP: Status: 200[0m
+[0;32mI (160789) HTTP: Content length: 7[0m
+[0;33mW (161479) ALERT: Muc canh bao 1! (temp=0.0, ph=2.1, tds=12.0, ntu=0.0)[0m
+[0;32mI (163089) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;33mW (163479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=14.5, ntu=0.0)[0m
+[0;32mI (165289) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (165479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;33mW (167479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (168589) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (169479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (170789) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (170829) GateIoT: Temp=0.0 -- pH=1.7 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (170959) HTTP: POST success![0m
+[0;32mI (170959) HTTP: Status: 200[0m
+[0;32mI (170959) HTTP: Content length: 7[0m
+[0;33mW (171479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.7, tds=12.0, ntu=0.0)[0m
+[0;32mI (173029) GateIoT: Temp=0.0 -- pH=2.9 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (173479) ALERT: Muc canh bao 1! (temp=0.0, ph=2.9, tds=13.0, ntu=0.0)[0m
+[0;33mW (175479) ALERT: Muc canh bao 1! (temp=0.0, ph=2.9, tds=13.0, ntu=0.0)[0m
+[0;32mI (176329) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (177479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (178529) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (179479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (180969) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":11.5,"ntu":0}[0m
+[0;32mI (181039) HTTP: POST success![0m
+[0;32mI (181039) HTTP: Status: 200[0m
+[0;32mI (181039) HTTP: Content length: 7[0m
+[0;33mW (181479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (181829) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (183479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (184069) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (185479) ALERT: Muc canh bao 1! (temp=0.0, ph=4.1, tds=12.5, ntu=0.0)[0m
+[0;32mI (187369) GateIoT: Temp=0.0 -- pH=1.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (187479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.1, tds=12.5, ntu=0.0)[0m
+[0;33mW (189479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.1, tds=12.5, ntu=0.0)[0m
+[0;32mI (190669) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (191039) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (192869) GateIoT: Temp=0.0 -- pH=1.9 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (193479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.9, tds=12.0, ntu=0.0)[0m
+[0;33mW (195479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.9, tds=12.0, ntu=0.0)[0m
+[0;32mI (196169) GateIoT: Temp=0.0 -- pH=4.6 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (197479) ALERT: Muc canh bao 1! (temp=0.0, ph=4.6, tds=12.5, ntu=0.0)[0m
+[0;32mI (198369) GateIoT: Temp=0.0 -- pH=1.3 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (199479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.3, tds=13.0, ntu=0.0)[0m
+[0;32mI (201119) HTTP: Sending JSON: {"temp":0,"ph":1.2999999523162842,"tds":13,"ntu":0}[0m
+[0;32mI (201179) HTTP: POST success![0m
+[0;32mI (201179) HTTP: Status: 200[0m
+[0;32mI (201179) HTTP: Content length: 7[0m
+[0;33mW (201479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.3, tds=13.0, ntu=0.0)[0m
+[0;32mI (201669) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (203479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (203869) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (205479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (206069) GateIoT: Temp=0.0 -- pH=1.9 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (207479) ALERT: Muc canh bao 1! (temp=0.0, ph=1.9, tds=12.5, ntu=0.0)[0m
+[0;32mI (209369) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (209479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (211189) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (211309) HTTP: POST success![0m
+[0;32mI (211309) HTTP: Status: 200[0m
+[0;32mI (211309) HTTP: Content length: 7[0m
+[0;33mW (211479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (211569) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (213479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (213769) GateIoT: Temp=0.0 -- pH=2.4 -- TDS=14.5 -- NTU=0.0[0m
+[0;33mW (215479) ALERT: Muc canh bao 1! (temp=0.0, ph=2.4, tds=14.5, ntu=0.0)[0m
+[0;32mI (217069) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (217479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (219269) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (219479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (221309) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (221379) HTTP: POST success![0m
+[0;32mI (221379) HTTP: Status: 200[0m
+[0;32mI (221379) HTTP: Content length: 7[0m
+[0;33mW (221479) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (222569) GateIoT: Temp=0.0 -- pH=5.6 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (223549) MAIL: Mail POST success, status=200[0m
+[0;32mI (224769) GateIoT: Temp=0.0 -- pH=5.5 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (228069) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (229549) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (230269) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (231379) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m

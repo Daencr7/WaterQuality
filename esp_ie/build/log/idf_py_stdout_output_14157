@@ -1,0 +1,1363 @@
+Command: /home/edna/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/edna/Souce/ESP_src/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/edna/Souce/ESP_src/esp_ie/build/esp_ie.elf /home/edna/Souce/ESP_src/esp_ie/build/bootloader/bootloader.elf -m '/home/edna/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/edna/Souce/ESP_src/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2873-g51d5e8fd08-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 11 2025 17:17:21[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21604h (136708) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=0003162c vaddr=3ffb0000 size=0454ch ( 17740) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=00035b80 vaddr=40080000 size=0a498h ( 42136) load[0m
+[0;32mI (163) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=ae040h (712768) map[0m
+[0;32mI (418) esp_image: segment 4: paddr=000ee068 vaddr=4008a498 size=0c474h ( 50292) load[0m
+[0;32mI (438) esp_image: segment 5: paddr=000fa4e4 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (450) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (450) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     esp_ie[0m
+[0;32mI (478) app_init: App version:      d037f65-dirty[0m
+[0;32mI (483) app_init: Compile time:     Nov 11 2025 17:16:39[0m
+[0;32mI (488) app_init: ELF file SHA256:  84e364c4d...[0m
+[0;32mI (492) app_init: ESP-IDF:          v6.0-dev-2873-g51d5e8fd08-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (506) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (510) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (516) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (521) heap_init: At 3FFB8F10 len 000270F0 (156 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (532) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (537) heap_init: At 4009690C len 000096F4 (37 KiB): IRAM[0m
+[0;32mI (544) spi_flash: detected chip: generic[0m
+[0;32mI (546) spi_flash: flash io: dio[0m
+[0;32mI (551) main_task: Started on CPU0[0m
+[0;32mI (561) main_task: Calling app_main()[0m
+[0;32mI (601) wifi:wifi driver task: 3ffc0f44, prio:23, stack:6656, core=0[0m
+[0;32mI (611) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (621) wifi:wifi certification version: v7.0[0m
+[0;32mI (621) wifi:config NVS flash: enabled[0m
+[0;32mI (621) wifi:config nano formatting: disabled[0m
+[0;32mI (621) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (631) wifi:Init management short buffer num: 32[0m
+[0;32mI (631) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (641) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (641) wifi:Init static rx buffer num: 10[0m
+[0;32mI (641) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi_init: rx ba win: 6[0m
+[0;32mI (651) wifi_init: accept mbox: 6[0m
+[0;32mI (651) wifi_init: tcpip mbox: 32[0m
+[0;32mI (661) wifi_init: udp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp tx win: 5760[0m
+[0;32mI (671) wifi_init: tcp rx win: 5760[0m
+[0;32mI (671) wifi_init: tcp mss: 1440[0m
+[0;32mI (671) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (681) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (681) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (771) wifi:mode : sta (08:d1:f9:26:7e:34)[0m
+[0;32mI (771) wifi:enable tsf[0m
+[0;32mI (781) WiFi: Wi-Fi initialization done[0m
+[0;32mI (781) Wifi: Wifi is connecting!...[0m
+[0;32mI (781) WiFi: Wi-Fi started, connecting to GA...[0m
+[0;32mI (1781) Wifi: Wifi is connecting!...[0m
+[0;32mI (2781) Wifi: Wifi is connecting!...[0m
+[0;33mW (3201) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (3221) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3221) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3241) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3261) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3281) wifi:connected with GA, aid = 1, channel 11, BW20, bssid = 7c:a1:07:9e:9b:a8[0m
+[0;32mI (3281) wifi:security: WPA2-PSK, phy: bgn, rssi: -54[0m
+[0;32mI (3291) wifi:pm start, type: 1[0m
+
+[0;32mI (3421) wifi:AP's beacon interval = 204800 us, DTIM period = 1[0m
+[0;32mI (3781) Wifi: Wifi is connecting!...[0m
+[0;32mI (4641) esp_netif_handlers: sta ip: 192.168.1.92, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4641) WiFi: Got IP: 192.168.1.92[0m
+[0;32mI (4781) Wifi: Ready to start other task![0m
+[0;32mI (4781) SSD1306: New i2c driver is used[0m
+[0;32mI (4781) SSD1306: OLED configured successfully[0m
+[0;32mI (4781) main_task: Returned from app_main()[0m
+[0;32mI (4781) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":0,"ntu":0}[0m
+[0;32mI (4791) wifi:<ba-add>idx:0 (ifx:0, 7c:a1:07:9e:9b:a8), tid:0, ssn:2, winSize:64[0m
+[0;32mI (4801) wifi:<ba-add>idx:1 (ifx:0, 7c:a1:07:9e:9b:a8), tid:7, ssn:2, winSize:64[0m
+[0;32mI (5401) HTTP: POST success![0m
+[0;32mI (5411) HTTP: Status: 200[0m
+[0;32mI (5411) HTTP: Content length: 7[0m
+[0;32mI (8181) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (10381) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (13681) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (14841) GateIoT: Temp=0.0 -- pH=2.2 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (15411) HTTP: Sending JSON: {"temp":0,"ph":2.2000000476837158,"tds":12.5,"ntu":0}[0m
+[0;32mI (15501) HTTP: POST success![0m
+[0;32mI (15501) HTTP: Status: 200[0m
+[0;32mI (15501) HTTP: Content length: 7[0m
+[0;32mI (18141) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (21441) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (23641) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (25501) HTTP: Sending JSON: {"temp":0,"ph":0.699999988079071,"tds":12,"ntu":0}[0m
+[0;32mI (25621) HTTP: POST success![0m
+[0;32mI (25621) HTTP: Status: 200[0m
+[0;32mI (25621) HTTP: Content length: 7[0m
+[0;32mI (26941) GateIoT: Temp=0.0 -- pH=2.5 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (29141) GateIoT: Temp=0.0 -- pH=4.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (32441) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (34641) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=16.0 -- NTU=0.0[0m
+[0;32mI (35621) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":16,"ntu":0}[0m
+[0;32mI (37151) HTTP: POST success![0m
+[0;32mI (37151) HTTP: Status: 200[0m
+[0;32mI (37151) HTTP: Content length: 7[0m
+[0;32mI (37941) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (40151) GateIoT: Temp=0.0 -- pH=0.5 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (43451) GateIoT: Temp=0.0 -- pH=3.9 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (46751) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=19.5 -- NTU=0.0[0m
+[0;32mI (47151) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":19.5,"ntu":0}[0m
+[0;32mI (47221) HTTP: POST success![0m
+[0;32mI (47221) HTTP: Status: 200[0m
+[0;32mI (47221) HTTP: Content length: 7[0m
+[0;32mI (48951) GateIoT: Temp=0.0 -- pH=2.8 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (52251) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=15.5 -- NTU=0.0[0m
+[0;32mI (54451) GateIoT: Temp=0.0 -- pH=3.8 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (57231) HTTP: Sending JSON: {"temp":0,"ph":3.7999999523162842,"tds":13,"ntu":0}[0m
+[0;32mI (57301) HTTP: POST success![0m
+[0;32mI (57301) HTTP: Status: 200[0m
+[0;32mI (57301) HTTP: Content length: 7[0m
+[0;32mI (57751) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (59951) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (62151) GateIoT: Temp=0.0 -- pH=2.6 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (65451) GateIoT: Temp=0.0 -- pH=2.2 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (67311) HTTP: Sending JSON: {"temp":0,"ph":2.2000000476837158,"tds":12.5,"ntu":0}[0m
+[0;32mI (67381) HTTP: POST success![0m
+[0;32mI (67381) HTTP: Status: 200[0m
+[0;32mI (67381) HTTP: Content length: 7[0m
+[0;32mI (67651) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (70951) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (73151) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (76451) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (77391) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (77471) HTTP: POST success![0m
+[0;32mI (77471) HTTP: Status: 200[0m
+[0;32mI (77471) HTTP: Content length: 7[0m
+[0;32mI (78731) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (82031) GateIoT: Temp=0.0 -- pH=4.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (85331) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (87471) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (87531) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (87541) HTTP: POST success![0m
+[0;32mI (87541) HTTP: Status: 200[0m
+[0;32mI (87541) HTTP: Content length: 7[0m
+[0;32mI (90831) GateIoT: Temp=0.0 -- pH=3.8 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (93031) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (96331) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (97541) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (97601) HTTP: POST success![0m
+[0;32mI (97601) HTTP: Status: 200[0m
+[0;32mI (97601) HTTP: Content length: 7[0m
+[0;32mI (98531) GateIoT: Temp=0.0 -- pH=3.5 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (101831) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (104051) GateIoT: Temp=0.0 -- pH=0.9 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (107351) GateIoT: Temp=0.0 -- pH=2.9 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (107611) HTTP: Sending JSON: {"temp":0,"ph":2.9000000953674316,"tds":10,"ntu":0}[0m
+[0;32mI (107681) HTTP: POST success![0m
+[0;32mI (107681) HTTP: Status: 200[0m
+[0;32mI (107681) HTTP: Content length: 7[0m
+[0;32mI (110651) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (112851) GateIoT: Temp=0.0 -- pH=0.3 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (115051) GateIoT: Temp=0.0 -- pH=2.7 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (117251) GateIoT: Temp=0.0 -- pH=2.6 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (117681) HTTP: Sending JSON: {"temp":0,"ph":2.5999999046325684,"tds":12,"ntu":0}[0m
+[0;32mI (117751) HTTP: POST success![0m
+[0;32mI (117751) HTTP: Status: 200[0m
+[0;32mI (117751) HTTP: Content length: 7[0m
+[0;32mI (119451) GateIoT: Temp=0.0 -- pH=1.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (122751) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (124951) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (127751) HTTP: Sending JSON: {"temp":0,"ph":1.2000000476837158,"tds":10.5,"ntu":0}[0m
+[0;32mI (127831) HTTP: POST success![0m
+[0;32mI (127831) HTTP: Status: 200[0m
+[0;32mI (127831) HTTP: Content length: 7[0m
+[0;32mI (128251) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (131551) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (133751) GateIoT: Temp=0.0 -- pH=1.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (137051) GateIoT: Temp=0.0 -- pH=3.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (137831) HTTP: Sending JSON: {"temp":0,"ph":3.4000000953674316,"tds":12.5,"ntu":0}[0m
+[0;32mI (137911) HTTP: POST success![0m
+[0;32mI (137911) HTTP: Status: 200[0m
+[0;32mI (137911) HTTP: Content length: 7[0m
+[0;32mI (139251) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (142551) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (144751) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+}
+[0;32mI (147991) HTTP: POST success![0m
+[0;32mI (147991) HTTP: Status: 200[0m
+[0;32mI (147991) HTTP: Content length: 7[0m
+[0;32mI (148051) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (150261) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (153561) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (155851) GateIoT: Temp=0.0 -- pH=1.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (157991) HTTP: Sending JSON: {"temp":0,"ph":1.1000000238418579,"tds":12.5,"ntu":0}[0m
+[0;32mI (158071) HTTP: POST success![0m
+[0;32mI (158071) HTTP: Status: 200[0m
+[0;32mI (158081) HTTP: Content length: 7[0m
+[0;32mI (159151) GateIoT: Temp=0.0 -- pH=2.3 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (162451) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (164651) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=16.0 -- NTU=0.0[0m
+[0;32mI (167951) GateIoT: Temp=0.0 -- pH=4.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (168081) HTTP: Sending JSON: {"temp":0,"ph":4.3000001907348633,"tds":12.5,"ntu":0}[0m
+[0;32mI (168151) HTTP: POST success![0m
+[0;32mI (168151) HTTP: Status: 200[0m
+[0;32mI (168151) HTTP: Content length: 7[0m
+[0;32mI (170151) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (173451) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=15.5 -- NTU=0.0[0m
+[0;32mI (175651) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (178161) HTTP: Sending JSON: {"temp":0,"ph":4.0999999046325684,"tds":12,"ntu":0}[0m
+[0;32mI (178231) HTTP: POST success![0m
+[0;32mI (178231) HTTP: Status: 200[0m
+[0;32mI (178231) HTTP: Content length: 7[0m
+[0;32mI (178951) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (181171) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (184471) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (187771) GateIoT: Temp=0.0 -- pH=2.7 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (188231) HTTP: Sending JSON: {"temp":0,"ph":2.7000000476837158,"tds":12.5,"ntu":0}[0m
+[0;32mI (188311) HTTP: POST success![0m
+[0;32mI (188311) HTTP: Status: 200[0m
+[0;32mI (188311) HTTP: Content length: 7[0m
+[0;32mI (189971) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (193271) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (195471) GateIoT: Temp=0.0 -- pH=0.5 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (198311) HTTP: Sending JSON: {"temp":0,"ph":0.5,"tds":13,"ntu":0}[0m
+[0;32mI (198381) HTTP: POST success![0m
+[0;32mI (198381) HTTP: Status: 200[0m
+[0;32mI (198381) HTTP: Content length: 7[0m
+[0;32mI (198771) GateIoT: Temp=0.0 -- pH=0.9 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (200971) GateIoT: Temp=0.0 -- pH=2.5 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (204271) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (206471) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (208391) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (208461) HTTP: POST success![0m
+[0;32mI (208461) HTTP: Status: 200[0m
+[0;32mI (208461) HTTP: Content length: 7[0m
+[0;32mI (209771) GateIoT: Temp=0.0 -- pH=3.6 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (211971) GateIoT: Temp=0.0 -- pH=1.6 -- TDS=15.5 -- NTU=0.0[0m
+[0;32mI (214171) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (217471) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (218461) HTTP: Sending JSON: {"temp":0,"ph":4.0999999046325684,"tds":12.5,"ntu":0}[0m
+[0;32mI (218541) HTTP: POST success![0m
+[0;32mI (218541) HTTP: Status: 200[0m
+[0;32mI (218541) HTTP: Content length: 7[0m
+[0;32mI (219691) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (222991) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (226291) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (228491) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (228541) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (228611) HTTP: POST success![0m
+[0;32mI (228611) HTTP: Status: 200[0m
+[0;32mI (228611) HTTP: Content length: 7[0m
+[0;32mI (231791) GateIoT: Temp=0.0 -- pH=0.9 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (233991) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (237291) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (238611) HTTP: Sending JSON: {"temp":0,"ph":0.800000011920929,"tds":12.5,"ntu":0}[0m
+[0;32mI (238691) HTTP: POST success![0m
+[0;32mI (238691) HTTP: Status: 200[0m
+[0;32mI (238691) HTTP: Content length: 7[0m
+[0;32mI (239491) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (242791) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (244991) GateIoT: Temp=0.0 -- pH=0.9 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (248291) GateIoT: Temp=0.0 -- pH=3.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (248691) HTTP: Sending JSON: {"temp":0,"ph":3,"tds":13,"ntu":0}[0m
+[0;32mI (248761) HTTP: POST success![0m
+[0;32mI (248761) HTTP: Status: 200[0m
+[0;32mI (248761) HTTP: Content length: 7[0m
+[0;32mI (251591) GateIoT: Temp=0.0 -- pH=3.5 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (253791) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (257091) GateIoT: Temp=0.0 -- pH=3.1 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (258221) GateIoT: Temp=0.0 -- pH=1.8 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (258771) HTTP: Sending JSON: {"temp":0,"ph":1.7999999523162842,"tds":11.5,"ntu":0}[0m
+[0;32mI (258851) HTTP: POST success![0m
+[0;32mI (258851) HTTP: Status: 200[0m
+[0;32mI (258851) HTTP: Content length: 7[0m
+[0;32mI (261521) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (264821) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (267021) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (268851) HTTP: Sending JSON: {"temp":0,"ph":0.800000011920929,"tds":12,"ntu":0}[0m
+[0;32mI (268941) HTTP: POST success![0m
+[0;32mI (268941) HTTP: Status: 200[0m
+[0;32mI (268941) HTTP: Content length: 7[0m
+[0;32mI (270321) GateIoT: Temp=0.0 -- pH=1.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (272521) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (275821) GateIoT: Temp=0.0 -- pH=0.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (278021) GateIoT: Temp=0.0 -- pH=1.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (278941) HTTP: Sending JSON: {"temp":0,"ph":1,"tds":13,"ntu":0}[0m
+[0;32mI (279011) HTTP: POST success![0m
+[0;32mI (279011) HTTP: Status: 200[0m
+[0;32mI (279011) HTTP: Content length: 7[0m
+[0;32mI (281321) GateIoT: Temp=0.0 -- pH=1.7 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (283521) GateIoT: Temp=0.0 -- pH=2.6 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (286821) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (289021) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (289091) HTTP: POST success![0m
+[0;32mI (289091) HTTP: Status: 200[0m
+[0;32mI (289091) HTTP: Content length: 7[0m
+[0;32mI (290121) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (292321) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (295621) GateIoT: Temp=0.0 -- pH=0.9 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (297821) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (299101) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (299181) HTTP: POST success![0m
+[0;32mI (299191) HTTP: Status: 200[0m
+[0;32mI (299191) HTTP: Content length: 7[0m
+[0;32mI (301121) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (303321) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (306621) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (308821) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (309191) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (309251) HTTP: POST success![0m
+[0;32mI (309251) HTTP: Status: 200[0m
+[0;32mI (309251) HTTP: Content length: 7[0m
+[0;32mI (312121) GateIoT: Temp=0.0 -- pH=0.5 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (315421) GateIoT: Temp=0.0 -- pH=3.1 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (317621) GateIoT: Temp=0.0 -- pH=4.2 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (319261) HTTP: Sending JSON: {"temp":0,"ph":4.1999998092651367,"tds":12.5,"ntu":0}[0m
+[0;32mI (319351) HTTP: POST success![0m
+[0;32mI (319351) HTTP: Status: 200[0m
+[0;32mI (319351) HTTP: Content length: 7[0m
+[0;32mI (320921) GateIoT: Temp=0.0 -- pH=3.1 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (323121) GateIoT: Temp=0.0 -- pH=1.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (326421) GateIoT: Temp=0.0 -- pH=1.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (328621) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (329351) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (329431) HTTP: POST success![0m
+[0;32mI (329431) HTTP: Status: 200[0m
+[0;32mI (329431) HTTP: Content length: 7[0m
+[0;32mI (331921) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (334121) GateIoT: Temp=0.0 -- pH=0.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (337421) GateIoT: Temp=0.0 -- pH=2.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (339431) HTTP: Sending JSON: {"temp":0,"ph":2.2999999523162842,"tds":12.5,"ntu":0}[0m
+[0;32mI (339491) HTTP: POST success![0m
+[0;32mI (339491) HTTP: Status: 200[0m
+[0;32mI (339491) HTTP: Content length: 7[0m
+[0;32mI (339661) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (342961) GateIoT: Temp=0.0 -- pH=1.3 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (345241) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (348541) GateIoT: Temp=0.0 -- pH=1.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (349501) HTTP: Sending JSON: {"temp":0,"ph":1,"tds":12.5,"ntu":0}[0m
+[0;32mI (349601) HTTP: POST success![0m
+[0;32mI (349601) HTTP: Status: 200[0m
+[0;32mI (349601) HTTP: Content length: 7[0m
+[0;32mI (351841) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (354041) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (356241) GateIoT: Temp=0.0 -- pH=1.8 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (358501) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (359601) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (359671) HTTP: POST success![0m
+[0;32mI (359671) HTTP: Status: 200[0m
+[0;32mI (359671) HTTP: Content length: 7[0m
+[0;32mI (361801) GateIoT: Temp=0.0 -- pH=2.5 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (364081) GateIoT: Temp=0.0 -- pH=0.6 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (367381) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (369661) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (369671) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (369761) HTTP: POST success![0m
+[0;32mI (369761) HTTP: Status: 200[0m
+[0;32mI (369761) HTTP: Content length: 7[0m
+[0;32mI (372961) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (376261) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (378461) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (379771) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (379851) HTTP: POST success![0m
+[0;32mI (379851) HTTP: Status: 200[0m
+[0;32mI (379851) HTTP: Content length: 7[0m
+[0;32mI (381761) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (383961) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (387261) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (389461) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (389861) HTTP: Sending JSON: {"temp":0,"ph":0.699999988079071,"tds":12.5,"ntu":0}[0m
+[0;32mI (389941) HTTP: POST success![0m
+[0;32mI (389941) HTTP: Status: 200[0m
+[0;32mI (389941) HTTP: Content length: 7[0m
+[0;32mI (391661) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (394961) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (397161) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=7.5 -- NTU=0.0[0m
+[0;32mI (399941) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":7.5,"ntu":0}[0m
+[0;32mI (400011) HTTP: POST success![0m
+[0;32mI (400011) HTTP: Status: 200[0m
+[0;32mI (400011) HTTP: Content length: 7[0m
+[0;32mI (400461) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (402661) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (405961) GateIoT: Temp=0.0 -- pH=0.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (408171) GateIoT: Temp=0.0 -- pH=3.9 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (410021) HTTP: Sending JSON: {"temp":0,"ph":3.9000000953674316,"tds":12.5,"ntu":0}[0m
+[0;32mI (410091) HTTP: POST success![0m
+[0;32mI (410091) HTTP: Status: 200[0m
+[0;32mI (410091) HTTP: Content length: 7[0m
+[0;32mI (411471) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=16.0 -- NTU=0.0[0m
+[0;32mI (414771) GateIoT: Temp=0.0 -- pH=1.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (416971) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (420101) HTTP: Sending JSON: {"temp":0,"ph":4.0999999046325684,"tds":12.5,"ntu":0}[0m
+[0;32mI (420181) HTTP: POST success![0m
+[0;32mI (420181) HTTP: Status: 200[0m
+[0;32mI (420181) HTTP: Content length: 7[0m
+[0;32mI (420271) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (422471) GateIoT: Temp=0.0 -- pH=0.5 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (425771) GateIoT: Temp=0.0 -- pH=3.8 -- TDS=15.5 -- NTU=0.0[0m
+[0;32mI (427971) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (430191) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (430271) HTTP: POST success![0m
+[0;32mI (430271) HTTP: Status: 200[0m
+[0;32mI (430271) HTTP: Content length: 7[0m
+[0;32mI (431271) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (433471) GateIoT: Temp=0.0 -- pH=4.3 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (436771) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (439021) GateIoT: Temp=0.0 -- pH=1.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (440271) HTTP: Sending JSON: {"temp":0,"ph":1.2999999523162842,"tds":12.5,"ntu":0}[0m
+[0;32mI (440361) HTTP: POST success![0m
+[0;32mI (440361) HTTP: Status: 200[0m
+[0;32mI (440361) HTTP: Content length: 7[0m
+[0;32mI (442321) GateIoT: Temp=0.0 -- pH=0.9 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (445621) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (447821) GateIoT: Temp=0.0 -- pH=3.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (450361) HTTP: Sending JSON: {"temp":0,"ph":3,"tds":12.5,"ntu":0}[0m
+[0;32mI (450441) HTTP: POST success![0m
+[0;32mI (450441) HTTP: Status: 200[0m
+[0;32mI (450441) HTTP: Content length: 7[0m
+[0;32mI (451121) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (453321) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (456621) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (458821) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=16.0 -- NTU=0.0[0m
+[0;32mI (460451) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":16,"ntu":0}[0m
+[0;32mI (460551) HTTP: POST success![0m
+[0;32mI (460551) HTTP: Status: 200[0m
+[0;32mI (460551) HTTP: Content length: 7[0m
+[0;32mI (462121) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (464341) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (467641) GateIoT: Temp=0.0 -- pH=2.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (470561) HTTP: Sending JSON: {"temp":0,"ph":2.0999999046325684,"tds":12.5,"ntu":0}[0m
+[0;32mI (470631) HTTP: POST success![0m
+[0;32mI (470631) HTTP: Status: 200[0m
+[0;32mI (470631) HTTP: Content length: 7[0m
+[0;32mI (470941) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (473141) GateIoT: Temp=0.0 -- pH=1.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (476441) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (478641) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (480631) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (480701) HTTP: POST success![0m
+[0;32mI (480711) HTTP: Status: 200[0m
+[0;32mI (480711) HTTP: Content length: 7[0m
+[0;32mI (481941) GateIoT: Temp=0.0 -- pH=1.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (484141) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (487441) GateIoT: Temp=0.0 -- pH=3.7 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (489661) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (490711) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (490781) HTTP: POST success![0m
+[0;32mI (490781) HTTP: Status: 200[0m
+[0;32mI (490781) HTTP: Content length: 7[0m
+[0;32mI (491861) GateIoT: Temp=0.0 -- pH=2.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (495161) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (497361) GateIoT: Temp=0.0 -- pH=3.5 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (500661) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (500781) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (500861) HTTP: POST success![0m
+[0;32mI (500861) HTTP: Status: 200[0m
+[0;32mI (500861) HTTP: Content length: 7[0m
+[0;32mI (502911) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (506211) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (509511) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (510861) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (510931) HTTP: POST success![0m
+[0;32mI (510931) HTTP: Status: 200[0m
+[0;32mI (510931) HTTP: Content length: 7[0m
+[0;32mI (511711) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (515011) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (517211) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (520511) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=16.0 -- NTU=0.0[0m
+[0;32mI (520941) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":16,"ntu":0}[0m
+[0;32mI (521001) HTTP: POST success![0m
+[0;32mI (521011) HTTP: Status: 200[0m
+[0;32mI (521011) HTTP: Content length: 7[0m
+[0;32mI (522711) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (526011) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (528231) GateIoT: Temp=0.0 -- pH=2.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (531011) HTTP: Sending JSON: {"temp":0,"ph":2.4000000953674316,"tds":12.5,"ntu":0}[0m
+[0;32mI (531071) HTTP: POST success![0m
+[0;32mI (531071) HTTP: Status: 200[0m
+[0;32mI (531071) HTTP: Content length: 7[0m
+[0;32mI (531531) GateIoT: Temp=0.0 -- pH=3.7 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (533801) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (537101) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (540401) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (541081) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (541161) HTTP: POST success![0m
+[0;32mI (541161) HTTP: Status: 200[0m
+[0;32mI (541161) HTTP: Content length: 7[0m
+[0;32mI (542601) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=15.5 -- NTU=0.0[0m
+[0;32mI (545901) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (548101) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (551171) HTTP: Sending JSON: {"temp":0,"ph":0.800000011920929,"tds":14,"ntu":0}[0m
+[0;32mI (551261) HTTP: POST success![0m
+[0;32mI (551261) HTTP: Status: 200[0m
+[0;32mI (551261) HTTP: Content length: 7[0m
+[0;32mI (551401) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (553601) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (556901) GateIoT: Temp=0.0 -- pH=0.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (559101) GateIoT: Temp=0.0 -- pH=0.3 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (561261) HTTP: Sending JSON: {"temp":0,"ph":0.300000011920929,"tds":14,"ntu":0}[0m
+[0;32mI (561341) HTTP: POST success![0m
+[0;32mI (561341) HTTP: Status: 200[0m
+[0;32mI (561341) HTTP: Content length: 7[0m
+[0;32mI (562401) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (565701) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (567901) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (571201) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (571341) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (571411) HTTP: POST success![0m
+[0;32mI (571411) HTTP: Status: 200[0m
+[0;32mI (571411) HTTP: Content length: 7[0m
+[0;32mI (573401) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (576701) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (578901) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (581421) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (581501) HTTP: POST success![0m
+[0;32mI (581501) HTTP: Status: 200[0m
+[0;32mI (581501) HTTP: Content length: 7[0m
+[0;32mI (582201) GateIoT: Temp=0.0 -- pH=0.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (584401) GateIoT: Temp=0.0 -- pH=2.2 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (587701) GateIoT: Temp=0.0 -- pH=4.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (591001) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (591501) HTTP: Sending JSON: {"temp":0,"ph":4.0999999046325684,"tds":12.5,"ntu":0}[0m
+[0;32mI (591571) HTTP: POST success![0m
+[0;32mI (591571) HTTP: Status: 200[0m
+[0;32mI (591571) HTTP: Content length: 7[0m
+[0;32mI (593201) GateIoT: Temp=0.0 -- pH=3.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (596501) GateIoT: Temp=0.0 -- pH=2.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (598701) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (601581) HTTP: Sending JSON: {"temp":0,"ph":0.800000011920929,"tds":13,"ntu":0}[0m
+[0;32mI (601661) HTTP: POST success![0m
+[0;32mI (601661) HTTP: Status: 200[0m
+[0;32mI (601661) HTTP: Content length: 7[0m
+[0;32mI (602001) GateIoT: Temp=0.0 -- pH=0.6 -- TDS=16.0 -- NTU=0.0[0m
+[0;32mI (604201) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (607501) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (609701) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (611661) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":14,"ntu":0}[0m
+[0;32mI (611731) HTTP: POST success![0m
+[0;32mI (611731) HTTP: Status: 200[0m
+[0;32mI (611731) HTTP: Content length: 7[0m
+[0;32mI (613001) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (616301) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (618501) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (621741) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":11.5,"ntu":0}[0m
+[0;32mI (621801) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (621811) HTTP: POST success![0m
+[0;32mI (621811) HTTP: Status: 200[0m
+[0;32mI (621811) HTTP: Content length: 7[0m
+[0;32mI (624001) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (627301) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (629501) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (631811) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (631881) HTTP: POST success![0m
+[0;32mI (631881) HTTP: Status: 200[0m
+[0;32mI (631881) HTTP: Content length: 7[0m
+[0;32mI (632801) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (635001) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (638301) GateIoT: Temp=0.0 -- pH=4.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (641601) GateIoT: Temp=0.0 -- pH=4.3 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (641891) HTTP: Sending JSON: {"temp":0,"ph":4.3000001907348633,"tds":12,"ntu":0}[0m
+[0;32mI (641981) HTTP: POST success![0m
+[0;32mI (641981) HTTP: Status: 200[0m
+[0;32mI (641981) HTTP: Content length: 7[0m
+[0;32mI (643801) GateIoT: Temp=0.0 -- pH=4.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (647101) GateIoT: Temp=0.0 -- pH=4.3 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (649301) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (651981) HTTP: Sending JSON: {"temp":0,"ph":4.0999999046325684,"tds":12.5,"ntu":0}[0m
+[0;32mI (652071) HTTP: POST success![0m
+[0;32mI (652071) HTTP: Status: 200[0m
+[0;32mI (652071) HTTP: Content length: 7[0m
+[0;32mI (652601) GateIoT: Temp=0.0 -- pH=4.3 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (654801) GateIoT: Temp=0.0 -- pH=4.2 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (658101) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (660301) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (662081) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (662151) HTTP: POST success![0m
+[0;32mI (662151) HTTP: Status: 200[0m
+[0;32mI (662151) HTTP: Content length: 7[0m
+[0;32mI (663601) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (665851) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (669151) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (672161) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (672261) HTTP: POST success![0m
+[0;32mI (672261) HTTP: Status: 200[0m
+[0;32mI (672261) HTTP: Content length: 7[0m
+[0;32mI (672451) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (674651) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (677951) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (680151) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (682261) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (682341) HTTP: POST success![0m
+[0;32mI (682351) GateIoT: Temp=0.0 -- pH=1.3 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (682351) HTTP: Status: 200[0m
+[0;32mI (682351) HTTP: Content length: 7[0m
+[0;32mI (685651) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (687851) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (691151) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (692351) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (692421) HTTP: POST success![0m
+[0;32mI (692421) HTTP: Status: 200[0m
+[0;32mI (692421) HTTP: Content length: 7[0m
+[0;32mI (693351) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (696651) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (698851) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (702151) GateIoT: Temp=0.0 -- pH=0.5 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (702421) HTTP: Sending JSON: {"temp":0,"ph":0.5,"tds":12.5,"ntu":0}[0m
+[0;32mI (702501) HTTP: POST success![0m
+[0;32mI (702501) HTTP: Status: 200[0m
+[0;32mI (702501) HTTP: Content length: 7[0m
+[0;32mI (704391) GateIoT: Temp=0.0 -- pH=3.2 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (707691) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (710991) GateIoT: Temp=0.0 -- pH=3.8 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (712091) GateIoT: Temp=0.0 -- pH=2.8 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (712501) HTTP: Sending JSON: {"temp":0,"ph":2.7999999523162842,"tds":12,"ntu":0}[0m
+[0;32mI (712591) HTTP: POST success![0m
+[0;32mI (712591) HTTP: Status: 200[0m
+[0;32mI (712591) HTTP: Content length: 7[0m
+[0;32mI (715391) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (717641) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (720941) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (722601) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (722671) HTTP: POST success![0m
+[0;32mI (722671) HTTP: Status: 200[0m
+[0;32mI (722671) HTTP: Content length: 7[0m
+[0;32mI (724241) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (726441) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (729741) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (731941) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (732681) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":14.5,"ntu":0}[0m
+[0;32mI (732781) HTTP: POST success![0m
+[0;32mI (732781) HTTP: Status: 200[0m
+[0;32mI (732781) HTTP: Content length: 7[0m
+[0;32mI (735241) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (737441) GateIoT: Temp=0.0 -- pH=0.3 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (740741) GateIoT: Temp=0.0 -- pH=1.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (742781) HTTP: Sending JSON: {"temp":0,"ph":1.1000000238418579,"tds":12.5,"ntu":0}[0m
+[0;32mI (742861) HTTP: POST success![0m
+[0;32mI (742861) HTTP: Status: 200[0m
+[0;32mI (742861) HTTP: Content length: 7[0m
+[0;32mI (742941) GateIoT: Temp=0.0 -- pH=0.9 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (746241) GateIoT: Temp=0.0 -- pH=0.6 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (749541) GateIoT: Temp=0.0 -- pH=1.7 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (750641) GateIoT: Temp=0.0 -- pH=2.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (752861) HTTP: Sending JSON: {"temp":0,"ph":2.4000000953674316,"tds":12.5,"ntu":0}[0m
+[0;32mI (752951) HTTP: POST success![0m
+[0;32mI (752951) HTTP: Status: 200[0m
+[0;32mI (752951) HTTP: Content length: 7[0m
+[0;32mI (753941) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (756181) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (759481) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (762781) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (762961) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (763041) HTTP: POST success![0m
+[0;32mI (763041) HTTP: Status: 200[0m
+[0;32mI (763041) HTTP: Content length: 7[0m
+[0;32mI (764981) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (768281) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (770481) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (773041) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (773131) HTTP: POST success![0m
+[0;32mI (773131) HTTP: Status: 200[0m
+[0;32mI (773131) HTTP: Content length: 7[0m
+[0;32mI (773781) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (775981) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (779281) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (781481) GateIoT: Temp=0.0 -- pH=0.6 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (783131) HTTP: Sending JSON: {"temp":0,"ph":0.600000023841858,"tds":12.5,"ntu":0}[0m
+[0;32mI (783211) HTTP: POST success![0m
+[0;32mI (783211) HTTP: Status: 200[0m
+[0;32mI (783211) HTTP: Content length: 7[0m
+[0;32mI (784781) GateIoT: Temp=0.0 -- pH=3.1 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (787011) GateIoT: Temp=0.0 -- pH=4.2 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (790311) GateIoT: Temp=0.0 -- pH=3.2 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (792511) GateIoT: Temp=0.0 -- pH=2.8 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (793211) HTTP: Sending JSON: {"temp":0,"ph":2.7999999523162842,"tds":12.5,"ntu":0}[0m
+[0;32mI (793291) HTTP: POST success![0m
+[0;32mI (793291) HTTP: Status: 200[0m
+[0;32mI (793291) HTTP: Content length: 7[0m
+[0;32mI (794711) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (798011) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (800261) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (803291) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (803361) HTTP: POST success![0m
+[0;32mI (803361) HTTP: Status: 200[0m
+[0;32mI (803361) HTTP: Content length: 7[0m
+[0;32mI (803561) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (806861) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (809061) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (812361) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (813371) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (814561) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (814571) HTTP: POST success![0m
+[0;32mI (814571) HTTP: Status: 200[0m
+[0;32mI (814571) HTTP: Content length: 7[0m
+[0;32mI (817861) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (820061) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (823361) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (824581) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (824661) HTTP: POST success![0m
+[0;32mI (824661) HTTP: Status: 200[0m
+[0;32mI (824661) HTTP: Content length: 7[0m
+[0;32mI (825561) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (828861) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (832161) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (834361) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (834671) HTTP: Sending JSON: {"temp":0,"ph":0.699999988079071,"tds":12,"ntu":0}[0m
+[0;32mI (834741) HTTP: POST success![0m
+[0;32mI (834741) HTTP: Status: 200[0m
+[0;32mI (834751) HTTP: Content length: 7[0m
+[0;32mI (837661) GateIoT: Temp=0.0 -- pH=0.9 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (839861) GateIoT: Temp=0.0 -- pH=1.1 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (843161) GateIoT: Temp=0.0 -- pH=0.1 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (844751) HTTP: Sending JSON: {"temp":0,"ph":0.10000000149011612,"tds":9,"ntu":0}[0m
+[0;32mI (844821) HTTP: POST success![0m
+[0;32mI (844821) HTTP: Status: 200[0m
+[0;32mI (844821) HTTP: Content length: 7[0m
+[0;32mI (845361) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (848661) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (850861) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (854161) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (854821) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (854891) HTTP: POST success![0m
+[0;32mI (854891) HTTP: Status: 200[0m
+[0;32mI (854891) HTTP: Content length: 7[0m
+[0;32mI (857461) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (859661) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (862961) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (864891) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (864961) HTTP: POST success![0m
+[0;32mI (864971) HTTP: Status: 200[0m
+[0;32mI (864971) HTTP: Content length: 7[0m
+[0;32mI (865161) GateIoT: Temp=0.0 -- pH=1.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (868461) GateIoT: Temp=0.0 -- pH=2.8 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (870661) GateIoT: Temp=0.0 -- pH=4.5 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (873961) GateIoT: Temp=0.0 -- pH=4.3 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (874971) HTTP: Sending JSON: {"temp":0,"ph":4.3000001907348633,"tds":14.5,"ntu":0}[0m
+[0;32mI (875041) HTTP: POST success![0m
+[0;32mI (875041) HTTP: Status: 200[0m
+[0;32mI (875041) HTTP: Content length: 7[0m
+[0;32mI (876161) GateIoT: Temp=0.0 -- pH=4.2 -- TDS=16.0 -- NTU=0.0[0m
+[0;32mI (879461) GateIoT: Temp=0.0 -- pH=3.7 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (882761) GateIoT: Temp=0.0 -- pH=4.5 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (884961) GateIoT: Temp=0.0 -- pH=4.3 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (885051) HTTP: Sending JSON: {"temp":0,"ph":4.3000001907348633,"tds":14,"ntu":0}[0m
+[0;32mI (885131) HTTP: POST success![0m
+[0;32mI (885131) HTTP: Status: 200[0m
+[0;32mI (885131) HTTP: Content length: 7[0m
+[0;32mI (888261) GateIoT: Temp=0.0 -- pH=4.5 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (890461) GateIoT: Temp=0.0 -- pH=3.9 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (893761) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (895131) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":11.5,"ntu":0}[0m
+[0;32mI (895201) HTTP: POST success![0m
+[0;32mI (895201) HTTP: Status: 200[0m
+[0;32mI (895201) HTTP: Content length: 7[0m
+[0;32mI (895961) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (899261) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (901461) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (904761) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (905211) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (905291) HTTP: POST success![0m
+[0;32mI (905291) HTTP: Status: 200[0m
+[0;32mI (905291) HTTP: Content length: 7[0m
+[0;32mI (907021) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (910321) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (913621) GateIoT: Temp=0.0 -- pH=0.5 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (915291) HTTP: Sending JSON: {"temp":0,"ph":0.5,"tds":13,"ntu":0}[0m
+[0;32mI (915351) HTTP: POST success![0m
+[0;32mI (915361) HTTP: Status: 200[0m
+[0;32mI (915361) HTTP: Content length: 7[0m
+[0;32mI (915821) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (918021) GateIoT: Temp=0.0 -- pH=2.2 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (920271) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (923571) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=15.5 -- NTU=0.0[0m
+[0;32mI (925361) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":15.5,"ntu":0}[0m
+[0;32mI (925451) HTTP: POST success![0m
+[0;32mI (925451) HTTP: Status: 200[0m
+[0;32mI (925451) HTTP: Content length: 7[0m
+[0;32mI (926871) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (929071) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (932371) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (934571) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (935461) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (935531) HTTP: POST success![0m
+[0;32mI (935531) HTTP: Status: 200[0m
+[0;32mI (935531) HTTP: Content length: 7[0m
+[0;32mI (937871) GateIoT: Temp=0.0 -- pH=1.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (940071) GateIoT: Temp=0.0 -- pH=2.1 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (942271) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (945531) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (945571) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (945601) HTTP: POST success![0m
+[0;32mI (945601) HTTP: Status: 200[0m
+[0;32mI (945601) HTTP: Content length: 7[0m
+[0;32mI (947771) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (951071) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (953271) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (955601) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (955671) HTTP: POST success![0m
+[0;32mI (955681) HTTP: Status: 200[0m
+[0;32mI (955681) HTTP: Content length: 7[0m
+[0;32mI (956571) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (958811) GateIoT: Temp=0.0 -- pH=0.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (962111) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (965411) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (965681) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (965751) HTTP: POST success![0m
+[0;32mI (965751) HTTP: Status: 200[0m
+[0;32mI (965751) HTTP: Content length: 7[0m
+[0;32mI (967611) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (970911) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (973111) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (975761) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (975841) HTTP: POST success![0m
+[0;32mI (975851) HTTP: Status: 200[0m
+[0;32mI (975851) HTTP: Content length: 7[0m
+[0;32mI (976411) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (978611) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (981911) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (984111) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (985851) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (985921) HTTP: POST success![0m
+[0;32mI (985921) HTTP: Status: 200[0m
+[0;32mI (985921) HTTP: Content length: 7[0m
+[0;32mI (987411) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (990711) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (992911) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (995921) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (996041) HTTP: POST success![0m
+[0;32mI (996041) HTTP: Status: 200[0m
+[0;32mI (996041) HTTP: Content length: 7[0m
+[0;32mI (996211) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (998411) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1001711) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1003911) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1006051) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1006111) HTTP: POST success![0m
+[0;32mI (1006111) HTTP: Status: 200[0m
+[0;32mI (1006121) HTTP: Content length: 7[0m
+[0;32mI (1007211) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1009411) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1012711) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1016011) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1016121) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1016221) HTTP: POST success![0m
+[0;32mI (1016221) HTTP: Status: 200[0m
+[0;32mI (1016221) HTTP: Content length: 7[0m
+[0;32mI (1018211) GateIoT: Temp=0.0 -- pH=0.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1021511) GateIoT: Temp=0.0 -- pH=0.9 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1023711) GateIoT: Temp=0.0 -- pH=1.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1026221) HTTP: Sending JSON: {"temp":0,"ph":1.2999999523162842,"tds":12.5,"ntu":0}[0m
+[0;32mI (1026291) HTTP: POST success![0m
+[0;32mI (1026291) HTTP: Status: 200[0m
+[0;32mI (1026291) HTTP: Content length: 7[0m
+[0;32mI (1027011) GateIoT: Temp=0.0 -- pH=1.7 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1029211) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1032511) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1034711) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1036291) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1036371) HTTP: POST success![0m
+[0;32mI (1036371) HTTP: Status: 200[0m
+[0;32mI (1036371) HTTP: Content length: 7[0m
+[0;32mI (1038011) GateIoT: Temp=0.0 -- pH=1.1 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1040241) GateIoT: Temp=0.0 -- pH=1.8 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1043541) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1046381) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1046451) HTTP: POST success![0m
+[0;32mI (1046451) HTTP: Status: 200[0m
+[0;32mI (1046451) HTTP: Content length: 7[0m
+[0;32mI (1046841) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1049041) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1052341) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1054541) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1056451) HTTP: Sending JSON: {"temp":0,"ph":0.699999988079071,"tds":13,"ntu":0}[0m
+[0;32mI (1056521) HTTP: POST success![0m
+[0;32mI (1056521) HTTP: Status: 200[0m
+[0;32mI (1056521) HTTP: Content length: 7[0m
+[0;32mI (1057841) GateIoT: Temp=0.0 -- pH=0.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1060041) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1063341) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1065541) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1066521) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1066591) HTTP: POST success![0m
+[0;32mI (1066591) HTTP: Status: 200[0m
+[0;32mI (1066591) HTTP: Content length: 7[0m
+[0;32mI (1068841) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1072141) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1074341) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1076601) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":11.5,"ntu":0}[0m
+[0;32mI (1076691) HTTP: POST success![0m
+[0;32mI (1076691) HTTP: Status: 200[0m
+[0;32mI (1076691) HTTP: Content length: 7[0m
+[0;32mI (1077641) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1079841) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1083141) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (1085341) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1086691) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1086771) HTTP: POST success![0m
+[0;32mI (1086771) HTTP: Status: 200[0m
+[0;32mI (1086771) HTTP: Content length: 7[0m
+[0;32mI (1088641) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1090841) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1094141) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1096781) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1096851) HTTP: POST success![0m
+[0;32mI (1096851) HTTP: Status: 200[0m
+[0;32mI (1096851) HTTP: Content length: 7[0m
+[0;32mI (1097441) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1099641) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1102941) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1105141) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=16.0 -- NTU=0.0[0m
+[0;32mI (1106861) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":16,"ntu":0}[0m
+[0;32mI (1106981) HTTP: POST success![0m
+[0;32mI (1106981) HTTP: Status: 200[0m
+[0;32mI (1106981) HTTP: Content length: 7[0m
+[0;32mI (1108441) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1110641) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=16.0 -- NTU=0.0[0m
+[0;32mI (1113941) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1116141) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1116981) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1117091) HTTP: POST success![0m
+[0;32mI (1117091) HTTP: Status: 200[0m
+[0;32mI (1117091) HTTP: Content length: 7[0m
+[0;32mI (1119441) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1122741) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1124941) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1127091) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1127171) HTTP: POST success![0m
+[0;32mI (1127171) HTTP: Status: 200[0m
+[0;32mI (1127171) HTTP: Content length: 7[0m
+[0;32mI (1128241) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1130441) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1133741) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1135941) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1137181) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1137251) HTTP: POST success![0m
+[0;32mI (1137251) HTTP: Status: 200[0m
+[0;32mI (1137251) HTTP: Content length: 7[0m
+[0;32mI (1139241) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (1141441) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1144741) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1147261) HTTP: Sending JSON: {"temp":0,"ph":1.2000000476837158,"tds":12,"ntu":0}[0m
+[0;32mI (1147351) HTTP: POST success![0m
+[0;32mI (1147351) HTTP: Status: 200[0m
+[0;32mI (1147351) HTTP: Content length: 7[0m
+[0;32mI (1148041) GateIoT: Temp=0.0 -- pH=1.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1150241) GateIoT: Temp=0.0 -- pH=2.6 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1153541) GateIoT: Temp=0.0 -- pH=4.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1155741) GateIoT: Temp=0.0 -- pH=4.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1157361) HTTP: Sending JSON: {"temp":0,"ph":4.3000001907348633,"tds":12.5,"ntu":0}[0m
+[0;32mI (1157431) HTTP: POST success![0m
+[0;32mI (1157431) HTTP: Status: 200[0m
+[0;32mI (1157441) HTTP: Content length: 7[0m
+[0;32mI (1159041) GateIoT: Temp=0.0 -- pH=4.5 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1161241) GateIoT: Temp=0.0 -- pH=4.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1164541) GateIoT: Temp=0.0 -- pH=3.9 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1166741) GateIoT: Temp=0.0 -- pH=4.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1167441) HTTP: Sending JSON: {"temp":0,"ph":4.3000001907348633,"tds":12.5,"ntu":0}[0m
+[0;32mI (1167511) HTTP: POST success![0m
+[0;32mI (1167511) HTTP: Status: 200[0m
+[0;32mI (1167511) HTTP: Content length: 7[0m
+[0;32mI (1170041) GateIoT: Temp=0.0 -- pH=3.6 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1173341) GateIoT: Temp=0.0 -- pH=3.1 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1175541) GateIoT: Temp=0.0 -- pH=3.5 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1177521) HTTP: Sending JSON: {"temp":0,"ph":3.5,"tds":12.5,"ntu":0}[0m
+[0;32mI (1177621) HTTP: POST success![0m
+[0;32mI (1177621) HTTP: Status: 200[0m
+[0;32mI (1177621) HTTP: Content length: 7[0m
+[0;32mI (1178841) GateIoT: Temp=0.0 -- pH=4.3 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (1181041) GateIoT: Temp=0.0 -- pH=4.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1184341) GateIoT: Temp=0.0 -- pH=4.5 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1186541) GateIoT: Temp=0.0 -- pH=3.2 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1187631) HTTP: Sending JSON: {"temp":0,"ph":3.2000000476837158,"tds":12,"ntu":0}[0m
+[0;32mI (1187721) HTTP: POST success![0m
+[0;32mI (1187721) HTTP: Status: 200[0m
+[0;32mI (1187721) HTTP: Content length: 7[0m
+[0;32mI (1188741) GateIoT: Temp=0.0 -- pH=3.6 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1192041) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1194241) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1197541) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1197721) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1197791) HTTP: POST success![0m
+[0;32mI (1197791) HTTP: Status: 200[0m
+[0;32mI (1197791) HTTP: Content length: 7[0m
+[0;32mI (1199741) GateIoT: Temp=0.0 -- pH=2.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1203041) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1205271) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1207791) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1207871) HTTP: POST success![0m
+[0;32mI (1207871) HTTP: Status: 200[0m
+[0;32mI (1207871) HTTP: Content length: 7[0m
+[0;32mI (1208571) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1211871) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1214071) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1217371) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1217871) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":11.5,"ntu":0}[0m
+[0;32mI (1217941) HTTP: POST success![0m
+[0;32mI (1217941) HTTP: Status: 200[0m
+[0;32mI (1217941) HTTP: Content length: 7[0m
+[0;32mI (1219571) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1222871) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1225071) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1227951) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1228051) HTTP: POST success![0m
+[0;32mI (1228051) HTTP: Status: 200[0m
+[0;32mI (1228051) HTTP: Content length: 7[0m
+[0;32mI (1228371) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1230571) GateIoT: Temp=0.0 -- pH=4.1 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1233871) GateIoT: Temp=0.0 -- pH=2.8 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1237171) GateIoT: Temp=0.0 -- pH=1.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1238061) HTTP: Sending JSON: {"temp":0,"ph":1,"tds":12.5,"ntu":0}[0m
+[0;32mI (1238131) HTTP: POST success![0m
+[0;32mI (1238131) HTTP: Status: 200[0m
+[0;32mI (1238131) HTTP: Content length: 7[0m
+[0;32mI (1239371) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1242671) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1244871) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1248131) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1248171) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1248221) HTTP: POST success![0m
+[0;32mI (1248221) HTTP: Status: 200[0m
+[0;32mI (1248221) HTTP: Content length: 7[0m
+[0;32mI (1250371) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1253671) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1255871) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1258221) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1258301) HTTP: POST success![0m
+[0;32mI (1258301) HTTP: Status: 200[0m
+[0;32mI (1258301) HTTP: Content length: 7[0m
+[0;32mI (1259171) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1262471) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1264671) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1267971) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1268301) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1269611) HTTP: POST success![0m
+[0;32mI (1269611) HTTP: Status: 200[0m
+[0;32mI (1269611) HTTP: Content length: 7[0m
+[0;32mI (1270171) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1273471) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=7.5 -- NTU=0.0[0m
+[0;32mI (1275671) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1278971) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1279621) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1279701) HTTP: POST success![0m
+[0;32mI (1279701) HTTP: Status: 200[0m
+[0;32mI (1279701) HTTP: Content length: 7[0m
+[0;32mI (1281171) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1284471) GateIoT: Temp=0.0 -- pH=2.5 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1287771) GateIoT: Temp=0.0 -- pH=3.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1289701) HTTP: Sending JSON: {"temp":0,"ph":3,"tds":12,"ntu":0}[0m
+[0;32mI (1289761) HTTP: POST success![0m
+[0;32mI (1289771) HTTP: Status: 200[0m
+[0;32mI (1289771) HTTP: Content length: 7[0m
+[0;32mI (1289971) GateIoT: Temp=0.0 -- pH=4.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1293271) GateIoT: Temp=0.0 -- pH=4.5 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1295471) GateIoT: Temp=0.0 -- pH=4.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1298771) GateIoT: Temp=0.0 -- pH=3.8 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1299771) HTTP: Sending JSON: {"temp":0,"ph":3.7999999523162842,"tds":12.5,"ntu":0}[0m
+[0;32mI (1299851) HTTP: POST success![0m
+[0;32mI (1299851) HTTP: Status: 200[0m
+[0;32mI (1299851) HTTP: Content length: 7[0m
+[0;32mI (1300971) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1304271) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1306471) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (1309771) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1309861) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1309941) HTTP: POST success![0m
+[0;32mI (1309941) HTTP: Status: 200[0m
+[0;32mI (1309941) HTTP: Content length: 7[0m
+[0;32mI (1312021) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1315321) GateIoT: Temp=0.0 -- pH=0.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1318621) GateIoT: Temp=0.0 -- pH=0.9 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1319941) HTTP: Sending JSON: {"temp":0,"ph":0.899999976158142,"tds":13,"ntu":0}[0m
+[0;32mI (1320021) HTTP: POST success![0m
+[0;32mI (1320021) HTTP: Status: 200[0m
+[0;32mI (1320021) HTTP: Content length: 7[0m
+[0;32mI (1320821) GateIoT: Temp=0.0 -- pH=1.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1323021) GateIoT: Temp=0.0 -- pH=2.8 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1325261) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1328561) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1330021) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1330111) HTTP: POST success![0m
+[0;32mI (1330111) HTTP: Status: 200[0m
+[0;32mI (1330111) HTTP: Content length: 7[0m
+[0;32mI (1331861) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1334061) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1337361) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1338501) GateIoT: Temp=0.0 -- pH=2.1 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1340111) HTTP: Sending JSON: {"temp":0,"ph":2.0999999046325684,"tds":13,"ntu":0}[0m
+[0;32mI (1340191) HTTP: POST success![0m
+[0;32mI (1340191) HTTP: Status: 200[0m
+[0;32mI (1340191) HTTP: Content length: 7[0m
+[0;32mI (1341801) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1345101) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1347301) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1350201) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1350281) HTTP: POST success![0m
+[0;32mI (1350281) HTTP: Status: 200[0m
+[0;32mI (1350281) HTTP: Content length: 7[0m
+[0;32mI (1350601) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1352801) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1356101) GateIoT: Temp=0.0 -- pH=0.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1358301) GateIoT: Temp=0.0 -- pH=1.8 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1360281) HTTP: Sending JSON: {"temp":0,"ph":1.7999999523162842,"tds":11.5,"ntu":0}[0m
+[0;32mI (1360361) HTTP: POST success![0m
+[0;32mI (1360361) HTTP: Status: 200[0m
+[0;32mI (1360361) HTTP: Content length: 7[0m
+[0;32mI (1360501) GateIoT: Temp=0.0 -- pH=1.7 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1363801) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1366001) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1369301) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1370361) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1370431) HTTP: POST success![0m
+[0;32mI (1370431) HTTP: Status: 200[0m
+[0;32mI (1370431) HTTP: Content length: 7[0m
+[0;32mI (1371501) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1374801) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1377031) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1380331) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1380431) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1380511) HTTP: POST success![0m
+[0;32mI (1380511) HTTP: Status: 200[0m
+[0;32mI (1380511) HTTP: Content length: 7[0m
+[0;32mI (1383631) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1385831) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1389131) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1390511) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (1390581) HTTP: POST success![0m
+[0;32mI (1390581) HTTP: Status: 200[0m
+[0;32mI (1390581) HTTP: Content length: 7[0m
+[0;32mI (1391331) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1394631) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1396831) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1399031) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1400581) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1400641) HTTP: POST success![0m
+[0;32mI (1400641) HTTP: Status: 200[0m
+[0;32mI (1400641) HTTP: Content length: 7[0m
+[0;32mI (1402331) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1404531) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=17.0 -- NTU=0.0[0m
+[0;32mI (1407831) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1410031) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1410651) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":14,"ntu":0}[0m
+[0;32mI (1410721) HTTP: POST success![0m
+[0;32mI (1410721) HTTP: Status: 200[0m
+[0;32mI (1410721) HTTP: Content length: 7[0m
+[0;32mI (1413331) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1415531) GateIoT: Temp=0.0 -- pH=1.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1418831) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1420721) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1420791) HTTP: POST success![0m
+[0;32mI (1420791) HTTP: Status: 200[0m
+[0;32mI (1420791) HTTP: Content length: 7[0m
+[0;32mI (1422131) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1424331) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1427631) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1429831) GateIoT: Temp=0.0 -- pH=0.2 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1430801) HTTP: Sending JSON: {"temp":0,"ph":0.20000000298023224,"tds":12,"ntu":0}[0m
+[0;32mI (1430871) HTTP: POST success![0m
+[0;32mI (1430871) HTTP: Status: 200[0m
+[0;32mI (1430871) HTTP: Content length: 7[0m
+[0;32mI (1433131) GateIoT: Temp=0.0 -- pH=0.2 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1435331) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1438631) GateIoT: Temp=0.0 -- pH=0.8 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1440831) GateIoT: Temp=0.0 -- pH=1.9 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1440871) HTTP: Sending JSON: {"temp":0,"ph":1.8999999761581421,"tds":12,"ntu":0}[0m
+[0;32mI (1440971) HTTP: POST success![0m
+[0;32mI (1440971) HTTP: Status: 200[0m
+[0;32mI (1440971) HTTP: Content length: 7[0m
+[0;32mI (1444131) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1446341) GateIoT: Temp=0.0 -- pH=2.2 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1449641) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1450971) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1451041) HTTP: POST success![0m
+[0;32mI (1451041) HTTP: Status: 200[0m
+[0;32mI (1451041) HTTP: Content length: 7[0m
+[0;32mI (1452941) GateIoT: Temp=0.0 -- pH=0.7 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1455141) GateIoT: Temp=0.0 -- pH=1.1 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1458441) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1460641) GateIoT: Temp=0.0 -- pH=0.3 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1461041) HTTP: Sending JSON: {"temp":0,"ph":0.300000011920929,"tds":14,"ntu":0}[0m
+[0;32mI (1463941) GateIoT: Temp=0.0 -- pH=1.7 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1466141) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1469441) GateIoT: Temp=0.0 -- pH=1.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1471131) HTTP: Sending JSON: {"temp":0,"ph":1,"tds":12,"ntu":0}[0m
+[0;32mI (1471201) HTTP: POST success![0m
+[0;32mI (1471201) HTTP: Status: 200[0m
+[0;32mI (1471201) HTTP: Content length: 7[0m
+[0;32mI (1471641) GateIoT: Temp=0.0 -- pH=3.1 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1474941) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1477141) GateIoT: Temp=0.0 -- pH=1.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1480441) GateIoT: Temp=0.0 -- pH=0.2 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1481211) HTTP: Sending JSON: {"temp":0,"ph":0.20000000298023224,"tds":13,"ntu":0}[0m
+[0;32mI (1481291) HTTP: POST success![0m
+[0;32mI (1481291) HTTP: Status: 200[0m
+[0;32mI (1481291) HTTP: Content length: 7[0m
+[0;32mI (1482671) GateIoT: Temp=0.0 -- pH=1.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1485971) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1489271) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1491291) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1494771) GateIoT: Temp=0.0 -- pH=1.6 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1496971) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (1500271) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1501361) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1501441) HTTP: POST success![0m
+[0;32mI (1501441) HTTP: Status: 200[0m
+[0;32mI (1501441) HTTP: Content length: 7[0m
+[0;32mI (1502471) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1505771) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1507971) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1511271) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1511451) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1511511) HTTP: POST success![0m
+[0;32mI (1511511) HTTP: Status: 200[0m
+[0;32mI (1511511) HTTP: Content length: 7[0m
+[0;32mI (1513541) GateIoT: Temp=0.0 -- pH=0.9 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1516841) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1520141) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1521521) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1521601) HTTP: POST success![0m
+[0;32mI (1521601) HTTP: Status: 200[0m
+[0;32mI (1521601) HTTP: Content length: 7[0m
+[0;32mI (1522341) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1525641) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1527841) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1531141) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1531611) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1533341) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1536641) GateIoT: Temp=0.0 -- pH=0.9 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1538841) GateIoT: Temp=0.0 -- pH=2.7 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1541041) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1541721) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1541791) HTTP: POST success![0m
+[0;32mI (1541791) HTTP: Status: 200[0m
+[0;32mI (1541791) HTTP: Content length: 7[0m
+[0;32mI (1544341) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1546541) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1548741) GateIoT: Temp=0.0 -- pH=3.2 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1551791) HTTP: Sending JSON: {"temp":0,"ph":3.2000000476837158,"tds":13,"ntu":0}[0m
+[0;32mI (1554241) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1557541) GateIoT: Temp=0.0 -- pH=1.3 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1559741) GateIoT: Temp=0.0 -- pH=4.5 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1561871) HTTP: Sending JSON: {"temp":0,"ph":4.5,"tds":12,"ntu":0}[0m
+[0;32mI (1563041) GateIoT: Temp=0.0 -- pH=2.3 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1565291) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1568591) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=15.5 -- NTU=0.0[0m
+[0;32mI (1571891) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1571951) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1574091) GateIoT: Temp=0.0 -- pH=0.6 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1576291) GateIoT: Temp=0.0 -- pH=2.9 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1578521) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1581821) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1582021) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1585121) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1587321) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1590621) GateIoT: Temp=0.0 -- pH=1.8 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1592161) HTTP: Sending JSON: {"temp":0,"ph":1.7999999523162842,"tds":12,"ntu":0}[0m
+[0;32mI (1592821) GateIoT: Temp=0.0 -- pH=4.3 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1596121) GateIoT: Temp=0.0 -- pH=4.2 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1598321) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1601621) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1602231) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1602301) HTTP: POST success![0m
+[0;32mI (1602311) HTTP: Status: 200[0m
+[0;32mI (1602311) HTTP: Content length: 7[0m
+[0;32mI (1603821) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=19.5 -- NTU=0.0[0m
+[0;32mI (1607121) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1609381) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1612311) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (1612391) HTTP: POST success![0m
+[0;32mI (1612391) HTTP: Status: 200[0m
+[0;32mI (1612391) HTTP: Content length: 7[0m
+[0;32mI (1612681) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1615981) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1618181) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1621481) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1622391) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (1623681) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1626981) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1629181) GateIoT: Temp=0.0 -- pH=3.2 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1632461) HTTP: Sending JSON: {"temp":0,"ph":3.2000000476837158,"tds":11.5,"ntu":0}[0m
+[0;32mI (1632481) GateIoT: Temp=0.0 -- pH=4.5 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1632541) HTTP: POST success![0m
+[0;32mI (1632551) HTTP: Status: 200[0m
+[0;32mI (1632551) HTTP: Content length: 7[0m
+[0;32mI (1634681) GateIoT: Temp=0.0 -- pH=1.2 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1637981) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1641281) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1642551) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1643481) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1646781) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1648981) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1652281) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1652641) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":14,"ntu":0}[0m
+[0;32mI (1654481) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1657781) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1659981) GateIoT: Temp=0.0 -- pH=1.3 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1662181) GateIoT: Temp=0.0 -- pH=2.4 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (1662721) HTTP: Sending JSON: {"temp":0,"ph":2.4000000953674316,"tds":15,"ntu":0}[0m
+[0;32mI (1665481) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1667681) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1670981) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1672811) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":14,"ntu":0}[0m
+[0;32mI (1672881) HTTP: POST success![0m
+[0;32mI (1672881) HTTP: Status: 200[0m
+[0;32mI (1672881) HTTP: Content length: 7[0m
+[0;32mI (1673211) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1676511) GateIoT: Temp=0.0 -- pH=0.2 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1678791) GateIoT: Temp=0.0 -- pH=3.5 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1682091) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1682891) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12.5,"ntu":0}[0m
+[0;32mI (1682991) HTTP: POST success![0m
+[0;32mI (1682991) HTTP: Status: 200[0m
+[0;32mI (1682991) HTTP: Content length: 7[0m
+[0;32mI (1685391) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1687591) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1690891) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1692991) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":10.5,"ntu":0}[0m
+[0;32mI (1693061) HTTP: POST success![0m
+[0;32mI (1693061) HTTP: Status: 200[0m
+[0;32mI (1693061) HTTP: Content length: 7[0m
+[0;32mI (1693091) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1696391) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1698591) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1701891) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1703071) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":12,"ntu":0}[0m
+[0;32mI (1703151) HTTP: POST success![0m
+[0;32mI (1703151) HTTP: Status: 200[0m
+[0;32mI (1703151) HTTP: Content length: 7[0m
+[0;32mI (1704091) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1707391) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1710691) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1712891) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1713151) HTTP: Sending JSON: {"temp":0,"ph":0,"tds":13,"ntu":0}[0m
+[0;32mI (1713221) HTTP: POST success![0m
+[0;32mI (1713221) HTTP: Status: 200[0m
+[0;32mI (1713221) HTTP: Content length: 7[0m

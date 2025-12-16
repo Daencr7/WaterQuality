@@ -1,0 +1,519 @@
+Command: /home/edna/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/edna/Souce/ESP_src/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/edna/Souce/ESP_src/esp_ie/build/esp_ie.elf /home/edna/Souce/ESP_src/esp_ie/build/bootloader/bootloader.elf -m '/home/edna/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/edna/Souce/ESP_src/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2873-g51d5e8fd08-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 11 2025 17:17:21[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21784h (137092) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=000317ac vaddr=3ffb0000 size=0454ch ( 17740) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=00035d00 vaddr=40080000 size=0a318h ( 41752) load[0m
+[0;32mI (163) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=ae284h (713348) map[0m
+[0;32mI (418) esp_image: segment 4: paddr=000ee2ac vaddr=4008a318 size=0c5f4h ( 50676) load[0m
+[0;32mI (439) esp_image: segment 5: paddr=000fa8a8 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (450) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (450) boot: Disabling RNG early entropy source...[0m
+[0;32mI (461) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     esp_ie[0m
+[0;32mI (479) app_init: App version:      d037f65-dirty[0m
+[0;32mI (483) app_init: Compile time:     Nov 11 2025 17:16:39[0m
+[0;32mI (488) app_init: ELF file SHA256:  f19bfb26d...[0m
+[0;32mI (493) app_init: ESP-IDF:          v6.0-dev-2873-g51d5e8fd08-dirty[0m
+[0;32mI (499) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (506) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (510) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (517) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (522) heap_init: At 3FFB8F10 len 000270F0 (156 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (532) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 4009690C len 000096F4 (37 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;32mI (551) main_task: Started on CPU0[0m
+[0;32mI (561) main_task: Calling app_main()[0m
+[0;32mI (601) wifi:wifi driver task: 3ffc0ec0, prio:23, stack:6656, core=0[0m
+[0;32mI (611) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (611) wifi:wifi certification version: v7.0[0m
+[0;32mI (611) wifi:config NVS flash: enabled[0m
+[0;32mI (611) wifi:config nano formatting: disabled[0m
+[0;32mI (621) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (631) wifi:Init management short buffer num: 32[0m
+[0;32mI (631) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (641) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (641) wifi:Init static rx buffer num: 10[0m
+[0;32mI (641) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi_init: rx ba win: 6[0m
+[0;32mI (651) wifi_init: accept mbox: 6[0m
+[0;32mI (651) wifi_init: tcpip mbox: 32[0m
+[0;32mI (661) wifi_init: udp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp tx win: 5760[0m
+[0;32mI (661) wifi_init: tcp rx win: 5760[0m
+[0;32mI (671) wifi_init: tcp mss: 1440[0m
+[0;32mI (671) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (671) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (681) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (771) wifi:mode : sta (08:d1:f9:26:7e:34)[0m
+[0;32mI (771) wifi:enable tsf[0m
+[0;32mI (771) WiFi: Wi-Fi initialization done[0m
+[0;32mI (771) WiFi: Wi-Fi started, connecting to GA...[0m
+[0;33mW (781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=0.0, ntu=0.0)[0m
+[0;33mW (781) MAIL: Wi-Fi not connected, skip email[0m
+[0;32mI (781) SSD1306: New i2c driver is used[0m
+[0;33mW (791) HTTP: Wi-Fi not connected[0m
+[0;32mI (791) SSD1306: OLED configured successfully[0m
+[0;32mI (791) Wifi: Wifi is connecting!...[0m
+[0;32mI (1801) Wifi: Wifi is connecting!...[0m
+[0;32mI (1981) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=16.0 -- NTU=0.0[0m
+[0;33mW (2781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=16.0, ntu=0.0)[0m
+[0;32mI (2801) Wifi: Wifi is connecting!...[0m
+[0;33mW (3191) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (3801) Wifi: Wifi is connecting!...[0m
+[0;32mI (4181) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (4781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (4801) Wifi: Wifi is connecting!...[0m
+[0;33mW (5611) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (5801) Wifi: Wifi is connecting!...[0m
+[0;33mW (6781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (6801) Wifi: Wifi is connecting!...[0m
+[0;32mI (7481) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (7801) Wifi: Wifi is connecting!...[0m
+[0;33mW (8031) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (8781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (8801) Wifi: Wifi is connecting!...[0m
+[0;32mI (9681) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (9801) Wifi: Wifi is connecting!...[0m
+[0;33mW (10451) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (10781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;33mW (10791) HTTP: Wi-Fi not connected[0m
+[0;32mI (10801) Wifi: Wifi is connecting!...[0m
+[0;32mI (11801) Wifi: Wifi is connecting!...[0m
+[0;33mW (12781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (12801) Wifi: Wifi is connecting!...[0m
+[0;33mW (12871) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (12981) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (13801) Wifi: Wifi is connecting!...[0m
+[0;33mW (14781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (14801) Wifi: Wifi is connecting!...[0m
+[0;32mI (15181) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (15291) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (15801) Wifi: Wifi is connecting!...[0m
+[0;33mW (16781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (16801) Wifi: Wifi is connecting!...[0m
+[0;33mW (17711) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (17801) Wifi: Wifi is connecting!...[0m
+[0;32mI (18481) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (18781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (18801) Wifi: Wifi is connecting!...[0m
+[0;32mI (19801) Wifi: Wifi is connecting!...[0m
+[0;33mW (20131) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (20681) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=8.5 -- NTU=0.0[0m
+[0;33mW (20781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=8.5, ntu=0.0)[0m
+[0;33mW (20791) HTTP: Wi-Fi not connected[0m
+[0;32mI (20801) Wifi: Wifi is connecting!...[0m
+[0;32mI (21801) Wifi: Wifi is connecting!...[0m
+[0;33mW (22551) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (22781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=8.5, ntu=0.0)[0m
+[0;32mI (22801) Wifi: Wifi is connecting!...[0m
+[0;32mI (23801) Wifi: Wifi is connecting!...[0m
+[0;32mI (23981) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (24781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (24801) Wifi: Wifi is connecting!...[0m
+[0;33mW (24971) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (25801) Wifi: Wifi is connecting!...[0m
+[0;33mW (26781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (26801) Wifi: Wifi is connecting!...[0m
+[0;32mI (27281) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (27391) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (27801) Wifi: Wifi is connecting!...[0m
+[0;33mW (28781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (28801) Wifi: Wifi is connecting!...[0m
+[0;32mI (29481) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (29801) Wifi: Wifi is connecting!...[0m
+[0;33mW (29811) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (30781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;33mW (30791) HTTP: Wi-Fi not connected[0m
+[0;32mI (30801) Wifi: Wifi is connecting!...[0m
+[0;32mI (31801) Wifi: Wifi is connecting!...[0m
+[0;33mW (32231) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (32781) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (32781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (32801) Wifi: Wifi is connecting!...[0m
+[0;32mI (33801) Wifi: Wifi is connecting!...[0m
+[0;33mW (34651) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (34781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (34801) Wifi: Wifi is connecting!...[0m
+[0;32mI (34981) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (35801) Wifi: Wifi is connecting!...[0m
+[0;33mW (36781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (36801) Wifi: Wifi is connecting!...[0m
+[0;33mW (37071) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (37801) Wifi: Wifi is connecting!...[0m
+[0;32mI (38281) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=0.0 -- NTU=0.0[0m
+[0;33mW (38781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=0.0, ntu=0.0)[0m
+[0;32mI (38801) Wifi: Wifi is connecting!...[0m
+[0;33mW (39491) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (39801) Wifi: Wifi is connecting!...[0m
+[0;32mI (40481) GateIoT: Temp=0.0 -- pH=0.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (40781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.4, tds=12.0, ntu=0.0)[0m
+[0;33mW (40791) HTTP: Wi-Fi not connected[0m
+[0;32mI (40801) Wifi: Wifi is connecting!...[0m
+[0;32mI (41801) Wifi: Wifi is connecting!...[0m
+[0;33mW (41911) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (42781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.4, tds=12.0, ntu=0.0)[0m
+[0;32mI (42801) Wifi: Wifi is connecting!...[0m
+[0;32mI (43781) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (43801) Wifi: Wifi is connecting!...[0m
+[0;33mW (44331) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (44781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (44801) Wifi: Wifi is connecting!...[0m
+[0;32mI (45801) Wifi: Wifi is connecting!...[0m
+[0;32mI (45991) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (46751) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (46781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (46801) Wifi: Wifi is connecting!...[0m
+[0;32mI (47801) Wifi: Wifi is connecting!...[0m
+[0;33mW (48781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (48801) Wifi: Wifi is connecting!...[0m
+[0;33mW (49171) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (49291) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (49801) Wifi: Wifi is connecting!...[0m
+[0;33mW (50781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;33mW (50791) HTTP: Wi-Fi not connected[0m
+[0;32mI (50801) Wifi: Wifi is connecting!...[0m
+[0;33mW (51591) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (51801) Wifi: Wifi is connecting!...[0m
+[0;32mI (52591) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (52781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (52801) Wifi: Wifi is connecting!...[0m
+[0;32mI (53801) Wifi: Wifi is connecting!...[0m
+[0;33mW (54001) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (54781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (54791) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (54801) Wifi: Wifi is connecting!...[0m
+[0;32mI (55801) Wifi: Wifi is connecting!...[0m
+[0;33mW (56421) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (56781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (56801) Wifi: Wifi is connecting!...[0m
+[0;32mI (57801) Wifi: Wifi is connecting!...[0m
+[0;32mI (58091) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (58781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (58801) Wifi: Wifi is connecting!...[0m
+[0;33mW (58841) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (59801) Wifi: Wifi is connecting!...[0m
+[0;32mI (60291) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (60781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=9.5, ntu=0.0)[0m
+[0;33mW (60791) HTTP: Wi-Fi not connected[0m
+[0;32mI (60801) Wifi: Wifi is connecting!...[0m
+[0;33mW (61261) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (61801) Wifi: Wifi is connecting!...[0m
+[0;33mW (62781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=9.5, ntu=0.0)[0m
+[0;32mI (62801) Wifi: Wifi is connecting!...[0m
+[0;32mI (63591) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (63681) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (63801) Wifi: Wifi is connecting!...[0m
+[0;33mW (64781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (64801) Wifi: Wifi is connecting!...[0m
+[0;32mI (65791) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (65801) Wifi: Wifi is connecting!...[0m
+[0;33mW (66101) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (66781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (66801) Wifi: Wifi is connecting!...[0m
+[0;32mI (67801) Wifi: Wifi is connecting!...[0m
+[0;33mW (68521) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (68781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (68801) Wifi: Wifi is connecting!...[0m
+[0;32mI (69091) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (69801) Wifi: Wifi is connecting!...[0m
+[0;33mW (70781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;33mW (70791) HTTP: Wi-Fi not connected[0m
+[0;32mI (70801) Wifi: Wifi is connecting!...[0m
+[0;33mW (70941) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (71301) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (71801) Wifi: Wifi is connecting!...[0m
+[0;33mW (72781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (72801) Wifi: Wifi is connecting!...[0m
+[0;33mW (73361) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (73801) Wifi: Wifi is connecting!...[0m
+[0;32mI (74601) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (74781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (74801) Wifi: Wifi is connecting!...[0m
+[0;33mW (75781) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (75801) Wifi: Wifi is connecting!...[0m
+[0;33mW (76781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (76801) Wifi: Wifi is connecting!...[0m
+[0;32mI (77801) Wifi: Wifi is connecting!...[0m
+[0;32mI (77901) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (78201) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (78781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (78801) Wifi: Wifi is connecting!...[0m
+[0;32mI (79801) Wifi: Wifi is connecting!...[0m
+[0;32mI (80101) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (80621) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (80781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;33mW (80791) HTTP: Wi-Fi not connected[0m
+[0;32mI (80801) Wifi: Wifi is connecting!...[0m
+[0;32mI (81801) Wifi: Wifi is connecting!...[0m
+[0;33mW (82781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (82801) Wifi: Wifi is connecting!...[0m
+[0;33mW (83041) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (83401) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (83801) Wifi: Wifi is connecting!...[0m
+[0;33mW (84781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (84801) Wifi: Wifi is connecting!...[0m
+[0;33mW (85461) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (85601) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (85801) Wifi: Wifi is connecting!...[0m
+[0;33mW (86781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (86801) Wifi: Wifi is connecting!...[0m
+[0;32mI (87801) Wifi: Wifi is connecting!...[0m
+[0;33mW (87881) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (88781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (88801) Wifi: Wifi is connecting!...[0m
+[0;32mI (88901) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (89801) Wifi: Wifi is connecting!...[0m
+[0;33mW (90301) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (90781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.5, ntu=0.0)[0m
+[0;33mW (90791) HTTP: Wi-Fi not connected[0m
+[0;32mI (90801) Wifi: Wifi is connecting!...[0m
+[0;32mI (91101) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (91801) Wifi: Wifi is connecting!...[0m
+[0;33mW (92721) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (92781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (92801) Wifi: Wifi is connecting!...[0m
+[0;32mI (93801) Wifi: Wifi is connecting!...[0m
+[0;32mI (94401) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (94781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (94801) Wifi: Wifi is connecting!...[0m
+[0;33mW (95141) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (95801) Wifi: Wifi is connecting!...[0m
+[0;32mI (96611) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (96781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (96801) Wifi: Wifi is connecting!...[0m
+[0;33mW (97561) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (97801) Wifi: Wifi is connecting!...[0m
+[0;33mW (98781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (98801) Wifi: Wifi is connecting!...[0m
+[0;32mI (99801) Wifi: Wifi is connecting!...[0m
+[0;32mI (99911) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (99981) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (100781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;33mW (100791) HTTP: Wi-Fi not connected[0m
+[0;32mI (100801) Wifi: Wifi is connecting!...[0m
+[0;32mI (101801) Wifi: Wifi is connecting!...[0m
+[0;33mW (102401) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (102781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (102801) Wifi: Wifi is connecting!...[0m
+[0;32mI (103211) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (103801) Wifi: Wifi is connecting!...[0m
+[0;33mW (104781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (104801) Wifi: Wifi is connecting!...[0m
+[0;33mW (104821) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (105411) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (105801) Wifi: Wifi is connecting!...[0m
+[0;33mW (106781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (106801) Wifi: Wifi is connecting!...[0m
+[0;33mW (107241) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (107801) Wifi: Wifi is connecting!...[0m
+[0;32mI (108711) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (108781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (108801) Wifi: Wifi is connecting!...[0m
+[0;33mW (109651) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (109801) Wifi: Wifi is connecting!...[0m
+[0;33mW (110781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;33mW (110791) HTTP: Wi-Fi not connected[0m
+[0;32mI (110801) Wifi: Wifi is connecting!...[0m
+[0;32mI (110911) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (111801) Wifi: Wifi is connecting!...[0m
+[0;33mW (112071) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (112781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (112801) Wifi: Wifi is connecting!...[0m
+[0;32mI (113801) Wifi: Wifi is connecting!...[0m
+[0;32mI (114211) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (114491) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (114781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (114801) Wifi: Wifi is connecting!...[0m
+[0;32mI (115801) Wifi: Wifi is connecting!...[0m
+[0;32mI (116411) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (116781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (116801) Wifi: Wifi is connecting!...[0m
+[0;33mW (116911) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (117801) Wifi: Wifi is connecting!...[0m
+[0;33mW (118781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (118801) Wifi: Wifi is connecting!...[0m
+[0;33mW (119331) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (119711) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (119801) Wifi: Wifi is connecting!...[0m
+[0;33mW (120781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;33mW (120791) HTTP: Wi-Fi not connected[0m
+[0;32mI (120801) Wifi: Wifi is connecting!...[0m
+[0;33mW (121751) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (121801) Wifi: Wifi is connecting!...[0m
+[0;32mI (121921) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (122781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (122801) Wifi: Wifi is connecting!...[0m
+[0;32mI (123801) Wifi: Wifi is connecting!...[0m
+[0;33mW (124171) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (124781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (124801) Wifi: Wifi is connecting!...[0m
+[0;32mI (125221) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (125801) Wifi: Wifi is connecting!...[0m
+[0;33mW (126591) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (126781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (126801) Wifi: Wifi is connecting!...[0m
+[0;32mI (127801) Wifi: Wifi is connecting!...[0m
+[0;32mI (128521) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (128781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (128801) Wifi: Wifi is connecting!...[0m
+[0;33mW (129011) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (129801) Wifi: Wifi is connecting!...[0m
+[0;32mI (130721) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (130781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;33mW (130791) HTTP: Wi-Fi not connected[0m
+[0;32mI (130801) Wifi: Wifi is connecting!...[0m
+[0;33mW (131431) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (131801) Wifi: Wifi is connecting!...[0m
+[0;33mW (132781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (132801) Wifi: Wifi is connecting!...[0m
+[0;32mI (133801) Wifi: Wifi is connecting!...[0m
+[0;33mW (133851) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (134021) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (134781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (134801) Wifi: Wifi is connecting!...[0m
+[0;32mI (135801) Wifi: Wifi is connecting!...[0m
+[0;32mI (136221) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (136271) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (136781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (136801) Wifi: Wifi is connecting!...[0m
+[0;32mI (137801) Wifi: Wifi is connecting!...[0m
+[0;33mW (138691) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (138781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (138801) Wifi: Wifi is connecting!...[0m
+[0;32mI (139521) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (139801) Wifi: Wifi is connecting!...[0m
+[0;33mW (140781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;33mW (140791) HTTP: Wi-Fi not connected[0m
+[0;32mI (140801) Wifi: Wifi is connecting!...[0m
+[0;33mW (141111) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (141721) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (141801) Wifi: Wifi is connecting!...[0m
+[0;33mW (142781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (142801) Wifi: Wifi is connecting!...[0m
+[0;33mW (143531) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (143801) Wifi: Wifi is connecting!...[0m
+[0;33mW (144781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (144801) Wifi: Wifi is connecting!...[0m
+[0;32mI (145021) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (145801) Wifi: Wifi is connecting!...[0m
+[0;33mW (145951) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (146781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (146801) Wifi: Wifi is connecting!...[0m
+[0;32mI (147241) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (147801) Wifi: Wifi is connecting!...[0m
+[0;33mW (148371) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (148781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (148801) Wifi: Wifi is connecting!...[0m
+[0;32mI (149801) Wifi: Wifi is connecting!...[0m
+[0;32mI (150541) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (150781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;33mW (150791) HTTP: Wi-Fi not connected[0m
+[0;33mW (150791) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (150801) Wifi: Wifi is connecting!...[0m
+[0;32mI (151801) Wifi: Wifi is connecting!...[0m
+[0;33mW (152781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (152801) Wifi: Wifi is connecting!...[0m
+[0;33mW (153211) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (153801) Wifi: Wifi is connecting!...[0m
+[0;32mI (153841) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (154781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (154801) Wifi: Wifi is connecting!...[0m
+[0;33mW (155631) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (155801) Wifi: Wifi is connecting!...[0m
+[0;32mI (156041) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (156781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (156801) Wifi: Wifi is connecting!...[0m
+[0;32mI (157801) Wifi: Wifi is connecting!...[0m
+[0;33mW (158051) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (158781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (158801) Wifi: Wifi is connecting!...[0m
+[0;32mI (159341) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (159801) Wifi: Wifi is connecting!...[0m
+[0;33mW (160471) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (160781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;33mW (160791) HTTP: Wi-Fi not connected[0m
+[0;32mI (160801) Wifi: Wifi is connecting!...[0m
+[0;32mI (161541) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (161801) Wifi: Wifi is connecting!...[0m
+[0;33mW (162781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (162801) Wifi: Wifi is connecting!...[0m
+[0;33mW (162891) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (163801) Wifi: Wifi is connecting!...[0m
+[0;33mW (164781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (164801) Wifi: Wifi is connecting!...[0m
+[0;32mI (164841) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (165301) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (165801) Wifi: Wifi is connecting!...[0m
+[0;33mW (166781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (166801) Wifi: Wifi is connecting!...[0m
+[0;32mI (167041) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (167721) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (167801) Wifi: Wifi is connecting!...[0m
+[0;33mW (168781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (168801) Wifi: Wifi is connecting!...[0m
+[0;32mI (169801) Wifi: Wifi is connecting!...[0m
+[0;33mW (170141) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (170341) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (170781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.5, ntu=0.0)[0m
+[0;33mW (170791) HTTP: Wi-Fi not connected[0m
+[0;32mI (170801) Wifi: Wifi is connecting!...[0m
+[0;32mI (171801) Wifi: Wifi is connecting!...[0m
+[0;32mI (172561) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (172561) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (172781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (172801) Wifi: Wifi is connecting!...[0m
+[0;32mI (173801) Wifi: Wifi is connecting!...[0m
+[0;33mW (174781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (174801) Wifi: Wifi is connecting!...[0m
+[0;33mW (174981) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (175801) Wifi: Wifi is connecting!...[0m
+[0;32mI (175861) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (176781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (176801) Wifi: Wifi is connecting!...[0m
+[0;33mW (177401) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;32mI (177801) Wifi: Wifi is connecting!...[0m
+[0;33mW (178781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (178801) Wifi: Wifi is connecting!...[0m
+[0;32mI (179161) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (179801) Wifi: Wifi is connecting!...[0m
+[0;33mW (179821) WiFi: Wi-Fi disconnected. Reconnecting...[0m
+[0;33mW (180781) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=12.0, ntu=0.0)[0m
+[0;33mW (180791) HTTP: Wi-Fi not connected[0m
+[0;32mI (180801) Wifi: Wifi is connecting!...[0m
+[0;32mI (181361) GateIoT: Temp=0.0 -- pH=0.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (181801) Wifi: Wifi is connecting!...[0m
+[0;33mW (182241) WiFi: Wi-Fi disconnected. Reconnecting...[0m

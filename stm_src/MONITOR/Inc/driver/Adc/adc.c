@@ -15,10 +15,12 @@ void ADC_Init_Scan_DMA(void)
     // --- 1. Cấu hình GPIO (PA1, PA3, PA4, PA5 -> Analog Mode) ---
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
     
+    GPIOA->MODER &= ~((0x03 << (2 * 1)) |
+                      (0x03 << (2 * 3)) |
+                      (0x03 << (2 * 5)));
     // Đặt PA1, PA3, PA4, PA5 vào chế độ Analog (0b11)
     GPIOA->MODER |= (0x03 << (2 * 1)) | // PA1 (Ch.1)
                     (0x03 << (2 * 3)) | // PA3 (Ch.3)
-                    (0x03 << (2 * 4)) | // PA4 (Ch.4)
                     (0x03 << (2 * 5));  // PA5 (Ch.5)
 
 
@@ -70,14 +72,12 @@ void ADC_Init_Scan_DMA(void)
     ADC1->SQR3 |= (1 << 0);     // SQ1 = Channel 1 (PA1)
     ADC1->SQR3 |= (5 << 5);     // SQ2 = Channel 5 (PA5)
     ADC1->SQR3 |= (3 << 10);    // SQ3 = Channel 3 (PA3)
-    ADC1->SQR3 |= (4 << 15);    // SQ4 = Channel 4 (PA4)
 
     // Cấu hình thời gian lấy mẫu (Ví dụ: 144 chu kỳ = 0b100)
     uint32_t sampling_time = 0x04; 
     ADC1->SMPR2 = 0;
     ADC1->SMPR2 |= (sampling_time << (3 * 1)); // Ch.1
     ADC1->SMPR2 |= (sampling_time << (3 * 3)); // Ch.3
-    ADC1->SMPR2 |= (sampling_time << (3 * 4)); // Ch.4
     ADC1->SMPR2 |= (sampling_time << (3 * 5)); // Ch.5
 
     // --- 4. Bắt đầu Chuyển đổi ---
@@ -90,8 +90,8 @@ void ADC_Init_Scan_DMA(void)
 
 /**
  * @brief Lấy giá trị ADC từ một vị trí (Rank) cụ thể trong mảng DMA.
- * @param channel_rank: Vị trí (0-3) trong mảng DMA.
- * 0: Ch.1 (PA1), 1: Ch.5 (PA5), 2: Ch.3 (PA3), 3: Ch.4 (PA4)
+ * @param channel_rank: Vị trí (0-2) trong mảng DMA.
+ * 0: Ch.1 (PA1), 1: Ch.5 (PA5), 2: Ch.3 (PA3)
  * @return Giá trị ADC 12-bit (0-4095).
  */
 uint16_t ADC_GetValue(uint8_t channel_rank)
@@ -100,5 +100,5 @@ uint16_t ADC_GetValue(uint8_t channel_rank)
     {
         return adc_values[channel_rank];
     }
-    return 0; // Trả về 0 nếu Rank không hợp lệ
+    return 0;
 }

@@ -204,6 +204,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/esp_ringbuf/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/esp_driver_i2c/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/esp_driver_uart/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/esp_event/cmake_install.cmake")
 endif()
 
@@ -220,16 +235,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/esp_phy/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/esp_ringbuf/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/esp_driver_uart/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -299,17 +304,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/json/cmake_install.cmake")
+  include("/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/espressif__cJSON/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/driver/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/esp_driver_i2c/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

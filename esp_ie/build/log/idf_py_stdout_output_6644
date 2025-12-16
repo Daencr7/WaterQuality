@@ -1,0 +1,1705 @@
+Command: /home/edna/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/edna/Souce/ESP_src/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/edna/Souce/ESP_src/esp_ie/build/esp_ie.elf /home/edna/Souce/ESP_src/esp_ie/build/bootloader/bootloader.elf -m '/home/edna/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/edna/Souce/ESP_src/esp-idf/tools/idf.py'
+���Jb��ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2873-g51d5e8fd08-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 11 2025 17:17:21[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21794h (137108) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=000317bc vaddr=3ffb0000 size=0454ch ( 17740) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=00035d10 vaddr=40080000 size=0a308h ( 41736) load[0m
+[0;32mI (163) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=ae41ch (713756) map[0m
+[0;32mI (418) esp_image: segment 4: paddr=000ee444 vaddr=4008a308 size=0c604h ( 50692) load[0m
+[0;32mI (439) esp_image: segment 5: paddr=000faa50 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (450) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (450) boot: Disabling RNG early entropy source...[0m
+[0;32mI (461) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (470) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     esp_ie[0m
+[0;32mI (479) app_init: App version:      d037f65-dirty[0m
+[0;32mI (483) app_init: Compile time:     Nov 11 2025 17:16:39[0m
+[0;32mI (488) app_init: ELF file SHA256:  22ce92821...[0m
+[0;32mI (493) app_init: ESP-IDF:          v6.0-dev-2873-g51d5e8fd08-dirty[0m
+[0;32mI (499) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (503) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (507) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (511) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (517) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (522) heap_init: At 3FFB8F10 len 000270F0 (156 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (532) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 4009690C len 000096F4 (37 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;32mI (551) main_task: Started on CPU0[0m
+[0;32mI (561) main_task: Calling app_main()[0m
+[0;32mI (591) wifi:wifi driver task: 3ffc0cf4, prio:23, stack:6656, core=0[0m
+[0;32mI (591) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (591) wifi:wifi certification version: v7.0[0m
+[0;32mI (591) wifi:config NVS flash: enabled[0m
+[0;32mI (591) wifi:config nano formatting: disabled[0m
+[0;32mI (601) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (601) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (611) wifi:Init management short buffer num: 32[0m
+[0;32mI (611) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (621) wifi:Init static rx buffer num: 10[0m
+[0;32mI (621) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (631) wifi_init: rx ba win: 6[0m
+[0;32mI (631) wifi_init: accept mbox: 6[0m
+[0;32mI (631) wifi_init: tcpip mbox: 32[0m
+[0;32mI (641) wifi_init: udp mbox: 6[0m
+[0;32mI (641) wifi_init: tcp mbox: 6[0m
+[0;32mI (641) wifi_init: tcp tx win: 5760[0m
+[0;32mI (651) wifi_init: tcp rx win: 5760[0m
+[0;32mI (651) wifi_init: tcp mss: 1440[0m
+[0;32mI (651) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (661) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (691) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;33mW (691) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;32mI (761) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;32mI (781) wifi:mode : sta (08:d1:f9:26:7e:34)[0m
+[0;32mI (781) wifi:enable tsf[0m
+[0;32mI (781) WiFi: Wi-Fi initialization done[0m
+[0;32mI (781) WiFi: Wi-Fi started, connecting to GA...[0m
+[0;33mW (791) ALERT: Muc canh bao 3! (temp=0.0, ph=0.0, tds=0.0, ntu=0.0)[0m
+[0;33mW (791) MAIL: Wi-Fi not connected, skip email[0m
+[0;33mW (791) MAIL: Wi-Fi not connected, skip email[0m
+[0;32mI (801) SSD1306: New i2c driver is used[0m
+[0;33mW (801) HTTP: Wi-Fi not connected[0m
+[0;32mI (801) SSD1306: OLED configured successfully[0m
+[0;32mI (811) Wifi: Wifi is connecting!...[0m
+[0;32mI (1811) Wifi: Wifi is connecting!...[0m
+[0;32mI (2001) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (2261) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2261) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2271) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2281) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2291) wifi:connected with GA, aid = 2, channel 11, BW20, bssid = 7c:a1:07:9e:9b:a8[0m
+[0;32mI (2291) wifi:security: WPA2-PSK, phy: bgn, rssi: -49[0m
+[0;32mI (2311) wifi:pm start, type: 1[0m
+
+[0;32mI (2351) wifi:AP's beacon interval = 204800 us, DTIM period = 1[0m
+[0;32mI (2811) Wifi: Wifi is connecting!...[0m
+[0;32mI (3101) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (3811) Wifi: Wifi is connecting!...[0m
+[0;32mI (4201) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (4811) Wifi: Wifi is connecting!...[0m
+[0;32mI (5301) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (5811) Wifi: Wifi is connecting!...[0m
+[0;32mI (6401) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (6811) Wifi: Wifi is connecting!...[0m
+[0;32mI (7091) esp_netif_handlers: sta ip: 192.168.1.92, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (7091) WiFi: Got IP: 192.168.1.92[0m
+[0;32mI (7501) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (7811) Wifi: Ready to start other task![0m
+[0;32mI (7811) main_task: Returned from app_main()[0m
+[0;32mI (8601) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (9701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (10801) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (10801) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (10811) wifi:<ba-add>idx:0 (ifx:0, 7c:a1:07:9e:9b:a8), tid:0, ssn:3, winSize:64[0m
+[0;32mI (10851) wifi:<ba-add>idx:1 (ifx:0, 7c:a1:07:9e:9b:a8), tid:7, ssn:6, winSize:64[0m
+[0;32mI (11441) MAIL: Mail POST success, status=200[0m
+[0;32mI (11901) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (14101) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (15201) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (16301) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (17401) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (18501) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (19601) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (20701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (21441) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (21511) MAIL: Mail POST success, status=200[0m
+[0;32mI (21801) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (22901) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (24001) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (25161) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (27361) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (28461) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (29561) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (30661) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (31511) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (31581) MAIL: Mail POST success, status=200[0m
+[0;32mI (31761) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (32861) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (33961) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (35061) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (36161) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (37261) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (38431) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (40631) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (41581) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.5, ntu=0.0)[0m
+[0;32mI (41691) MAIL: Mail POST success, status=200[0m
+[0;32mI (41731) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (42831) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (43931) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (45031) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (46131) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (47231) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (48331) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (49431) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (50531) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (51701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (51701) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.5, ntu=0.0)[0m
+[0;32mI (51861) MAIL: Mail POST success, status=200[0m
+[0;32mI (53901) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (55001) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (56101) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (57201) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (58301) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (59401) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (60501) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (60811) HTTP: Sending JSON: {"temp":27.5,"ph":14,"tds":13,"ntu":0}[0m
+[0;32mI (60901) HTTP: POST success![0m
+[0;32mI (60901) HTTP: Status: 200[0m
+[0;32mI (60901) HTTP: Content length: 83[0m
+[0;32mI (61601) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (61861) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (61961) MAIL: Mail POST success, status=200[0m
+[0;32mI (62701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (63801) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (64981) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (67181) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (68281) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (69381) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (70481) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (71581) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (71961) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.5, ntu=0.0)[0m
+[0;32mI (72051) MAIL: Mail POST success, status=200[0m
+[0;32mI (72681) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (73781) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (74881) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (75981) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (77081) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (78251) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (80451) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (81551) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (82061) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (82131) MAIL: Mail POST success, status=200[0m
+[0;32mI (82651) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (83751) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (84851) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (85951) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (87051) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (88151) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (89251) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (90351) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (91521) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;33mW (92141) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=14.0, ntu=0.0)[0m
+[0;32mI (92211) MAIL: Mail POST success, status=200[0m
+[0;32mI (93721) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (94821) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (95921) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (97021) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (98121) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (99221) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (100321) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (101421) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (102221) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (102281) MAIL: Mail POST success, status=200[0m
+[0;32mI (102521) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (103621) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (104791) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (106991) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (108091) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (109191) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (110291) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (111391) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (112291) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (112361) MAIL: Mail POST success, status=200[0m
+[0;32mI (112491) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (113591) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (114691) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (115791) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (116891) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (118061) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (120261) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (120911) HTTP: Sending JSON: {"temp":27.5,"ph":14,"tds":12,"ntu":0}[0m
+[0;32mI (121021) HTTP: POST success![0m
+[0;32mI (121021) HTTP: Status: 200[0m
+[0;32mI (121021) HTTP: Content length: 83[0m
+[0;32mI (121361) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (122371) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (122441) MAIL: Mail POST success, status=200[0m
+[0;32mI (122461) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (123561) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (124661) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (125761) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (126861) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (127961) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (129061) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (130161) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (131331) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (132441) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (132501) MAIL: Mail POST success, status=200[0m
+[0;32mI (133531) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (134631) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (135731) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (136831) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (137931) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (139031) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (140131) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (141231) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (142331) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;33mW (142511) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=14.5, ntu=0.0)[0m
+[0;32mI (142571) MAIL: Mail POST success, status=200[0m
+[0;32mI (143431) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (144601) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (146801) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (147901) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (149001) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (150101) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (151201) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=16.0 -- NTU=0.0[0m
+[0;32mI (152301) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;33mW (152581) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=14.5, ntu=0.0)[0m
+[0;32mI (152661) MAIL: Mail POST success, status=200[0m
+[0;32mI (153401) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (154501) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (155601) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (156701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (157871) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (160071) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (161171) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (162271) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (162671) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (162741) MAIL: Mail POST success, status=200[0m
+[0;32mI (163371) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (164471) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (165571) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (166671) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (167771) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (168871) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (169971) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (171141) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (172751) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (172821) MAIL: Mail POST success, status=200[0m
+[0;32mI (173341) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (174441) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (175541) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (176641) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (177741) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (178841) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (179941) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (181021) HTTP: Sending JSON: {"temp":27.5,"ph":14,"tds":12,"ntu":0}[0m
+[0;32mI (181041) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (181131) HTTP: POST success![0m
+[0;32mI (181131) HTTP: Status: 200[0m
+[0;32mI (181131) HTTP: Content length: 83[0m
+[0;32mI (182141) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (182831) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (182901) MAIL: Mail POST success, status=200[0m
+[0;32mI (183241) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (184411) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (186611) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (187711) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (188811) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (189911) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (191011) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (192111) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (192901) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (192981) MAIL: Mail POST success, status=200[0m
+[0;32mI (193211) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (194311) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (195411) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=15.5 -- NTU=0.0[0m
+[0;32mI (196511) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=7.5 -- NTU=1248.0[0m
+[0;32mI (197681) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (199881) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (200981) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (202081) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (202981) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (203061) MAIL: Mail POST success, status=200[0m
+[0;32mI (203181) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (204281) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (205381) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=90.0[0m
+[0;32mI (206481) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=502.0[0m
+[0;32mI (207581) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=16.0 -- NTU=585.0[0m
+[0;32mI (208681) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=15.5 -- NTU=899.0[0m
+[0;32mI (209781) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=15.5 -- NTU=1228.0[0m
+[0;32mI (210941) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=1489.0[0m
+[0;33mW (213071) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=11.5, ntu=1489.0)[0m
+[0;32mI (213141) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (213151) MAIL: Mail POST success, status=200[0m
+[0;32mI (214241) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=20.5 -- NTU=0.0[0m
+[0;32mI (215341) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=18.0 -- NTU=0.0[0m
+[0;32mI (216441) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=20.0 -- NTU=0.0[0m
+[0;32mI (217541) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=23.0 -- NTU=0.0[0m
+[0;32mI (218641) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (219741) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=52.5 -- NTU=0.0[0m
+[0;32mI (220841) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=52.5 -- NTU=0.0[0m
+[0;32mI (221941) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=47.5 -- NTU=0.0[0m
+[0;32mI (223041) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=51.0 -- NTU=0.0[0m
+[0;33mW (223151) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=51.0, ntu=0.0)[0m
+[0;32mI (223221) MAIL: Mail POST success, status=200[0m
+[0;32mI (224201) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=52.5 -- NTU=0.0[0m
+[0;32mI (226401) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=51.5 -- NTU=0.0[0m
+[0;32mI (227501) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=56.5 -- NTU=0.0[0m
+[0;32mI (228601) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=50.0 -- NTU=0.0[0m
+[0;32mI (229701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=49.0 -- NTU=0.0[0m
+[0;32mI (230801) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=28.5 -- NTU=0.0[0m
+[0;32mI (231901) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=42.0 -- NTU=0.0[0m
+[0;32mI (233001) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=30.5 -- NTU=0.0[0m
+[0;33mW (233231) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=30.5, ntu=0.0)[0m
+[0;32mI (233301) MAIL: Mail POST success, status=200[0m
+[0;32mI (234101) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=37.5 -- NTU=0.0[0m
+[0;32mI (235201) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (236301) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (237451) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (239651) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (240751) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (241131) HTTP: Sending JSON: {"temp":27.5,"ph":14,"tds":12.5,"ntu":0}[0m
+[0;32mI (241211) HTTP: POST success![0m
+[0;32mI (241211) HTTP: Status: 200[0m
+[0;32mI (241211) HTTP: Content length: 83[0m
+[0;32mI (241851) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (242951) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.0 -- NTU=0.0[0m
+[0;33mW (243311) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.0, ntu=0.0)[0m
+[0;32mI (243381) MAIL: Mail POST success, status=200[0m
+[0;32mI (244051) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (245151) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (246251) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (247351) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (248451) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (249551) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (250711) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (252911) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (253381) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (253461) MAIL: Mail POST success, status=200[0m
+[0;32mI (254011) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (255111) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (256211) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (257311) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (258411) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (259511) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (260611) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (261711) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (262811) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=7.0 -- NTU=0.0[0m
+[0;33mW (263461) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=7.0, ntu=0.0)[0m
+[0;32mI (263531) MAIL: Mail POST success, status=200[0m
+[0;32mI (263971) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (266171) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (267271) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (268371) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (269471) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (270571) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (271671) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (272771) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (273531) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (273611) MAIL: Mail POST success, status=200[0m
+[0;32mI (273871) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (274971) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (276071) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (277231) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (279431) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (280531) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (281631) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (282731) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (283621) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (283711) MAIL: Mail POST success, status=200[0m
+[0;32mI (283831) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (284931) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (286031) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (287131) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (288231) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (289331) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (290491) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (292691) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (293711) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.5, ntu=0.0)[0m
+[0;32mI (293781) MAIL: Mail POST success, status=200[0m
+[0;32mI (293791) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (294891) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (295991) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (297091) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (298191) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (299291) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (300391) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (301211) HTTP: Sending JSON: {"temp":27.5,"ph":14,"tds":12,"ntu":0}[0m
+[0;32mI (301291) HTTP: POST success![0m
+[0;32mI (301291) HTTP: Status: 200[0m
+[0;32mI (301291) HTTP: Content length: 83[0m
+[0;32mI (301491) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (302591) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (303751) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;33mW (303791) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=14.5, ntu=0.0)[0m
+[0;32mI (303871) MAIL: Mail POST success, status=200[0m
+[0;32mI (305951) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (307051) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (308151) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (309251) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (310351) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=7.0 -- NTU=0.0[0m
+[0;32mI (311451) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (312551) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (313651) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (313881) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.5, ntu=0.0)[0m
+[0;32mI (313951) MAIL: Mail POST success, status=200[0m
+[0;32mI (314751) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (315851) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (317011) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (319211) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (320311) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (321411) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (322511) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (323611) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (323951) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (324031) MAIL: Mail POST success, status=200[0m
+[0;32mI (324711) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (325811) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (326911) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (328011) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (329111) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (330261) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (332461) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (333561) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (334031) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (334111) MAIL: Mail POST success, status=200[0m
+[0;32mI (334661) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (335761) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (336861) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (337961) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (339061) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (340161) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (341261) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (342361) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (343521) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (344121) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (344201) MAIL: Mail POST success, status=200[0m
+[0;32mI (345721) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (346821) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (347921) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (349021) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (350121) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (351221) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (352321) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (353421) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (354201) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.5, ntu=0.0)[0m
+[0;32mI (354271) MAIL: Mail POST success, status=200[0m
+[0;32mI (354521) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (355621) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (356761) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (358961) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (360061) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (361161) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (361301) HTTP: Sending JSON: {"temp":27.5,"ph":14,"tds":10,"ntu":0}[0m
+[0;32mI (361391) HTTP: POST success![0m
+[0;32mI (361391) HTTP: Status: 200[0m
+[0;32mI (361391) HTTP: Content length: 83[0m
+[0;32mI (362261) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (363361) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;33mW (364281) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=14.5, ntu=0.0)[0m
+[0;32mI (364351) MAIL: Mail POST success, status=200[0m
+[0;32mI (364461) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (365561) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (366661) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (367761) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (368861) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (370011) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (372211) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (373311) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (374351) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (374411) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (374421) MAIL: Mail POST success, status=200[0m
+[0;32mI (375511) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (376611) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (377711) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (378811) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (379911) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (381011) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (382111) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (383261) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (384431) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=12.5, ntu=0.0)[0m
+[0;32mI (384501) MAIL: Mail POST success, status=200[0m
+[0;32mI (385461) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (386561) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (387661) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (388761) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (389861) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (390961) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (392061) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (393161) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (394261) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (394501) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.5, ntu=0.0)[0m
+[0;32mI (394571) MAIL: Mail POST success, status=200[0m
+[0;32mI (395361) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (396501) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (398701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (399801) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (400901) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (402001) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (403101) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (404201) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.0 -- NTU=0.0[0m
+[0;33mW (404581) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.0, ntu=0.0)[0m
+[0;32mI (404651) MAIL: Mail POST success, status=200[0m
+[0;32mI (405301) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (406401) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (407501) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (408601) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (409761) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (411961) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (413061) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (414161) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;33mW (414661) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=14.0, ntu=0.0)[0m
+[0;32mI (414731) MAIL: Mail POST success, status=200[0m
+[0;32mI (415261) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (416361) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (417461) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (418561) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (419661) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (420761) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (421401) HTTP: Sending JSON: {"temp":27.5,"ph":14,"tds":10.5,"ntu":0}[0m
+[0;32mI (421461) HTTP: POST success![0m
+[0;32mI (421461) HTTP: Status: 200[0m
+[0;32mI (421461) HTTP: Content length: 83[0m
+[0;32mI (421861) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (423031) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (424741) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (424821) MAIL: Mail POST success, status=200[0m
+[0;32mI (425231) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (426331) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (427431) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (428531) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (429631) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (430731) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (431831) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=7.5 -- NTU=0.0[0m
+[0;32mI (432931) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (434031) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (434821) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.5, ntu=0.0)[0m
+[0;32mI (434881) MAIL: Mail POST success, status=200[0m
+[0;32mI (435131) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (436291) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (438491) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (439591) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (440691) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=15.5 -- NTU=0.0[0m
+[0;32mI (441791) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (442891) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (443991) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (444891) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.5, ntu=0.0)[0m
+[0;32mI (444971) MAIL: Mail POST success, status=200[0m
+[0;32mI (445091) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (446191) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (447291) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (448391) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (449551) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (451751) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (452851) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (453951) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (454971) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (455051) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (455081) MAIL: Mail POST success, status=200[0m
+[0;32mI (456151) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (457251) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (458351) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (459451) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (460551) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (461651) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (462811) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (465011) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (465091) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (465171) MAIL: Mail POST success, status=200[0m
+[0;32mI (466111) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (467211) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (468311) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (469411) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (470511) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (471611) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (472711) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=17.0 -- NTU=0.0[0m
+[0;32mI (473811) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (474911) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (475171) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.5, ntu=0.0)[0m
+[0;32mI (475231) MAIL: Mail POST success, status=200[0m
+[0;32mI (476081) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (478281) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (479381) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (480481) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (481471) HTTP: Sending JSON: {"temp":27.5,"ph":14,"tds":10,"ntu":0}[0m
+[0;32mI (481581) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (481581) HTTP: POST success![0m
+[0;32mI (481581) HTTP: Status: 200[0m
+[0;32mI (481581) HTTP: Content length: 83[0m
+[0;32mI (482681) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (483781) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (484881) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (485241) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (485311) MAIL: Mail POST success, status=200[0m
+[0;32mI (485981) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (487081) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (488181) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (489341) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (491541) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (492641) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (493741) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (494841) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (495321) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (495441) MAIL: Mail POST success, status=200[0m
+[0;32mI (495941) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (497041) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (498141) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (499241) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (500341) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (501441) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (502601) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (504801) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (505441) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (505521) MAIL: Mail POST success, status=200[0m
+[0;32mI (505901) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (507001) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (508101) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (509201) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (510301) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (511401) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (512501) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (513601) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (514701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (515531) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (515601) MAIL: Mail POST success, status=200[0m
+[0;32mI (515871) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (518071) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (519171) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (520271) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (521371) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (522471) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (523571) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (524671) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (525601) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (525701) MAIL: Mail POST success, status=200[0m
+[0;32mI (525771) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (526871) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (527971) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (529131) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (531331) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (532431) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (533531) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (534631) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (535701) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (535731) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (535771) MAIL: Mail POST success, status=200[0m
+[0;32mI (536831) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (537931) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (539031) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (540131) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (541231) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (541591) HTTP: Sending JSON: {"temp":27.5,"ph":14,"tds":9,"ntu":0}[0m
+[0;32mI (541711) HTTP: POST success![0m
+[0;32mI (541711) HTTP: Status: 200[0m
+[0;32mI (541711) HTTP: Content length: 83[0m
+[0;32mI (542401) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (544601) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (545701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (545771) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (545881) MAIL: Mail POST success, status=200[0m
+[0;32mI (546801) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (547901) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (549001) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (550101) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (551201) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (552301) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (553401) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (554501) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (555661) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (555881) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (555951) MAIL: Mail POST success, status=200[0m
+[0;32mI (557861) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (558961) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (560061) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (561161) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (562261) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (563361) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (564461) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (565561) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=8.5 -- NTU=0.0[0m
+[0;33mW (565951) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=8.5, ntu=0.0)[0m
+[0;32mI (566021) MAIL: Mail POST success, status=200[0m
+[0;32mI (566661) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (567761) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (568931) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (571131) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (572231) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (573331) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (574431) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (575531) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;33mW (576021) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=14.5, ntu=0.0)[0m
+[0;32mI (576091) MAIL: Mail POST success, status=200[0m
+[0;32mI (576631) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (577731) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (578831) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (579931) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (581031) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (582191) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (584391) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (585491) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (586091) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (586161) MAIL: Mail POST success, status=200[0m
+[0;32mI (586591) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (587691) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (588791) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (589891) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (590991) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (592091) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (593191) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (594291) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (595441) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (596171) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (596241) MAIL: Mail POST success, status=200[0m
+[0;32mI (597641) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (598741) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (599841) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (600941) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (601711) HTTP: Sending JSON: {"temp":27.5,"ph":14,"tds":10.5,"ntu":0}[0m
+[0;32mI (601771) HTTP: POST success![0m
+[0;32mI (601771) HTTP: Status: 200[0m
+[0;32mI (601771) HTTP: Content length: 83[0m
+[0;32mI (602041) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (603141) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (604241) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (605341) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (606241) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=12.0, ntu=0.0)[0m
+[0;32mI (606311) MAIL: Mail POST success, status=200[0m
+[0;32mI (606441) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (607541) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (608701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (610901) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (612001) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (613101) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (614201) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (615301) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (616321) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (616391) MAIL: Mail POST success, status=200[0m
+[0;32mI (616401) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (617501) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (618601) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (619701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (620801) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (621951) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (624151) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (625251) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (626351) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;33mW (626401) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=14.0, ntu=0.0)[0m
+[0;32mI (626481) MAIL: Mail POST success, status=200[0m
+[0;32mI (627451) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (628551) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (629651) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (630751) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (631851) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (632951) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (634051) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (635201) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (636481) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (636591) MAIL: Mail POST success, status=200[0m
+[0;32mI (637401) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (638501) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (639601) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (640701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (641801) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (642901) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (644001) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (645101) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (646201) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (646591) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.5, ntu=0.0)[0m
+[0;32mI (646661) MAIL: Mail POST success, status=200[0m
+[0;32mI (647301) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (648451) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (650651) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (651751) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (652851) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (653951) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (655051) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (656151) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;33mW (656671) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=14.0, ntu=0.0)[0m
+[0;32mI (656751) MAIL: Mail POST success, status=200[0m
+[0;32mI (657251) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (658351) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (659451) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (660551) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (661701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (661781) HTTP: Sending JSON: {"temp":27.5,"ph":14,"tds":12.5,"ntu":0}[0m
+[0;32mI (661861) HTTP: POST success![0m
+[0;32mI (661861) HTTP: Status: 200[0m
+[0;32mI (661861) HTTP: Content length: 83[0m
+[0;32mI (663901) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (665001) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (666101) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (666751) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (666831) MAIL: Mail POST success, status=200[0m
+[0;32mI (667201) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (668301) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (669401) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (670501) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (671601) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (672701) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (673801) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (674951) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (676831) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (676901) MAIL: Mail POST success, status=200[0m
+[0;32mI (677151) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (678251) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (679351) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (680451) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (681551) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (682651) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (683751) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (684851) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (685951) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (686901) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (687011) MAIL: Mail POST success, status=200[0m
+[0;32mI (687051) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (688211) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (690411) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (691511) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (692611) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (693711) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (694811) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (695911) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (697011) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (697011) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (697091) MAIL: Mail POST success, status=200[0m
+[0;32mI (698111) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (699211) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (700311) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (701461) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (703661) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (704761) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (705861) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (706961) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (707091) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.5, ntu=0.0)[0m
+[0;32mI (707161) MAIL: Mail POST success, status=200[0m
+[0;32mI (708061) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (709161) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (710261) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (711361) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (712461) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (713561) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (714721) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (716921) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (717161) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (717241) MAIL: Mail POST success, status=200[0m
+[0;32mI (718021) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (719121) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (720221) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (721321) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (721861) HTTP: Sending JSON: {"temp":27.5,"ph":14,"tds":9.5,"ntu":0}[0m
+[0;32mI (721931) HTTP: POST success![0m
+[0;32mI (721931) HTTP: Status: 200[0m
+[0;32mI (721931) HTTP: Content length: 83[0m
+[0;32mI (722421) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (723521) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (724621) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (725721) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (726821) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (727241) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=9.5, ntu=0.0)[0m
+[0;32mI (727321) MAIL: Mail POST success, status=200[0m
+[0;32mI (727971) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (730171) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (731271) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (732371) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (733471) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (734571) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (735671) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (736771) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (737321) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=13.0, ntu=0.0)[0m
+[0;32mI (737391) MAIL: Mail POST success, status=200[0m
+[0;32mI (737871) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (738971) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (740071) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (741221) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (743421) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (744521) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (745621) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (746721) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (747391) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=10.0, ntu=0.0)[0m
+[0;32mI (747471) MAIL: Mail POST success, status=200[0m
+[0;32mI (747821) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (748921) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (750021) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (751121) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (752221) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (753321) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (754471) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (756671) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.5 -- NTU=0.0[0m
+[0;33mW (757481) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=14.5, ntu=0.0)[0m
+[0;32mI (757541) MAIL: Mail POST success, status=200[0m
+[0;32mI (757771) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (758871) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (759971) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (761071) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (762171) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (763271) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (764371) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (765471) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (766571) GateIoT: Temp=27.5 -- pH=14.0 -- TDS=11.5 -- NTU=0.0[0m
+[0;33mW (767551) ALERT: Muc canh bao 3! (temp=27.5, ph=14.0, tds=11.5, ntu=0.0)[0m
+[0;32mI (767641) MAIL: Mail POST success, status=200[0m
+[0;33mW (770971) GateIoT: Invalid JSON: {"temp"U [0m
+[0;33mW (772071) GateIoT: Invalid JSON: wwu2[0m
+[0;32mI (773171) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (774271) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (775371) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (776471) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (777591) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.0 -- NTU=0.0[0m
+[0;33mW (777641) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=7.0, ntu=0.0)[0m
+[0;32mI (777711) MAIL: Mail POST success, status=200[0m
+[0;32mI (777791) MAIL: Mail POST success, status=200[0m
+[0;32mI (779791) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (780891) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (781931) HTTP: Sending JSON: {"temp":27.5,"ph":9.3999996185302734,"tds":10.5,"ntu":0}[0m
+[0;32mI (781991) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (782001) HTTP: POST success![0m
+[0;32mI (782001) HTTP: Status: 200[0m
+[0;32mI (782001) HTTP: Content length: 83[0m
+[0;32mI (783091) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (784191) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (785291) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (786391) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (787491) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (787801) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=13.0, ntu=0.0)[0m
+[0;32mI (787881) MAIL: Mail POST success, status=200[0m
+[0;32mI (788591) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (789691) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (790821) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (793021) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (794121) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (795221) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (796321) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (797421) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (797881) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=10.0, ntu=0.0)[0m
+[0;32mI (797951) MAIL: Mail POST success, status=200[0m
+[0;32mI (798521) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (799621) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (800721) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (801821) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (802921) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (804061) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (806261) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (807361) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (807961) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=0.0)[0m
+[0;32mI (808031) MAIL: Mail POST success, status=200[0m
+[0;32mI (808461) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (809561) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (810661) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (811761) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (812861) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (813961) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (815061) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (816161) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (817281) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (818041) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=0.0)[0m
+[0;32mI (818111) MAIL: Mail POST success, status=200[0m
+[0;32mI (819481) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (820581) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (821681) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (822781) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (823881) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (824981) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (826081) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (827181) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (828121) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=10.0, ntu=0.0)[0m
+[0;32mI (828191) MAIL: Mail POST success, status=200[0m
+[0;32mI (828281) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (829381) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (830511) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (832711) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (833811) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (834911) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (836011) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (837111) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (838201) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=10.0, ntu=0.0)[0m
+[0;32mI (838211) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (838271) MAIL: Mail POST success, status=200[0m
+[0;32mI (839311) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (840411) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (841511) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (842001) HTTP: Sending JSON: {"temp":27.5,"ph":9.3999996185302734,"tds":9.5,"ntu":0}[0m
+[0;32mI (842071) HTTP: POST success![0m
+[0;32mI (842071) HTTP: Status: 200[0m
+[0;32mI (842071) HTTP: Content length: 83[0m
+[0;32mI (842611) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (843751) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (845951) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (847051) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (848151) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;33mW (848281) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.0, ntu=0.0)[0m
+[0;32mI (848361) MAIL: Mail POST success, status=200[0m
+[0;32mI (849251) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (850351) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (851451) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (852551) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=24.0 -- NTU=0.0[0m
+[0;32mI (853651) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=23.0 -- NTU=0.0[0m
+[0;32mI (854751) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (855851) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=16.0 -- NTU=0.0[0m
+[0;32mI (856981) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=24.0 -- NTU=0.0[0m
+[0;33mW (858361) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=24.0, ntu=0.0)[0m
+[0;32mI (858441) MAIL: Mail POST success, status=200[0m
+[0;32mI (859181) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=28.5 -- NTU=0.0[0m
+[0;32mI (860281) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=30.5 -- NTU=0.0[0m
+[0;32mI (861381) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=29.0 -- NTU=0.0[0m
+[0;32mI (862481) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=29.0 -- NTU=0.0[0m
+[0;32mI (863581) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=34.0 -- NTU=0.0[0m
+[0;32mI (864681) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=36.5 -- NTU=0.0[0m
+[0;32mI (865781) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=32.5 -- NTU=0.0[0m
+[0;32mI (866881) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=33.5 -- NTU=0.0[0m
+[0;32mI (867981) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=37.5 -- NTU=0.0[0m
+[0;33mW (868441) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=37.5, ntu=0.0)[0m
+[0;32mI (868521) MAIL: Mail POST success, status=200[0m
+[0;32mI (869081) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=39.0 -- NTU=0.0[0m
+[0;32mI (870211) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=34.5 -- NTU=0.0[0m
+[0;32mI (872411) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=42.0 -- NTU=0.0[0m
+[0;32mI (873511) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=38.0 -- NTU=0.0[0m
+[0;32mI (874611) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=36.5 -- NTU=0.0[0m
+[0;32mI (875711) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=39.0 -- NTU=0.0[0m
+[0;32mI (876811) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=39.5 -- NTU=0.0[0m
+[0;32mI (877911) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=37.0 -- NTU=0.0[0m
+[0;33mW (878521) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=37.0, ntu=0.0)[0m
+[0;32mI (878591) MAIL: Mail POST success, status=200[0m
+[0;32mI (879011) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=32.0 -- NTU=0.0[0m
+[0;32mI (880111) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=34.5 -- NTU=0.0[0m
+[0;32mI (881211) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=34.5 -- NTU=0.0[0m
+[0;32mI (882311) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=33.5 -- NTU=0.0[0m
+[0;32mI (883461) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=41.5 -- NTU=0.0[0m
+[0;32mI (885661) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=35.0 -- NTU=0.0[0m
+[0;32mI (886761) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=31.0 -- NTU=0.0[0m
+[0;32mI (887861) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=32.5 -- NTU=0.0[0m
+[0;33mW (888601) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=32.5, ntu=0.0)[0m
+[0;32mI (888681) MAIL: Mail POST success, status=200[0m
+[0;32mI (888961) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=31.0 -- NTU=0.0[0m
+[0;32mI (890061) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=32.5 -- NTU=0.0[0m
+[0;32mI (891161) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=35.0 -- NTU=0.0[0m
+[0;32mI (892261) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=31.0 -- NTU=0.0[0m
+[0;32mI (893361) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=34.0 -- NTU=0.0[0m
+[0;32mI (894461) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=34.5 -- NTU=0.0[0m
+[0;32mI (895561) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=25.0 -- NTU=0.0[0m
+[0;32mI (896701) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=29.5 -- NTU=0.0[0m
+[0;33mW (898681) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=29.5, ntu=0.0)[0m
+[0;32mI (898751) MAIL: Mail POST success, status=200[0m
+[0;32mI (898901) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=30.5 -- NTU=0.0[0m
+[0;32mI (900001) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=29.0 -- NTU=0.0[0m
+[0;32mI (901101) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=28.5 -- NTU=0.0[0m
+[0;32mI (902071) HTTP: Sending JSON: {"temp":27.5,"ph":9.3999996185302734,"tds":28.5,"ntu":0}[0m
+[0;32mI (902141) HTTP: POST success![0m
+[0;32mI (902141) HTTP: Status: 200[0m
+[0;32mI (902141) HTTP: Content length: 83[0m
+[0;32mI (902201) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=28.5 -- NTU=0.0[0m
+[0;32mI (903301) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=34.0 -- NTU=0.0[0m
+[0;32mI (904401) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=32.0 -- NTU=0.0[0m
+[0;32mI (905501) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=33.5 -- NTU=0.0[0m
+[0;32mI (906601) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=35.0 -- NTU=0.0[0m
+[0;32mI (907701) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=30.5 -- NTU=0.0[0m
+[0;33mW (908761) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=30.5, ntu=0.0)[0m
+[0;32mI (908801) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=34.0 -- NTU=0.0[0m
+[0;32mI (908881) MAIL: Mail POST success, status=200[0m
+[0;32mI (909931) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=32.5 -- NTU=0.0[0m
+[0;32mI (912131) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=32.5 -- NTU=0.0[0m
+[0;32mI (913231) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=36.0 -- NTU=0.0[0m
+[0;32mI (914331) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=35.0 -- NTU=0.0[0m
+[0;32mI (915431) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=39.0 -- NTU=0.0[0m
+[0;32mI (916531) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=37.0 -- NTU=0.0[0m
+[0;32mI (917631) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=36.5 -- NTU=0.0[0m
+[0;32mI (918731) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=37.5 -- NTU=0.0[0m
+[0;33mW (918891) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=37.5, ntu=0.0)[0m
+[0;32mI (919041) MAIL: Mail POST success, status=200[0m
+[0;32mI (919831) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=30.5 -- NTU=0.0[0m
+[0;32mI (920931) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=34.5 -- NTU=0.0[0m
+[0;32mI (922031) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=29.5 -- NTU=0.0[0m
+[0;32mI (923171) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=32.5 -- NTU=0.0[0m
+[0;32mI (925371) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=36.0 -- NTU=0.0[0m
+[0;32mI (926471) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=37.5 -- NTU=0.0[0m
+[0;32mI (927571) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=32.5 -- NTU=0.0[0m
+[0;32mI (928671) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=35.0 -- NTU=0.0[0m
+[0;33mW (929041) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=35.0, ntu=0.0)[0m
+[0;32mI (929121) MAIL: Mail POST success, status=200[0m
+[0;32mI (929771) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=33.5 -- NTU=0.0[0m
+[0;32mI (930871) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=34.0 -- NTU=0.0[0m
+[0;32mI (931971) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (933071) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=49.0 -- NTU=0.0[0m
+[0;32mI (934171) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=48.0 -- NTU=0.0[0m
+[0;32mI (935271) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=45.0 -- NTU=0.0[0m
+[0;32mI (936401) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=46.0 -- NTU=0.0[0m
+[0;32mI (938601) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=48.5 -- NTU=0.0[0m
+[0;33mW (939131) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=48.5, ntu=0.0)[0m
+[0;32mI (939201) MAIL: Mail POST success, status=200[0m
+[0;32mI (939701) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=47.5 -- NTU=0.0[0m
+[0;32mI (940801) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=23.5 -- NTU=0.0[0m
+[0;32mI (941901) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=24.0 -- NTU=0.0[0m
+[0;32mI (943001) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=48.5 -- NTU=0.0[0m
+[0;32mI (944101) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=51.5 -- NTU=0.0[0m
+[0;32mI (945201) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=45.0 -- NTU=0.0[0m
+[0;32mI (946301) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=50.0 -- NTU=0.0[0m
+[0;32mI (947401) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=49.0 -- NTU=0.0[0m
+[0;32mI (948501) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=56.5 -- NTU=0.0[0m
+[0;33mW (949201) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=56.5, ntu=0.0)[0m
+[0;32mI (949281) MAIL: Mail POST success, status=200[0m
+[0;32mI (949631) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=45.0 -- NTU=0.0[0m
+[0;32mI (951831) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=35.0 -- NTU=0.0[0m
+[0;32mI (952931) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=39.5 -- NTU=0.0[0m
+[0;32mI (954031) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=35.0 -- NTU=0.0[0m
+[0;32mI (955131) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=42.0 -- NTU=0.0[0m
+[0;32mI (956231) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (957331) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (958431) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=48.5 -- NTU=0.0[0m
+[0;33mW (959281) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=48.5, ntu=0.0)[0m
+[0;32mI (959371) MAIL: Mail POST success, status=200[0m
+[0;32mI (959531) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (960631) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (961731) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (962141) HTTP: Sending JSON: {"temp":27.5,"ph":9.3999996185302734,"tds":13,"ntu":0}[0m
+[0;32mI (962241) HTTP: POST success![0m
+[0;32mI (962241) HTTP: Status: 200[0m
+[0;32mI (962241) HTTP: Content length: 83[0m
+[0;32mI (962871) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=767.0 -- NTU=0.0[0m
+[0;32mI (965071) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=770.0 -- NTU=0.0[0m
+[0;32mI (966171) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=772.0 -- NTU=0.0[0m
+[0;32mI (967271) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=771.5 -- NTU=0.0[0m
+[0;32mI (968371) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=770.0 -- NTU=0.0[0m
+[0;33mW (969371) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=770.0, ntu=0.0)[0m
+[0;32mI (969441) MAIL: Mail POST success, status=200[0m
+[0;32mI (969471) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=772.0 -- NTU=0.0[0m
+[0;32mI (970571) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=768.5 -- NTU=0.0[0m
+[0;32mI (971671) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=770.0 -- NTU=0.0[0m
+[0;32mI (972771) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=771.5 -- NTU=0.0[0m
+[0;32mI (973871) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=770.0 -- NTU=0.0[0m
+[0;32mI (974971) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=773.5 -- NTU=0.0[0m
+[0;32mI (976111) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=769.0 -- NTU=0.0[0m
+[0;32mI (978311) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=769.5 -- NTU=0.0[0m
+[0;32mI (979411) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=769.5 -- NTU=0.0[0m
+[0;33mW (979441) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=769.5, ntu=0.0)[0m
+[0;32mI (979531) MAIL: Mail POST success, status=200[0m
+[0;32mI (980511) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=771.5 -- NTU=0.0[0m
+[0;32mI (981611) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=768.5 -- NTU=0.0[0m
+[0;32mI (982711) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=772.5 -- NTU=0.0[0m
+[0;32mI (983811) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=769.5 -- NTU=0.0[0m
+[0;32mI (984911) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=770.0 -- NTU=0.0[0m
+[0;32mI (986011) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=772.5 -- NTU=0.0[0m
+[0;32mI (987111) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=768.5 -- NTU=0.0[0m
+[0;32mI (988211) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=769.5 -- NTU=0.0[0m
+[0;32mI (989351) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=774.0 -- NTU=0.0[0m
+[0;33mW (989531) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=774.0, ntu=0.0)[0m
+[0;32mI (989641) MAIL: Mail POST success, status=200[0m
+[0;32mI (991551) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=774.0 -- NTU=0.0[0m
+[0;32mI (992651) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=774.5 -- NTU=0.0[0m
+[0;32mI (993751) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=770.0 -- NTU=0.0[0m
+[0;32mI (994851) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=773.5 -- NTU=0.0[0m
+[0;32mI (995951) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=770.0 -- NTU=0.0[0m
+[0;32mI (997051) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=771.0 -- NTU=0.0[0m
+[0;32mI (998151) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=769.0 -- NTU=0.0[0m
+[0;32mI (999251) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=769.0 -- NTU=0.0[0m
+[0;33mW (999641) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=769.0, ntu=0.0)[0m
+[0;32mI (999731) MAIL: Mail POST success, status=200[0m
+[0;32mI (1000351) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=769.0 -- NTU=0.0[0m
+[0;32mI (1001451) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=770.0 -- NTU=0.0[0m
+[0;32mI (1002591) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=768.5 -- NTU=0.0[0m
+[0;32mI (1004791) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=769.5 -- NTU=0.0[0m
+[0;32mI (1005891) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=772.0 -- NTU=0.0[0m
+[0;32mI (1006991) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=771.5 -- NTU=0.0[0m
+[0;32mI (1008091) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=769.5 -- NTU=0.0[0m
+[0;32mI (1009191) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=771.0 -- NTU=0.0[0m
+[0;33mW (1009731) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=771.0, ntu=0.0)[0m
+[0;32mI (1009821) MAIL: Mail POST success, status=200[0m
+[0;32mI (1010291) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=767.0 -- NTU=0.0[0m
+[0;32mI (1011391) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=769.5 -- NTU=0.0[0m
+[0;32mI (1012491) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=771.0 -- NTU=0.0[0m
+[0;32mI (1013591) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=772.5 -- NTU=0.0[0m
+[0;32mI (1014691) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=770.0 -- NTU=0.0[0m
+[0;32mI (1015841) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=771.0 -- NTU=0.0[0m
+[0;32mI (1018041) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=772.5 -- NTU=0.0[0m
+[0;32mI (1019141) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=771.0 -- NTU=0.0[0m
+[0;33mW (1019821) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=771.0, ntu=0.0)[0m
+[0;32mI (1019901) MAIL: Mail POST success, status=200[0m
+[0;32mI (1020241) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=769.0 -- NTU=0.0[0m
+[0;32mI (1021341) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=768.5 -- NTU=0.0[0m
+[0;32mI (1022241) HTTP: Sending JSON: {"temp":27.5,"ph":9.3999996185302734,"tds":768.5,"ntu":0}[0m
+[0;32mI (1022311) HTTP: POST success![0m
+[0;32mI (1022311) HTTP: Status: 200[0m
+[0;32mI (1022311) HTTP: Content length: 83[0m
+[0;32mI (1022441) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=768.5 -- NTU=0.0[0m
+[0;32mI (1023541) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1024641) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1025741) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (1026841) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1027941) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (1029071) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=619.5 -- NTU=0.0[0m
+[0;33mW (1029901) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=619.5, ntu=0.0)[0m
+[0;32mI (1029971) MAIL: Mail POST success, status=200[0m
+[0;32mI (1031271) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=768.0 -- NTU=0.0[0m
+[0;32mI (1032371) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=770.0 -- NTU=0.0[0m
+[0;32mI (1033471) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=770.0 -- NTU=0.0[0m
+[0;32mI (1034571) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1035671) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=15.5 -- NTU=0.0[0m
+[0;32mI (1036771) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1037871) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1038971) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (1039981) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=0.0)[0m
+[0;32mI (1040071) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1040071) MAIL: Mail POST success, status=200[0m
+[0;32mI (1041171) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1042311) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1044511) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1045611) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=6.0 -- NTU=2977.0[0m
+[0;32mI (1046711) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.5 -- NTU=2975.0[0m
+[0;32mI (1047811) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.0 -- NTU=2975.0[0m
+[0;32mI (1048911) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.5 -- NTU=2977.0[0m
+[0;32mI (1050011) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.0 -- NTU=2975.0[0m
+[0;33mW (1050081) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=3.0, ntu=2975.0)[0m
+[0;32mI (1050161) MAIL: Mail POST success, status=200[0m
+[0;32mI (1051111) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=6.0 -- NTU=2976.0[0m
+[0;32mI (1052211) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.5 -- NTU=2975.0[0m
+[0;32mI (1053311) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.5 -- NTU=2980.0[0m
+[0;32mI (1054411) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.5 -- NTU=2976.0[0m
+[0;32mI (1055561) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.0 -- NTU=2979.0[0m
+[0;32mI (1057761) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.5 -- NTU=2975.0[0m
+[0;32mI (1058861) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=5.0 -- NTU=2970.0[0m
+[0;32mI (1059961) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.5 -- NTU=2979.0[0m
+[0;33mW (1060171) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=7.5, ntu=2979.0)[0m
+[0;32mI (1060241) MAIL: Mail POST success, status=200[0m
+[0;32mI (1061061) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.5 -- NTU=2977.0[0m
+[0;32mI (1062161) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.5 -- NTU=2975.0[0m
+[0;32mI (1063261) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=2.0 -- NTU=2979.0[0m
+[0;32mI (1064361) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=6.0 -- NTU=2977.0[0m
+[0;32mI (1065461) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=2.0 -- NTU=2976.0[0m
+[0;32mI (1066561) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.0 -- NTU=2975.0[0m
+[0;32mI (1067661) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.5 -- NTU=2976.0[0m
+[0;32mI (1068801) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=1.5 -- NTU=2976.0[0m
+[0;33mW (1070241) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=1.5, ntu=2976.0)[0m
+[0;32mI (1070321) MAIL: Mail POST success, status=200[0m
+[0;32mI (1071001) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.0 -- NTU=2976.0[0m
+[0;32mI (1072101) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.5 -- NTU=2976.0[0m
+[0;32mI (1073201) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.0 -- NTU=2977.0[0m
+[0;32mI (1074301) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.0 -- NTU=2974.0[0m
+[0;32mI (1075401) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=5.0 -- NTU=2974.0[0m
+[0;32mI (1076501) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=6.5 -- NTU=2977.0[0m
+[0;32mI (1077601) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.5 -- NTU=2974.0[0m
+[0;32mI (1078701) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=5.0 -- NTU=2976.0[0m
+[0;32mI (1079801) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.5 -- NTU=2976.0[0m
+[0;33mW (1080321) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=3.5, ntu=2976.0)[0m
+[0;32mI (1080401) MAIL: Mail POST success, status=200[0m
+[0;32mI (1080901) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.0 -- NTU=2977.0[0m
+[0;32mI (1082061) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=1.5 -- NTU=2976.0[0m
+[0;32mI (1082321) HTTP: Sending JSON: {"temp":27.5,"ph":9.3999996185302734,"tds":1.5,"ntu":2976}[0m
+[0;32mI (1082401) HTTP: POST success![0m
+[0;32mI (1082401) HTTP: Status: 200[0m
+[0;32mI (1082401) HTTP: Content length: 84[0m
+[0;32mI (1084261) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.0 -- NTU=2976.0[0m
+[0;32mI (1085361) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.0 -- NTU=2976.0[0m
+[0;32mI (1086461) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=2.0 -- NTU=2976.0[0m
+[0;32mI (1087561) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.5 -- NTU=2977.0[0m
+[0;32mI (1088661) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.5 -- NTU=2979.0[0m
+[0;32mI (1089761) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.5 -- NTU=2979.0[0m
+[0;33mW (1090401) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=4.5, ntu=2979.0)[0m
+[0;32mI (1090471) MAIL: Mail POST success, status=200[0m
+[0;32mI (1090861) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.5 -- NTU=2976.0[0m
+[0;32mI (1091961) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.0 -- NTU=2977.0[0m
+[0;32mI (1093061) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.0 -- NTU=2977.0[0m
+[0;32mI (1094161) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.0 -- NTU=2975.0[0m
+[0;32mI (1095311) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.5 -- NTU=2977.0[0m
+[0;32mI (1097511) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=5.0 -- NTU=2972.0[0m
+[0;32mI (1098611) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=5.0 -- NTU=2977.0[0m
+[0;32mI (1099711) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.5 -- NTU=2977.0[0m
+[0;33mW (1100471) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=3.5, ntu=2977.0)[0m
+[0;32mI (1100561) MAIL: Mail POST success, status=200[0m
+[0;32mI (1100811) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.5 -- NTU=2974.0[0m
+[0;32mI (1101911) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.0 -- NTU=2975.0[0m
+[0;32mI (1103011) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.5 -- NTU=2981.0[0m
+[0;32mI (1104111) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.5 -- NTU=2974.0[0m
+[0;32mI (1105211) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.0 -- NTU=2975.0[0m
+[0;32mI (1106311) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.5 -- NTU=2977.0[0m
+[0;32mI (1107411) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.0 -- NTU=2976.0[0m
+[0;32mI (1108561) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=2.0 -- NTU=2974.0[0m
+[0;33mW (1110561) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=2.0, ntu=2974.0)[0m
+[0;32mI (1110641) MAIL: Mail POST success, status=200[0m
+[0;32mI (1110761) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=2.0 -- NTU=2975.0[0m
+[0;32mI (1111861) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.5 -- NTU=2975.0[0m
+[0;32mI (1112961) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.0 -- NTU=2977.0[0m
+[0;32mI (1114061) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.5 -- NTU=2976.0[0m
+[0;32mI (1115161) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.5 -- NTU=2979.0[0m
+[0;32mI (1116261) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=3.5 -- NTU=2975.0[0m
+[0;32mI (1117361) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.0 -- NTU=2977.0[0m
+[0;32mI (1118461) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=5.0 -- NTU=2976.0[0m
+[0;32mI (1119561) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=4.5 -- NTU=2976.0[0m
+[0;33mW (1120641) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=4.5, ntu=2976.0)[0m
+[0;32mI (1120661) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.0 -- NTU=2979.0[0m
+[0;32mI (1120751) MAIL: Mail POST success, status=200[0m
+[0;32mI (1121811) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1124011) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1125111) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1126211) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1127311) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1128411) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1129511) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1130611) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (1130751) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=10.0, ntu=0.0)[0m
+[0;32mI (1130831) MAIL: Mail POST success, status=200[0m
+[0;32mI (1131711) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1132811) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1133911) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1135051) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1137251) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1138351) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1139451) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1140551) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (1140841) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=10.0, ntu=0.0)[0m
+[0;32mI (1140921) MAIL: Mail POST success, status=200[0m
+[0;32mI (1141651) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1142401) HTTP: Sending JSON: {"temp":27.5,"ph":9.3999996185302734,"tds":9.5,"ntu":0}[0m
+[0;32mI (1142471) HTTP: POST success![0m
+[0;32mI (1142471) HTTP: Status: 200[0m
+[0;32mI (1142471) HTTP: Content length: 83[0m
+[0;32mI (1142751) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1143851) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1144951) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1146051) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1147151) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1148291) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1150491) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (1150921) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=13.0, ntu=0.0)[0m
+[0;32mI (1150991) MAIL: Mail POST success, status=200[0m
+[0;32mI (1151591) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1152691) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1153791) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1154891) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1155991) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1157091) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1158191) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1159291) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1160391) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (1160991) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=10.5, ntu=0.0)[0m
+[0;32mI (1161071) MAIL: Mail POST success, status=200[0m
+[0;32mI (1161531) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1163731) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1164831) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (1165931) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1167031) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (1168131) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1169231) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1170331) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;33mW (1171071) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.0, ntu=0.0)[0m
+[0;32mI (1171131) MAIL: Mail POST success, status=200[0m
+[0;32mI (1171431) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1172531) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1173631) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1174771) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1176971) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1178071) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1179171) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1180271) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (1181141) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=0.0)[0m
+[0;32mI (1181241) MAIL: Mail POST success, status=200[0m
+[0;32mI (1181371) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1182471) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1183571) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1184671) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (1185771) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1186871) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1188001) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1190201) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (1191241) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=0.0)[0m
+[0;32mI (1191301) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (1191311) MAIL: Mail POST success, status=200[0m
+[0;32mI (1192401) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1193501) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1194601) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1195701) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1196801) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1197901) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1199001) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1200101) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1201241) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (1201311) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=0.0)[0m
+[0;32mI (1201391) MAIL: Mail POST success, status=200[0m
+[0;32mI (1202481) HTTP: Sending JSON: {"temp":27.5,"ph":9.3999996185302734,"tds":9.5,"ntu":0}[0m
+[0;32mI (1202571) HTTP: POST success![0m
+[0;32mI (1202571) HTTP: Status: 200[0m
+[0;32mI (1202571) HTTP: Content length: 83[0m
+[0;32mI (1203441) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1204541) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1205641) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1206741) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1207841) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1208941) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1210041) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1211141) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (1211391) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=10.0, ntu=0.0)[0m
+[0;32mI (1211491) MAIL: Mail POST success, status=200[0m
+[0;32mI (1212241) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1213341) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1214481) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1216681) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1217781) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1218881) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1219981) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1221081) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (1221501) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=10.0, ntu=0.0)[0m
+[0;32mI (1221581) MAIL: Mail POST success, status=200[0m
+[0;32mI (1222181) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1223281) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1224381) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1225481) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1226581) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1227731) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1229931) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1231031) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (1231581) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=12.0, ntu=0.0)[0m
+[0;32mI (1231651) MAIL: Mail POST success, status=200[0m
+[0;32mI (1232131) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1233231) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1234331) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1235431) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1236531) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1237631) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1238731) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1239831) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1240981) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (1241661) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=0.0)[0m
+[0;32mI (1241731) MAIL: Mail POST success, status=200[0m
+[0;32mI (1243181) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1244281) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1245381) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1246481) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1247581) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1248681) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1249781) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1250881) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (1251741) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=12.5, ntu=0.0)[0m
+[0;32mI (1251811) MAIL: Mail POST success, status=200[0m
+[0;32mI (1251981) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1253081) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1254221) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1256421) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1257521) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1258621) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1259721) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1260821) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;33mW (1261811) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=12.0, ntu=0.0)[0m
+[0;32mI (1261881) MAIL: Mail POST success, status=200[0m
+[0;32mI (1261921) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1262571) HTTP: Sending JSON: {"temp":27.5,"ph":9.3999996185302734,"tds":8.5,"ntu":0}[0m
+[0;32mI (1262721) HTTP: POST success![0m
+[0;32mI (1262721) HTTP: Status: 200[0m
+[0;32mI (1262721) HTTP: Content length: 83[0m
+[0;32mI (1263021) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1264121) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1265221) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1266321) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1267471) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.5 -- NTU=0.0[0m
+[0;32mI (1269671) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1270771) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1271871) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (1271891) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=10.0, ntu=0.0)[0m
+[0;32mI (1271961) MAIL: Mail POST success, status=200[0m
+[0;32mI (1272971) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1274071) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1275171) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1276271) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1277371) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1278471) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1279571) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1280721) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (1281961) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=0.0)[0m
+[0;32mI (1282061) MAIL: Mail POST success, status=200[0m
+[0;32mI (1282921) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1284021) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1285121) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1286221) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1287321) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1288421) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1289521) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1290621) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=15.0 -- NTU=0.0[0m
+[0;32mI (1291721) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (1292061) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=0.0)[0m
+[0;32mI (1292131) MAIL: Mail POST success, status=200[0m
+[0;32mI (1292821) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1293981) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1296181) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1297281) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1298381) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1299481) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1300581) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1301681) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (1302141) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=10.0, ntu=0.0)[0m
+[0;32mI (1302211) MAIL: Mail POST success, status=200[0m
+[0;32mI (1302781) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1303881) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1304981) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1306081) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1307241) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1309441) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1310541) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1311641) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;33mW (1312221) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.0, ntu=0.0)[0m
+[0;32mI (1312291) MAIL: Mail POST success, status=200[0m
+[0;32mI (1312741) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1313841) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1314941) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (1316041) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1317141) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1318241) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1319341) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1320491) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;33mW (1322291) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=12.5, ntu=0.0)[0m
+[0;32mI (1322361) MAIL: Mail POST success, status=200[0m
+[0;32mI (1322691) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1322731) HTTP: Sending JSON: {"temp":27.5,"ph":9.3999996185302734,"tds":8.5,"ntu":0}[0m
+[0;32mI (1322801) HTTP: POST success![0m
+[0;32mI (1322801) HTTP: Status: 200[0m
+[0;32mI (1322801) HTTP: Content length: 83[0m
+[0;32mI (1323791) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1324891) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1325991) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1327091) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1328191) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1329291) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1330391) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1331491) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (1332361) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=13.0, ntu=0.0)[0m
+[0;32mI (1332441) MAIL: Mail POST success, status=200[0m
+[0;32mI (1332591) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1333741) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1335941) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1337041) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1338141) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1339241) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1340341) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1341441) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (1342451) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=0.0)[0m
+[0;32mI (1342531) MAIL: Mail POST success, status=200[0m
+[0;32mI (1342541) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1343641) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1344741) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1345841) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (1346991) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1349191) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1350291) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=6.0 -- NTU=0.0[0m
+[0;32mI (1351391) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1352491) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;33mW (1352531) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=10.5, ntu=0.0)[0m
+[0;32mI (1352601) MAIL: Mail POST success, status=200[0m
+[0;32mI (1353591) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1354691) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1355791) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1356891) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1357991) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1359091) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;32mI (1360241) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1362441) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=0.0[0m
+[0;33mW (1362611) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=10.0, ntu=0.0)[0m
+[0;32mI (1362691) MAIL: Mail POST success, status=200[0m
+[0;32mI (1363541) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1364641) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1365741) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1366841) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1367941) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1369041) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.5 -- NTU=0.0[0m
+[0;32mI (1370141) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1371241) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1372341) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;33mW (1372691) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=8.5, ntu=0.0)[0m
+[0;32mI (1372781) MAIL: Mail POST success, status=200[0m
+[0;32mI (1373501) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1375701) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1376801) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1377901) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1379001) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1380101) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1381201) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1382301) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (1382781) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=0.0)[0m
+[0;32mI (1382801) HTTP: Sending JSON: {"temp":27.5,"ph":9.3999996185302734,"tds":9.5,"ntu":0}[0m
+[0;32mI (1382871) MAIL: Mail POST success, status=200[0m
+[0;32mI (1382881) HTTP: POST success![0m
+[0;32mI (1382881) HTTP: Status: 200[0m
+[0;32mI (1382881) HTTP: Content length: 83[0m
+[0;32mI (1383401) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1384501) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.5 -- NTU=0.0[0m
+[0;32mI (1385601) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1386761) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=0.0[0m
+[0;32mI (1388961) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.5 -- NTU=0.0[0m
+[0;32mI (1390061) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=6.5 -- NTU=0.0[0m
+[0;32mI (1391161) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1392261) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;33mW (1392881) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=13.0, ntu=0.0)[0m
+[0;32mI (1392951) MAIL: Mail POST success, status=200[0m
+[0;32mI (1393361) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1394461) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1395561) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=0.0[0m
+[0;32mI (1396661) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1397761) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.5 -- NTU=0.0[0m
+[0;32mI (1398861) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1400021) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1402221) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (1402961) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=0.0)[0m
+[0;32mI (1403031) MAIL: Mail POST success, status=200[0m
+[0;32mI (1403321) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1404421) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1405521) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1406621) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1407721) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1408821) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1409921) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1411021) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1412121) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;33mW (1413031) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=0.0)[0m
+[0;32mI (1413101) MAIL: Mail POST success, status=200[0m
+[0;32mI (1413271) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1415471) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1416571) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1417671) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=0.0[0m
+[0;32mI (1418771) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1419871) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1420971) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1422071) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=7.0 -- NTU=0.0[0m
+[0;33mW (1423111) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=7.0, ntu=0.0)[0m
+[0;32mI (1423171) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=0.0[0m
+[0;32mI (1423191) MAIL: Mail POST success, status=200[0m
+[0;32mI (1424271) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.5 -- NTU=0.0[0m
+[0;32mI (1425371) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1426531) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1428731) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=0.0[0m
+[0;32mI (1429831) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=0.0[0m
+[0;32mI (1430931) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=0.0[0m
+[0;32mI (1432031) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;32mI (1433131) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=0.0[0m
+[0;33mW (1433201) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=8.5, ntu=0.0)[0m
+[0;32mI (1433261) MAIL: Mail POST success, status=200[0m
+[0;32mI (1434231) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=4.0[0m
+[0;32mI (1435331) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=8.0[0m
+[0;32mI (1436431) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=10.0 -- NTU=2.0[0m
+[0;32mI (1437531) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=2.0[0m
+[0;32mI (1438631) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=14.0 -- NTU=4.0[0m
+[0;32mI (1439791) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.5 -- NTU=4.0[0m
+[0;32mI (1441991) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=3.0[0m
+[0;32mI (1442891) HTTP: Sending JSON: {"temp":27.5,"ph":9.3999996185302734,"tds":13,"ntu":3}[0m
+[0;32mI (1442971) HTTP: POST success![0m
+[0;32mI (1442971) HTTP: Status: 200[0m
+[0;32mI (1442971) HTTP: Content length: 83[0m
+[0;32mI (1443091) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=5.0[0m
+[0;33mW (1443271) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=9.5, ntu=5.0)[0m
+[0;32mI (1443341) MAIL: Mail POST success, status=200[0m
+[0;32mI (1444191) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=13.0 -- NTU=7.0[0m
+[0;32mI (1445291) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=4.0[0m
+[0;32mI (1446391) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=4.0[0m
+[0;32mI (1447491) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=3.0[0m
+[0;32mI (1448591) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=11.5 -- NTU=8.0[0m
+[0;32mI (1449691) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=5.0[0m
+[0;32mI (1450791) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=10.0[0m
+[0;32mI (1451891) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.5 -- NTU=9.0[0m
+[0;32mI (1453051) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=8.5 -- NTU=8.0[0m
+[0;33mW (1453351) ALERT: Muc canh bao 1! (temp=27.5, ph=9.4, tds=8.5, ntu=8.0)[0m
+[0;32mI (1453431) MAIL: Mail POST success, status=200[0m
+[0;32mI (1455251) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=9.0 -- NTU=9.0[0m
+[0;32mI (1456351) GateIoT: Temp=27.5 -- pH=9.4 -- TDS=12.0 -- NTU=9.0[0m

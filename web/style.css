@@ -1,0 +1,599 @@
+/* ============================================================
+   1. BIẾN MÀU & THIẾT LẬP CHUNG
+   ------------------------------------------------------------
+   - Dùng chung cho toàn bộ dashboard
+============================================================ */
+:root {
+  --bg-main: #020617;
+  --bg-card: #0b1220;
+  --bg-card-soft: #020617;
+  --border-subtle: #1f2937;
+
+  --accent: #22c55e;
+  --accent-warning: #f97316;
+  --accent-danger: #ef4444;
+
+  --text-main: #e5e7eb;
+  --text-soft: #9ca3af;
+  --text-muted: #6b7280;
+
+  --sidebar-bg: #020617;
+  --sidebar-border: #111827;
+  --chip-bg: #020617;
+
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.5);
+  --radius-card: 18px;
+}
+
+/* Reset đơn giản */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Đảm bảo chiều cao full màn hình */
+html,
+body {
+  height: 100%;
+}
+
+/* Font + nền tổng thể */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #020617, #020617 40%, #020617);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+}
+
+/* ============================================================
+   2. LAYOUT CHUNG: APP, SIDEBAR, MAIN CONTENT
+============================================================ */
+
+/* khung lớn bao toàn bộ web */
+.app {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ---------------------- SIDEBAR ---------------------- */
+/* cột trái: logo + menu điều hướng */
+.sidebar {
+  width: 260px;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* box logo phía trên sidebar */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* vòng tròn logo "WQ" */
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 0%, #4ade80, #22c55e 45%, #15803d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #022c22;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+/* phần chữ cạnh logo */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 15px;
+}
+
+.brand-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* tiêu đề nhỏ "ĐIỀU HƯỚNG" */
+.nav-section-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  padding-left: 5px;
+}
+
+/* list menu */
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* từng dòng menu */
+.nav-item {
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text-soft);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.08s ease;
+}
+
+/* hover menu */
+.nav-item:hover {
+  background: #020617;
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+/* menu đang active */
+.nav-item.active {
+  background: linear-gradient(90deg, #22c55e1a, transparent);
+  border: 1px solid #22c55e33;
+  color: var(--accent);
+}
+
+/* chấm tròn nhỏ bên trái mỗi menu */
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #4b5563;
+}
+
+.nav-item.active .nav-dot {
+  background: var(--accent);
+}
+
+/* footer của sidebar: version + user */
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px dashed #111827;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* viên user "AD Admin" */
+.user-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #020617;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid #111827;
+}
+
+.user-avatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+/* ---------------------- MAIN CONTENT ---------------------- */
+/* vùng bên phải (header + từng page) */
+.main {
+  flex: 1;
+  padding: 18px 22px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow: auto;
+}
+
+/* thanh trên cùng: tiêu đề + trạng thái trạm */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 6px;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.page-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* bên phải topbar: pill trạng thái Online */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 3px 9px;
+  background: var(--chip-bg);
+  border: 1px solid #1f2937;
+}
+
+/* chấm xanh online */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 10px #22c55e;
+}
+
+/* ============================================================
+   3. PAGE SWITCHING (TỪNG MỤC: TỔNG QUAN / LỊCH SỬ / CẢNH BÁO / AI)
+============================================================ */
+
+/* khung của từng page (mặc định ẩn) */
+.page {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  /* cao gần full màn hình - trừ phần topbar */
+  min-height: calc(100vh - 80px);
+}
+
+/* page đang hiển thị */
+.page.active {
+  display: flex;
+}
+
+/* ============================================================
+   4. GRID LAYOUT CHO CÁC BOX (CARD)
+============================================================ */
+
+/* GRID CHUNG: dùng cho mọi hàng box */
+.grid {
+  display: grid;
+  gap: 16px;
+  align-items: stretch; /* card trong grid sẽ kéo full chiều cao ô */
+}
+
+/* GRID 2 CỘT LỆCH (dùng cho TRANG TỔNG QUAN):
+   - cột trái rộng hơn cột phải (1.6 / 1.1) */
+.grid-2 {
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+}
+
+/* GRID 2 CỘT BẰNG NHAU (dùng riêng cho TRANG "Biểu đồ & Lịch sử"):
+   - 2 cột bằng nhau 1fr / 1fr */
+.grid-2-eq {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* GRID 3 CỘT (dùng cho 3 biểu đồ Mức 1/2/3 ở trang Cảnh báo) */
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+
+/* Page TỔNG QUAN:
+   - grid đầu (biểu đồ + 4 giờ gần nhất) chiếm 2 phần cao
+   - grid thứ 2 (trạng thái hiện tại) chiếm 1 phần */
+#page-overview > .grid:first-of-type {
+  flex: 2;
+}
+#page-overview > .grid:last-of-type {
+  flex: 1;
+}
+
+/* Page LỊCH SỬ:
+   - mỗi grid (một hàng 2 biểu đồ) CHIA ĐỀU chiều cao -> 4 box = nhau */
+#page-history > .grid {
+  flex: 1;
+}
+
+/* Page CẢNH BÁO:
+   - grid đầu (3 biểu đồ Mức 1/2/3) chiếm 2/3
+   - grid dưới (bảng ngưỡng) chiếm 1/3 */
+#page-alerts > .grid:first-of-type {
+  flex: 2;
+}
+#page-alerts > .grid:last-of-type {
+  flex: 1;
+}
+
+
+/* ============================================================
+   5. CARD CHUNG (BOX MÀU XANH ĐẬM)
+============================================================ */
+
+/* khung của mọi box (card) */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  padding: 14px 14px 16px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* header trên mỗi box: tiêu đề + subtitle */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-subtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   6. CHART WRAPPER (KHUNG CHỨA BIỂU ĐỒ)
+============================================================ */
+
+/* KHUNG CHỨA BIỂU ĐỒ TRONG MỖI CARD */
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  flex: 1;            /* chiếm hết chiều cao còn lại của card */
+  min-height: 220px;  /* nhưng không thấp hơn 220px */
+}
+
+
+/* ============================================================
+   7. METRICS ROW (TRẠNG THÁI HIỆN TẠI: pH / TDS / NTU / TEMP)
+============================================================ */
+
+/* hàng chứa 4 ô nhỏ trạng thái hiện tại */
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* mỗi ô nhỏ trạng thái */
+.metric-chip {
+  background: var(--bg-card-soft);
+  border-radius: 12px;
+  padding: 8px 10px;
+  border: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* label nhỏ ở trên (pH / TDS / NTU / °C) */
+.metric-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* giá trị lớn ở dưới */
+.metric-value {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ============================================================
+   8. BẢNG NGƯỠNG CẢNH BÁO (PAGE "CẢNH BÁO & NGƯỠNG")
+============================================================ */
+
+.threshold-table-wrapper {
+  overflow-x: auto;
+}
+
+/* bảng màu xám đậm */
+.threshold-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.threshold-table th,
+.threshold-table td {
+  padding: 6px 8px;
+  border: 1px solid #1f2937;
+  text-align: left;
+}
+
+.threshold-table th {
+  background: #020617;
+  color: var(--text-soft);
+  font-weight: 500;
+}
+
+/* ============================================================
+   9. PLACEHOLDER-BOX (KHUNG DEMO CHO DỰ BÁO AI)
+============================================================ */
+
+/* box chữ gạch gạch ở trang "Dự báo AI" */
+.placeholder-box {
+  border-radius: 14px;
+  border: 1px dashed #1f2937;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+/* ============================================================
+   10. RESPONSIVE CHO MÀN HÌNH NHỎ
+============================================================ */
+
+/* Tablet & mobile: ẩn sidebar, các grid xếp 1 cột */
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    padding: 14px 12px 20px;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Mobile: 2 ô trạng thái trên 1 hàng */
+@media (max-width: 768px) {
+  .metrics-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* ===== GRID 4 Ô BẰNG NHAU ===== */
+/* .grid-4-eq {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+} */
+
+/* ===== Ô TRẠNG THÁI LỚN ===== */
+/* Ô trạng thái lớn */
+.metric-big {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.metric-title {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.metric-value-big {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* Vòng tròn cảnh báo */
+.alert-circle-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-circle {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  border: 6px solid var(--border-subtle);
+  transition: background 0.25s, border-color 0.25s;
+}
+
+/* Màu mức cảnh báo */
+.alert-l0 { background: #064e3b; border-color: #10b981; }  /* xanh */
+.alert-l1 { background: #78350f; border-color: #fbbf24; }  /* vàng */
+.alert-l2 { background: #7c2d12; border-color: #fb923c; }  /* cam */
+.alert-l3 { background: #7f1d1d; border-color: #f87171; }  /* đỏ */
+
+/* Layout bên trong card "Trạng thái hiện tại" */
+/* Chiều cao tổng của khối bên trái */
+.overview-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* trái rộng hơn phải */
+  gap: 20px;
+  height: 100%;   /* chiếm full card */
+  min-height: 420px; /* tùy chỉnh */
+}
+
+/* Lưới 4 ô – kéo giãn theo chiều dọc */
+.overview-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;    /* 2 hàng cao bằng nhau */
+  gap: 18px;
+  height: 100%;
+}
+.metric-big {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 30px 20px;   /* tăng padding */
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  min-height: 140px; /* tăng chiều cao tối thiểu */
+}
+.metric-title {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.metric-value-big {
+  font-size: 42px;   /* to hơn */
+  font-weight: 700;
+}
+.alert-circle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-circle {
+  width: 200px;   /* tăng size */
+  height: 200px;
+  font-size: 28px;
+  border-width: 8px;
+}

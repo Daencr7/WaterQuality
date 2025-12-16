@@ -23,6 +23,10 @@ C_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Inc/driver/Adc \
+Inc/driver/I2c \
+Inc/driver/Oled \
+Inc/driver/Onewire \
+Inc/driver/Rtc \
 Inc/driver/SysTick \
 Inc/driver/Uart \
 Inc/sensor \

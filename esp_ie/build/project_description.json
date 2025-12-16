@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp_ie",
-    "project_version":    "1",
+    "project_version":    "d037f65-dirty",
     "project_path":       "/home/edna/Souce/ESP_src/esp_ie",
     "idf_path":           "/home/edna/Souce/ESP_src/esp-idf",
     "build_dir":          "/home/edna/Souce/ESP_src/esp_ie/build",
@@ -25,8 +25,8 @@
         "COMPONENT_KCONFIGS_PROJBUILD" : "/home/edna/Souce/ESP_src/esp-idf/components/bootloader/Kconfig.projbuild;/home/edna/Souce/ESP_src/esp-idf/components/esp_app_format/Kconfig.projbuild;/home/edna/Souce/ESP_src/esp-idf/components/esp_rom/Kconfig.projbuild;/home/edna/Souce/ESP_src/esp-idf/components/esptool_py/Kconfig.projbuild;/home/edna/Souce/ESP_src/esp-idf/components/partition_table/Kconfig.projbuild;/home/edna/Souce/ESP_src/esp_ie/components/ssd1306/Kconfig.projbuild"
     },
     "common_component_reqs": [ "cxx", "esp_libc", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "xtensa" ],
-    "build_components" : [ "app_update", "bootloader", "bootloader_support", "cxx", "driver", "efuse", "esp-tls", "esp_app_format", "esp_bootloader_format", "esp_coex", "esp_common", "esp_driver_gpio", "esp_driver_i2c", "esp_driver_spi", "esp_driver_uart", "esp_driver_usb_serial_jtag", "esp_event", "esp_hal_i2c", "esp_hal_mspi", "esp_hal_timg", "esp_http_client", "esp_hw_support", "esp_libc", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_ringbuf", "esp_rom", "esp_security", "esp_system", "esp_timer", "esp_usb_cdc_rom_console", "esp_vfs_console", "esp_wifi", "esptool_py", "freertos", "hal", "heap", "http_parser", "json", "log", "lwip", "main", "mbedtls", "nvs_flash", "nvs_sec_provider", "partition_table", "pthread", "soc", "spi_flash", "ssd1306", "tcp_transport", "vfs", "wpa_supplicant", "xtensa", "" ],
-    "build_component_paths" : [ "/home/edna/Souce/ESP_src/esp-idf/components/app_update", "/home/edna/Souce/ESP_src/esp-idf/components/bootloader", "/home/edna/Souce/ESP_src/esp-idf/components/bootloader_support", "/home/edna/Souce/ESP_src/esp-idf/components/cxx", "/home/edna/Souce/ESP_src/esp-idf/components/driver", "/home/edna/Souce/ESP_src/esp-idf/components/efuse", "/home/edna/Souce/ESP_src/esp-idf/components/esp-tls", "/home/edna/Souce/ESP_src/esp-idf/components/esp_app_format", "/home/edna/Souce/ESP_src/esp-idf/components/esp_bootloader_format", "/home/edna/Souce/ESP_src/esp-idf/components/esp_coex", "/home/edna/Souce/ESP_src/esp-idf/components/esp_common", "/home/edna/Souce/ESP_src/esp-idf/components/esp_driver_gpio", "/home/edna/Souce/ESP_src/esp-idf/components/esp_driver_i2c", "/home/edna/Souce/ESP_src/esp-idf/components/esp_driver_spi", "/home/edna/Souce/ESP_src/esp-idf/components/esp_driver_uart", "/home/edna/Souce/ESP_src/esp-idf/components/esp_driver_usb_serial_jtag", "/home/edna/Souce/ESP_src/esp-idf/components/esp_event", "/home/edna/Souce/ESP_src/esp-idf/components/esp_hal_i2c", "/home/edna/Souce/ESP_src/esp-idf/components/esp_hal_mspi", "/home/edna/Souce/ESP_src/esp-idf/components/esp_hal_timg", "/home/edna/Souce/ESP_src/esp-idf/components/esp_http_client", "/home/edna/Souce/ESP_src/esp-idf/components/esp_hw_support", "/home/edna/Souce/ESP_src/esp-idf/components/esp_libc", "/home/edna/Souce/ESP_src/esp-idf/components/esp_mm", "/home/edna/Souce/ESP_src/esp-idf/components/esp_netif", "/home/edna/Souce/ESP_src/esp-idf/components/esp_netif_stack", "/home/edna/Souce/ESP_src/esp-idf/components/esp_partition", "/home/edna/Souce/ESP_src/esp-idf/components/esp_phy", "/home/edna/Souce/ESP_src/esp-idf/components/esp_pm", "/home/edna/Souce/ESP_src/esp-idf/components/esp_ringbuf", "/home/edna/Souce/ESP_src/esp-idf/components/esp_rom", "/home/edna/Souce/ESP_src/esp-idf/components/esp_security", "/home/edna/Souce/ESP_src/esp-idf/components/esp_system", "/home/edna/Souce/ESP_src/esp-idf/components/esp_timer", "/home/edna/Souce/ESP_src/esp-idf/components/esp_usb_cdc_rom_console", "/home/edna/Souce/ESP_src/esp-idf/components/esp_vfs_console", "/home/edna/Souce/ESP_src/esp-idf/components/esp_wifi", "/home/edna/Souce/ESP_src/esp-idf/components/esptool_py", "/home/edna/Souce/ESP_src/esp-idf/components/freertos", "/home/edna/Souce/ESP_src/esp-idf/components/hal", "/home/edna/Souce/ESP_src/esp-idf/components/heap", "/home/edna/Souce/ESP_src/esp-idf/components/http_parser", "/home/edna/Souce/ESP_src/esp-idf/components/json", "/home/edna/Souce/ESP_src/esp-idf/components/log", "/home/edna/Souce/ESP_src/esp-idf/components/lwip", "/home/edna/Souce/ESP_src/esp_ie/main", "/home/edna/Souce/ESP_src/esp-idf/components/mbedtls", "/home/edna/Souce/ESP_src/esp-idf/components/nvs_flash", "/home/edna/Souce/ESP_src/esp-idf/components/nvs_sec_provider", "/home/edna/Souce/ESP_src/esp-idf/components/partition_table", "/home/edna/Souce/ESP_src/esp-idf/components/pthread", "/home/edna/Souce/ESP_src/esp-idf/components/soc", "/home/edna/Souce/ESP_src/esp-idf/components/spi_flash", "/home/edna/Souce/ESP_src/esp_ie/components/ssd1306", "/home/edna/Souce/ESP_src/esp-idf/components/tcp_transport", "/home/edna/Souce/ESP_src/esp-idf/components/vfs", "/home/edna/Souce/ESP_src/esp-idf/components/wpa_supplicant", "/home/edna/Souce/ESP_src/esp-idf/components/xtensa", "" ],
+    "build_components" : [ "app_update", "bootloader", "bootloader_support", "cxx", "driver", "efuse", "esp-tls", "esp_app_format", "esp_bootloader_format", "esp_coex", "esp_common", "esp_driver_gpio", "esp_driver_i2c", "esp_driver_spi", "esp_driver_uart", "esp_driver_usb_serial_jtag", "esp_event", "esp_hal_i2c", "esp_hal_mspi", "esp_hal_timg", "esp_http_client", "esp_hw_support", "esp_libc", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_ringbuf", "esp_rom", "esp_security", "esp_system", "esp_timer", "esp_usb_cdc_rom_console", "esp_vfs_console", "esp_wifi", "espressif__cJSON", "esptool_py", "freertos", "hal", "heap", "http_parser", "log", "lwip", "main", "mbedtls", "nvs_flash", "nvs_sec_provider", "partition_table", "pthread", "soc", "spi_flash", "ssd1306", "tcp_transport", "vfs", "wpa_supplicant", "xtensa", "" ],
+    "build_component_paths" : [ "/home/edna/Souce/ESP_src/esp-idf/components/app_update", "/home/edna/Souce/ESP_src/esp-idf/components/bootloader", "/home/edna/Souce/ESP_src/esp-idf/components/bootloader_support", "/home/edna/Souce/ESP_src/esp-idf/components/cxx", "/home/edna/Souce/ESP_src/esp-idf/components/driver", "/home/edna/Souce/ESP_src/esp-idf/components/efuse", "/home/edna/Souce/ESP_src/esp-idf/components/esp-tls", "/home/edna/Souce/ESP_src/esp-idf/components/esp_app_format", "/home/edna/Souce/ESP_src/esp-idf/components/esp_bootloader_format", "/home/edna/Souce/ESP_src/esp-idf/components/esp_coex", "/home/edna/Souce/ESP_src/esp-idf/components/esp_common", "/home/edna/Souce/ESP_src/esp-idf/components/esp_driver_gpio", "/home/edna/Souce/ESP_src/esp-idf/components/esp_driver_i2c", "/home/edna/Souce/ESP_src/esp-idf/components/esp_driver_spi", "/home/edna/Souce/ESP_src/esp-idf/components/esp_driver_uart", "/home/edna/Souce/ESP_src/esp-idf/components/esp_driver_usb_serial_jtag", "/home/edna/Souce/ESP_src/esp-idf/components/esp_event", "/home/edna/Souce/ESP_src/esp-idf/components/esp_hal_i2c", "/home/edna/Souce/ESP_src/esp-idf/components/esp_hal_mspi", "/home/edna/Souce/ESP_src/esp-idf/components/esp_hal_timg", "/home/edna/Souce/ESP_src/esp-idf/components/esp_http_client", "/home/edna/Souce/ESP_src/esp-idf/components/esp_hw_support", "/home/edna/Souce/ESP_src/esp-idf/components/esp_libc", "/home/edna/Souce/ESP_src/esp-idf/components/esp_mm", "/home/edna/Souce/ESP_src/esp-idf/components/esp_netif", "/home/edna/Souce/ESP_src/esp-idf/components/esp_netif_stack", "/home/edna/Souce/ESP_src/esp-idf/components/esp_partition", "/home/edna/Souce/ESP_src/esp-idf/components/esp_phy", "/home/edna/Souce/ESP_src/esp-idf/components/esp_pm", "/home/edna/Souce/ESP_src/esp-idf/components/esp_ringbuf", "/home/edna/Souce/ESP_src/esp-idf/components/esp_rom", "/home/edna/Souce/ESP_src/esp-idf/components/esp_security", "/home/edna/Souce/ESP_src/esp-idf/components/esp_system", "/home/edna/Souce/ESP_src/esp-idf/components/esp_timer", "/home/edna/Souce/ESP_src/esp-idf/components/esp_usb_cdc_rom_console", "/home/edna/Souce/ESP_src/esp-idf/components/esp_vfs_console", "/home/edna/Souce/ESP_src/esp-idf/components/esp_wifi", "/home/edna/Souce/ESP_src/esp_ie/managed_components/espressif__cJSON", "/home/edna/Souce/ESP_src/esp-idf/components/esptool_py", "/home/edna/Souce/ESP_src/esp-idf/components/freertos", "/home/edna/Souce/ESP_src/esp-idf/components/hal", "/home/edna/Souce/ESP_src/esp-idf/components/heap", "/home/edna/Souce/ESP_src/esp-idf/components/http_parser", "/home/edna/Souce/ESP_src/esp-idf/components/log", "/home/edna/Souce/ESP_src/esp-idf/components/lwip", "/home/edna/Souce/ESP_src/esp_ie/main", "/home/edna/Souce/ESP_src/esp-idf/components/mbedtls", "/home/edna/Souce/ESP_src/esp-idf/components/nvs_flash", "/home/edna/Souce/ESP_src/esp-idf/components/nvs_sec_provider", "/home/edna/Souce/ESP_src/esp-idf/components/partition_table", "/home/edna/Souce/ESP_src/esp-idf/components/pthread", "/home/edna/Souce/ESP_src/esp-idf/components/soc", "/home/edna/Souce/ESP_src/esp-idf/components/spi_flash", "/home/edna/Souce/ESP_src/esp_ie/components/ssd1306", "/home/edna/Souce/ESP_src/esp-idf/components/tcp_transport", "/home/edna/Souce/ESP_src/esp-idf/components/vfs", "/home/edna/Souce/ESP_src/esp-idf/components/wpa_supplicant", "/home/edna/Souce/ESP_src/esp-idf/components/xtensa", "" ],
     "build_component_info" : {
         "app_update": {
             "alias": "idf::app_update",
@@ -583,6 +583,21 @@
             "sources": [ "/home/edna/Souce/ESP_src/esp-idf/components/esp_wifi/src/lib_printf.c", "/home/edna/Souce/ESP_src/esp-idf/components/esp_wifi/src/mesh_event.c", "/home/edna/Souce/ESP_src/esp-idf/components/esp_wifi/src/smartconfig.c", "/home/edna/Souce/ESP_src/esp-idf/components/esp_wifi/src/wifi_init.c", "/home/edna/Souce/ESP_src/esp-idf/components/esp_wifi/src/wifi_default.c", "/home/edna/Souce/ESP_src/esp-idf/components/esp_wifi/src/wifi_netif.c", "/home/edna/Souce/ESP_src/esp-idf/components/esp_wifi/src/wifi_default_ap.c", "/home/edna/Souce/ESP_src/esp-idf/components/esp_wifi/esp32/esp_adapter.c", "/home/edna/Souce/ESP_src/esp-idf/components/esp_wifi/regulatory/esp_wifi_regulatory.c", "/home/edna/Souce/ESP_src/esp-idf/components/esp_wifi/src/smartconfig_ack.c" ],
             "include_dirs": [ "include", "include/local", "wifi_apps/include", "wifi_apps/nan_app/include" ]
         },
+        "espressif__cJSON": {
+            "alias": "idf::espressif__cJSON",
+            "target": "___idf_espressif__cJSON",
+            "prefix": "idf",
+            "dir": "/home/edna/Souce/ESP_src/esp_ie/managed_components/espressif__cJSON",
+            "type": "LIBRARY",
+            "lib": "__idf_espressif__cJSON",
+            "reqs": [],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/espressif__cJSON/libespressif__cJSON.a",
+            "sources": [ "/home/edna/Souce/ESP_src/esp_ie/managed_components/espressif__cJSON/cJSON/cJSON.c", "/home/edna/Souce/ESP_src/esp_ie/managed_components/espressif__cJSON/cJSON/cJSON_Utils.c" ],
+            "include_dirs": [ "cJSON" ]
+        },
         "esptool_py": {
             "alias": "idf::esptool_py",
             "target": "___idf_esptool_py",
@@ -658,21 +673,6 @@
             "sources": [ "/home/edna/Souce/ESP_src/esp-idf/components/http_parser/http_parser.c" ],
             "include_dirs": [ "." ]
         },
-        "json": {
-            "alias": "idf::json",
-            "target": "___idf_json",
-            "prefix": "idf",
-            "dir": "/home/edna/Souce/ESP_src/esp-idf/components/json",
-            "type": "LIBRARY",
-            "lib": "__idf_json",
-            "reqs": [],
-            "priv_reqs": [],
-            "managed_reqs": [],
-            "managed_priv_reqs": [],
-            "file": "/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/json/libjson.a",
-            "sources": [ "/home/edna/Souce/ESP_src/esp-idf/components/json/cJSON/cJSON.c", "/home/edna/Souce/ESP_src/esp-idf/components/json/cJSON/cJSON_Utils.c" ],
-            "include_dirs": [ "cJSON" ]
-        },
         "log": {
             "alias": "idf::log",
             "target": "___idf_log",
@@ -711,11 +711,11 @@
             "type": "LIBRARY",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "spi_flash", "esp_wifi", "esp_http_client", "nvs_flash", "esp_driver_uart", "json", "ssd1306", "esp_driver_i2c" ],
+            "priv_reqs": [ "esp_driver_i2c", "esp_driver_uart", "esp_driver_gpio", "esp_wifi", "esp_http_client", "nvs_flash", "spi_flash", "espressif__cJSON", "ssd1306" ],
             "managed_reqs": [],
-            "managed_priv_reqs": [],
+            "managed_priv_reqs": [ "espressif__cJSON" ],
             "file": "/home/edna/Souce/ESP_src/esp_ie/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/edna/Souce/ESP_src/esp_ie/main/main.c", "/home/edna/Souce/ESP_src/esp_ie/main/wifi_connect.c", "/home/edna/Souce/ESP_src/esp_ie/main/http_send.c" ],
+            "sources": [ "/home/edna/Souce/ESP_src/esp_ie/main/main.c", "/home/edna/Souce/ESP_src/esp_ie/main/wifi_connect.c", "/home/edna/Souce/ESP_src/esp_ie/main/http_send.c", "/home/edna/Souce/ESP_src/esp_ie/main/email_send.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
@@ -2251,7 +2251,19 @@
             "dir": "/home/edna/Souce/ESP_src/esp_ie/main",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "spi_flash", "esp_wifi", "esp_http_client", "nvs_flash", "esp_driver_uart", "json", "ssd1306", "esp_driver_i2c" ],
+            "priv_reqs": [ "esp_driver_i2c", "esp_driver_uart", "esp_driver_gpio", "esp_wifi", "esp_http_client", "nvs_flash", "spi_flash", "espressif__cJSON", "ssd1306" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [ "espressif__cJSON" ],
+            "include_dirs": [ "." ]
+        },
+        "at24cx": {
+            "alias": "idf::at24cx",
+            "target": "___idf_at24cx",
+            "prefix": "idf",
+            "dir": "/home/edna/Souce/ESP_src/esp_ie/components/at24cx",
+            "lib": "__idf_at24cx",
+            "reqs": [],
+            "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "." ]
@@ -2267,6 +2279,18 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "." ]
+        },
+        "espressif__cJSON": {
+            "alias": "idf::espressif__cJSON",
+            "target": "___idf_espressif__cJSON",
+            "prefix": "idf",
+            "dir": "/home/edna/Souce/ESP_src/esp_ie/managed_components/espressif__cJSON",
+            "lib": "__idf_espressif__cJSON",
+            "reqs": [],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "cJSON" ]
         }
     },
     "gdbinit_files": {

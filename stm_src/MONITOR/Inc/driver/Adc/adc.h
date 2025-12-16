@@ -5,7 +5,7 @@
 #include <stm32f4xx.h>
 
 // Định nghĩa số lượng kênh được lấy mẫu
-#define ADC_NUM_CHANNELS 4
+#define ADC_NUM_CHANNELS 3
 
 // Biến toàn cục (được đánh dấu là volatile vì nó được DMA ghi vào)
 // Mảng này sẽ chứa 4 giá trị ADC theo thứ tự: Ch1 (PA1), Ch5 (PA5), Ch3 (PA3), Ch4 (PA4)

@@ -1,0 +1,12 @@
+../Inc/driver/I2c/i2c1.c:9:6:I2C1_Init	1
+../Inc/driver/I2c/i2c1.c:16:13:I2C1_GpioInit	1
+../Inc/driver/I2c/i2c1.c:41:13:I2C1_CoreInit	1
+../Inc/driver/I2c/i2c1.c:70:12:I2C1_WaitFlagSet	3
+../Inc/driver/I2c/i2c1.c:79:12:I2C1_WaitFlagClear	3
+../Inc/driver/I2c/i2c1.c:88:12:I2C1_StartWrite	3
+../Inc/driver/I2c/i2c1.c:104:12:I2C1_StartRead	3
+../Inc/driver/I2c/i2c1.c:120:13:I2C1_Stop	1
+../Inc/driver/I2c/i2c1.c:127:6:I2C1_WriteRegister	4
+../Inc/driver/I2c/i2c1.c:145:6:I2C1_WriteMulti	2
+../Inc/driver/I2c/i2c1.c:152:9:I2C1_ReadRegister	5
+../Inc/driver/I2c/i2c1.c:183:6:I2C1_ReadMulti	2

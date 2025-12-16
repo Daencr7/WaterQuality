@@ -14,6 +14,10 @@ RM := rm -rf
 -include Inc/sensor/subdir.mk
 -include Inc/driver/Uart/subdir.mk
 -include Inc/driver/SysTick/subdir.mk
+-include Inc/driver/Rtc/subdir.mk
+-include Inc/driver/Onewire/subdir.mk
+-include Inc/driver/Oled/subdir.mk
+-include Inc/driver/I2c/subdir.mk
 -include Inc/driver/Adc/subdir.mk
 -include objects.mk
 

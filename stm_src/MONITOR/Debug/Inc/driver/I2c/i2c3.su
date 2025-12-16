@@ -1,0 +1,9 @@
+../Inc/driver/I2c/i2c3.c:9:6:I2C3_Init	8	static
+../Inc/driver/I2c/i2c3.c:16:13:I2C3_GpioInit	4	static
+../Inc/driver/I2c/i2c3.c:45:13:I2C3_CoreInit	4	static
+../Inc/driver/I2c/i2c3.c:74:12:I2C3_WaitFlagSet	24	static
+../Inc/driver/I2c/i2c3.c:83:12:I2C3_WaitFlagClear	24	static
+../Inc/driver/I2c/i2c3.c:92:12:I2C3_StartWrite	16	static
+../Inc/driver/I2c/i2c3.c:105:13:I2C3_Stop	4	static
+../Inc/driver/I2c/i2c3.c:113:6:I2C3_WriteByte	16	static
+../Inc/driver/I2c/i2c3.c:125:6:I2C3_WriteMulti	24	static

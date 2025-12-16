@@ -1,0 +1,377 @@
+Command: /home/edna/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/edna/Souce/ESP_src/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/edna/Souce/ESP_src/esp_ie/build/esp_ie.elf /home/edna/Souce/ESP_src/esp_ie/build/bootloader/bootloader.elf -m '/home/edna/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/edna/Souce/ESP_src/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2873-g51d5e8fd08-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 11 2025 17:17:21[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21794h (137108) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=000317bc vaddr=3ffb0000 size=0454ch ( 17740) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=00035d10 vaddr=40080000 size=0a308h ( 41736) load[0m
+[0;32mI (163) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=ae27ch (713340) map[0m
+[0;32mI (418) esp_image: segment 4: paddr=000ee2a4 vaddr=4008a308 size=0c604h ( 50692) load[0m
+[0;32mI (439) esp_image: segment 5: paddr=000fa8b0 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (450) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (450) boot: Disabling RNG early entropy source...[0m
+[0;32mI (461) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     esp_ie[0m
+[0;32mI (479) app_init: App version:      d037f65-dirty[0m
+[0;32mI (483) app_init: Compile time:     Nov 11 2025 17:16:39[0m
+[0;32mI (488) app_init: ELF file SHA256:  1a607a512...[0m
+[0;32mI (493) app_init: ESP-IDF:          v6.0-dev-2873-g51d5e8fd08-dirty[0m
+[0;32mI (499) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (506) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (511) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (517) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (522) heap_init: At 3FFB8F10 len 000270F0 (156 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (532) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 4009690C len 000096F4 (37 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;32mI (551) main_task: Started on CPU0[0m
+[0;32mI (561) main_task: Calling app_main()[0m
+[0;32mI (591) wifi:wifi driver task: 3ffc0f44, prio:23, stack:6656, core=0[0m
+[0;32mI (601) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (601) wifi:wifi certification version: v7.0[0m
+[0;32mI (601) wifi:config NVS flash: enabled[0m
+[0;32mI (601) wifi:config nano formatting: disabled[0m
+[0;32mI (611) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (611) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (621) wifi:Init management short buffer num: 32[0m
+[0;32mI (621) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (631) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (631) wifi:Init static rx buffer num: 10[0m
+[0;32mI (631) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (641) wifi_init: rx ba win: 6[0m
+[0;32mI (641) wifi_init: accept mbox: 6[0m
+[0;32mI (641) wifi_init: tcpip mbox: 32[0m
+[0;32mI (651) wifi_init: udp mbox: 6[0m
+[0;32mI (651) wifi_init: tcp mbox: 6[0m
+[0;32mI (651) wifi_init: tcp tx win: 5760[0m
+[0;32mI (651) wifi_init: tcp rx win: 5760[0m
+[0;32mI (661) wifi_init: tcp mss: 1440[0m
+[0;32mI (661) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (661) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (671) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (761) wifi:mode : sta (08:d1:f9:26:7e:34)[0m
+[0;32mI (761) wifi:enable tsf[0m
+[0;32mI (761) WiFi: Wi-Fi initialization done[0m
+[0;32mI (761) WiFi: Wi-Fi started, connecting to trendongsonglybiet...[0m
+[0;33mW (771) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=0.0, ntu=0.0)[0m
+[0;32mI (781) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (781) wifi:state: init -> auth (0xb0)[0m
+[0;33mW (791) MAIL: Wi-Fi not connected, skip email[0m
+[0;32mI (791) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (791) SSD1306: New i2c driver is used[0m
+[0;32mI (801) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (801) SSD1306: OLED configured successfully[0m
+[0;33mW (811) HTTP: Wi-Fi not connected[0m
+[0;32mI (811) Wifi: Wifi is connecting!...[0m
+[0;32mI (811) wifi:connected with trendongsonglybiet, aid = 14, channel 11, BW20, bssid = ec:84:b4:5f:e6:16[0m
+[0;32mI (821) wifi:security: WPA2-PSK, phy: bgn, rssi: -41[0m
+[0;32mI (831) wifi:pm start, type: 1[0m
+
+[0;32mI (831) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (881) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1831) Wifi: Wifi is connecting!...[0m
+[0;32mI (2101) esp_netif_handlers: sta ip: 192.168.1.93, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2101) WiFi: Got IP: 192.168.1.93[0m
+[0;33mW (2791) ALERT: Muc canh bao 1! (temp=0.0, ph=0.0, tds=0.0, ntu=0.0)[0m
+[0;32mI (2831) Wifi: Ready to start other task![0m
+[0;32mI (2831) main_task: Returned from app_main()[0m
+[0;32mI (3091) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=11.5 -- NTU=130.0[0m
+[0;32mI (3141) wifi:<ba-add>idx:0 (ifx:0, ec:84:b4:5f:e6:16), tid:0, ssn:2, winSize:64[0m
+[0;32mI (3141) wifi:<ba-add>idx:1 (ifx:0, ec:84:b4:5f:e6:16), tid:7, ssn:2, winSize:64[0m
+[0;32mI (4191) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=131.0[0m
+[0;33mW (4791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=131.0)[0m
+[0;32mI (6391) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.5 -- NTU=132.0[0m
+[0;33mW (6791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=132.0)[0m
+[0;32mI (8591) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=126.0[0m
+[0;33mW (8791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=126.0)[0m
+[0;32mI (10791) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.5 -- NTU=125.0[0m
+[0;33mW (10791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=125.0)[0m
+[0;32mI (10811) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":10.5,"ntu":125}[0m
+[0;32mI (10891) HTTP: POST success![0m
+[0;32mI (10891) HTTP: Status: 200[0m
+[0;32mI (10891) HTTP: Content length: 7[0m
+[0;33mW (12791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=125.0)[0m
+[0;32mI (12991) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=119.0[0m
+[0;32mI (14131) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=8.5 -- NTU=123.0[0m
+[0;33mW (14791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=8.5, ntu=123.0)[0m
+[0;32mI (16331) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=114.0[0m
+[0;33mW (16791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=114.0)[0m
+[0;32mI (18531) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=116.0[0m
+[0;33mW (18791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=116.0)[0m
+[0;32mI (20731) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=121.0[0m
+[0;33mW (20791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=121.0)[0m
+[0;32mI (20891) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":10,"ntu":121}[0m
+[0;32mI (20951) HTTP: POST success![0m
+[0;32mI (20951) HTTP: Status: 200[0m
+[0;32mI (20961) HTTP: Content length: 7[0m
+[0;33mW (22791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=121.0)[0m
+[0;32mI (22931) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=124.0[0m
+[0;33mW (24791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=124.0)[0m
+[0;32mI (25131) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=123.0[0m
+[0;32mI (26231) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=115.0[0m
+[0;33mW (26791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=115.0)[0m
+[0;32mI (28431) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=125.0[0m
+[0;33mW (28791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=125.0)[0m
+[0;32mI (30631) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.0 -- NTU=127.0[0m
+[0;33mW (30791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.0, ntu=127.0)[0m
+[0;32mI (30961) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":9,"ntu":127}[0m
+[0;32mI (31031) HTTP: POST success![0m
+[0;32mI (31031) HTTP: Status: 200[0m
+[0;32mI (31031) HTTP: Content length: 7[0m
+[0;33mW (32791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.0, ntu=127.0)[0m
+[0;32mI (32831) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=123.0[0m
+[0;33mW (34791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=123.0)[0m
+[0;32mI (35031) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=115.0[0m
+[0;32mI (36151) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=121.0[0m
+[0;33mW (36791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=121.0)[0m
+[0;32mI (38351) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=120.0[0m
+[0;33mW (38791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=120.0)[0m
+[0;32mI (40551) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=124.0[0m
+[0;33mW (40791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=124.0)[0m
+[0;32mI (41031) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":10,"ntu":124}[0m
+[0;32mI (41101) HTTP: POST success![0m
+[0;32mI (41101) HTTP: Status: 200[0m
+[0;32mI (41101) HTTP: Content length: 7[0m
+[0;32mI (42751) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=222.0[0m
+[0;33mW (42791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=222.0)[0m
+[0;33mW (44791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=222.0)[0m
+[0;32mI (44951) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=126.0[0m
+[0;33mW (46791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=126.0)[0m
+[0;32mI (47151) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=121.0[0m
+[0;32mI (48251) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=120.0[0m
+[0;33mW (48791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=120.0)[0m
+[0;32mI (50451) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=120.0[0m
+[0;33mW (50791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=120.0)[0m
+[0;32mI (51111) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":9.5,"ntu":120}[0m
+[0;32mI (51181) HTTP: POST success![0m
+[0;32mI (51181) HTTP: Status: 200[0m
+[0;32mI (51181) HTTP: Content length: 7[0m
+[0;32mI (52651) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.5 -- NTU=130.0[0m
+[0;33mW (52791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=130.0)[0m
+[0;33mW (54791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=130.0)[0m
+[0;32mI (54851) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=135.0[0m
+[0;33mW (56791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=135.0)[0m
+[0;32mI (57051) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=7.0 -- NTU=125.0[0m
+[0;32mI (58161) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=217.0[0m
+[0;33mW (58791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=217.0)[0m
+[0;32mI (60361) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=127.0[0m
+[0;33mW (60791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=127.0)[0m
+[0;32mI (61191) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":10,"ntu":127}[0m
+[0;32mI (61271) HTTP: POST success![0m
+[0;32mI (61271) HTTP: Status: 200[0m
+[0;32mI (61271) HTTP: Content length: 7[0m
+[0;32mI (62561) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=120.0[0m
+[0;33mW (62791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=120.0)[0m
+[0;32mI (64761) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=12.0 -- NTU=160.0[0m
+[0;33mW (64791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=12.0, ntu=160.0)[0m
+[0;33mW (66791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=12.0, ntu=160.0)[0m
+[0;32mI (66961) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=118.0[0m
+[0;33mW (68791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=118.0)[0m
+[0;32mI (69161) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.0 -- NTU=124.0[0m
+[0;32mI (70261) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=217.0[0m
+[0;33mW (70791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=217.0)[0m
+[0;32mI (71271) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":10,"ntu":217}[0m
+[0;32mI (71341) HTTP: POST success![0m
+[0;32mI (71341) HTTP: Status: 200[0m
+[0;32mI (71341) HTTP: Content length: 7[0m
+[0;32mI (72461) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=123.0[0m
+[0;33mW (72791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=123.0)[0m
+[0;32mI (74661) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=8.5 -- NTU=124.0[0m
+[0;33mW (74791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=8.5, ntu=124.0)[0m
+[0;33mW (76791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=8.5, ntu=124.0)[0m
+[0;32mI (76861) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=125.0[0m
+[0;33mW (78791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=125.0)[0m
+[0;32mI (79061) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=129.0[0m
+[0;32mI (80181) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.5 -- NTU=127.0[0m
+[0;33mW (80791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=127.0)[0m
+[0;32mI (81341) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":10.5,"ntu":127}[0m
+[0;32mI (81411) HTTP: POST success![0m
+[0;32mI (81411) HTTP: Status: 200[0m
+[0;32mI (81411) HTTP: Content length: 7[0m
+[0;32mI (82381) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=132.0[0m
+[0;33mW (82791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=132.0)[0m
+[0;32mI (84581) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=126.0[0m
+[0;33mW (84791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=126.0)[0m
+[0;32mI (86781) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=198.0[0m
+[0;33mW (86791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=198.0)[0m
+[0;33mW (88791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=198.0)[0m
+[0;32mI (88981) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=134.0[0m
+[0;33mW (90791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=134.0)[0m
+[0;32mI (91181) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=130.0[0m
+[0;32mI (91411) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":9.5,"ntu":130}[0m
+[0;32mI (91481) HTTP: POST success![0m
+[0;32mI (91481) HTTP: Status: 200[0m
+[0;32mI (91481) HTTP: Content length: 7[0m
+[0;32mI (92281) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=123.0[0m
+[0;33mW (92791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=123.0)[0m
+[0;32mI (94481) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=11.5 -- NTU=129.0[0m
+[0;33mW (94791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=11.5, ntu=129.0)[0m
+[0;32mI (96681) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.5 -- NTU=124.0[0m
+[0;33mW (96791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=124.0)[0m
+[0;33mW (98791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=124.0)[0m
+[0;32mI (98881) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=129.0[0m
+[0;33mW (100791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=129.0)[0m
+[0;32mI (101081) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=127.0[0m
+[0;32mI (101481) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":10,"ntu":127}[0m
+[0;32mI (101551) HTTP: POST success![0m
+[0;32mI (101551) HTTP: Status: 200[0m
+[0;32mI (101551) HTTP: Content length: 7[0m
+[0;32mI (102201) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=124.0[0m
+[0;33mW (102791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=124.0)[0m
+[0;32mI (104401) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=12.0 -- NTU=131.0[0m
+[0;33mW (104791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=12.0, ntu=131.0)[0m
+[0;32mI (106601) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=123.0[0m
+[0;33mW (106791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=123.0)[0m
+[0;33mW (108791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=123.0)[0m
+[0;32mI (108801) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=215.0[0m
+[0;33mW (110791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=215.0)[0m
+[0;32mI (111001) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=129.0[0m
+[0;32mI (111551) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":9.5,"ntu":129}[0m
+[0;32mI (111621) HTTP: POST success![0m
+[0;32mI (111621) HTTP: Status: 200[0m
+[0;32mI (111621) HTTP: Content length: 7[0m
+[0;33mW (112791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=129.0)[0m
+[0;32mI (113201) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=130.0[0m
+[0;32mI (114301) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.5 -- NTU=120.0[0m
+[0;33mW (114791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=120.0)[0m
+[0;32mI (116501) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.5 -- NTU=124.0[0m
+[0;33mW (116791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=124.0)[0m
+[0;32mI (118701) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=127.0[0m
+[0;33mW (118791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=127.0)[0m
+[0;33mW (120791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=127.0)[0m
+[0;32mI (120901) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.5 -- NTU=125.0[0m
+[0;32mI (121621) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":10.5,"ntu":125}[0m
+[0;32mI (121701) HTTP: POST success![0m
+[0;32mI (121701) HTTP: Status: 200[0m
+[0;32mI (121701) HTTP: Content length: 7[0m
+[0;33mW (122791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=125.0)[0m
+[0;32mI (123101) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.0 -- NTU=127.0[0m
+[0;32mI (124211) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=121.0[0m
+[0;33mW (124791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=121.0)[0m
+[0;32mI (126411) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.5 -- NTU=120.0[0m
+[0;33mW (126791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=120.0)[0m
+[0;32mI (128611) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=127.0[0m
+[0;33mW (128791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=127.0)[0m
+[0;33mW (130791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=127.0)[0m
+[0;32mI (130811) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.0 -- NTU=209.0[0m
+[0;32mI (131711) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":9,"ntu":209}[0m
+[0;32mI (131801) HTTP: POST success![0m
+[0;32mI (131801) HTTP: Status: 200[0m
+[0;32mI (131801) HTTP: Content length: 7[0m
+[0;33mW (132791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.0, ntu=209.0)[0m
+[0;32mI (133011) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=229.0[0m
+[0;33mW (134791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=229.0)[0m
+[0;32mI (135211) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=124.0[0m
+[0;32mI (136311) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=127.0[0m
+[0;33mW (136791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=127.0)[0m
+[0;32mI (138511) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=121.0[0m
+[0;33mW (138791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=121.0)[0m
+[0;32mI (140711) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.0 -- NTU=126.0[0m
+[0;33mW (140791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.0, ntu=126.0)[0m
+[0;32mI (141801) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":9,"ntu":126}[0m
+[0;32mI (141871) HTTP: POST success![0m
+[0;32mI (141871) HTTP: Status: 200[0m
+[0;32mI (141871) HTTP: Content length: 7[0m
+[0;33mW (142791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.0, ntu=126.0)[0m
+[0;32mI (142911) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=124.0[0m
+[0;33mW (144791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=124.0)[0m
+[0;32mI (145111) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=124.0[0m
+[0;32mI (146231) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=129.0[0m
+[0;33mW (146791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=129.0)[0m
+[0;32mI (148431) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=127.0[0m
+[0;33mW (148791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=127.0)[0m
+[0;32mI (150631) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=131.0[0m
+[0;33mW (150791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=131.0)[0m
+[0;32mI (151871) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":10,"ntu":131}[0m
+[0;32mI (151931) HTTP: POST success![0m
+[0;32mI (151931) HTTP: Status: 200[0m
+[0;32mI (151931) HTTP: Content length: 7[0m
+[0;33mW (152791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=131.0)[0m
+[0;32mI (152831) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.0 -- NTU=213.0[0m
+[0;33mW (154791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.0, ntu=213.0)[0m
+[0;32mI (155031) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.5 -- NTU=132.0[0m
+[0;33mW (156791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=132.0)[0m
+[0;32mI (157231) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.0 -- NTU=123.0[0m
+[0;32mI (158331) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=126.0[0m
+[0;33mW (158791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=126.0)[0m
+[0;32mI (160531) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=127.0[0m
+[0;33mW (160791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=127.0)[0m
+[0;32mI (161941) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":10,"ntu":127}[0m
+[0;32mI (162031) HTTP: POST success![0m
+[0;32mI (162031) HTTP: Status: 200[0m
+[0;32mI (162031) HTTP: Content length: 7[0m
+[0;32mI (162731) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=115.0[0m
+[0;33mW (162791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=115.0)[0m
+[0;33mW (164791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=115.0)[0m
+[0;32mI (164931) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=218.0[0m
+[0;33mW (166791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=218.0)[0m
+[0;32mI (167131) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.0 -- NTU=120.0[0m
+[0;32mI (168251) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.5 -- NTU=129.0[0m
+[0;33mW (168791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=129.0)[0m
+[0;32mI (170451) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=135.0[0m
+[0;33mW (170791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=135.0)[0m
+[0;32mI (172031) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":9.5,"ntu":135}[0m
+[0;32mI (172121) HTTP: POST success![0m
+[0;32mI (172131) HTTP: Status: 200[0m
+[0;32mI (172131) HTTP: Content length: 7[0m
+[0;32mI (172651) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.5 -- NTU=208.0[0m
+[0;33mW (172791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=208.0)[0m
+[0;33mW (174791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=208.0)[0m
+[0;32mI (174851) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=136.0[0m
+[0;33mW (176791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=136.0)[0m
+[0;32mI (177051) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=124.0[0m
+[0;33mW (178791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=124.0)[0m
+[0;32mI (179251) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=141.0[0m
+[0;32mI (180351) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=130.0[0m
+[0;33mW (180791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=130.0)[0m
+[0;32mI (182131) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":9.5,"ntu":130}[0m
+[0;32mI (182201) HTTP: POST success![0m
+[0;32mI (182201) HTTP: Status: 200[0m
+[0;32mI (182201) HTTP: Content length: 7[0m
+[0;32mI (182551) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.5 -- NTU=225.0[0m
+[0;33mW (182791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.5, ntu=225.0)[0m
+[0;32mI (184751) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=9.5 -- NTU=125.0[0m
+[0;33mW (184791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=125.0)[0m
+[0;33mW (186791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=9.5, ntu=125.0)[0m
+[0;32mI (186951) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=138.0[0m
+[0;33mW (188791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=138.0)[0m
+[0;32mI (189151) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=209.0[0m
+[0;32mI (190261) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=124.0[0m
+[0;33mW (190791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=124.0)[0m
+[0;32mI (192201) HTTP: Sending JSON: {"temp":0,"ph":14,"tds":10,"ntu":124}[0m
+[0;32mI (192271) HTTP: POST success![0m
+[0;32mI (192271) HTTP: Status: 200[0m
+[0;32mI (192271) HTTP: Content length: 7[0m
+[0;32mI (192461) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=130.0[0m
+[0;33mW (192791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=130.0)[0m
+[0;32mI (194661) GateIoT: Temp=0.0 -- pH=14.0 -- TDS=10.0 -- NTU=125.0[0m
+[0;33mW (194791) ALERT: Muc canh bao 1! (temp=0.0, ph=14.0, tds=10.0, ntu=125.0)[0m
