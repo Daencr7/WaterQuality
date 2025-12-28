@@ -16,7 +16,7 @@
 // Cấu hình thời gian
 // **********************************************
 
-/* Giả định: Tần số xung clock của MCU là 16MHz */
+/* Tần số xung clock của MCU là 16MHz */
 /* Để có 1ms (1 mili giây), cần 16,000 chu kỳ clock */
 #define ONE_MSEC_LOAD   16000
 

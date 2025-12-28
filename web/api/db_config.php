@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username   = "ednaiovn_iotuser";   // user MySQL của bạn
-$password   = "Test12@123@A";    // mật khẩu MySQL
-$dbname     = "ednaiovn_iotdb";  // tên database
+$username   = "ednaiovn_iotuser";   
+$password   = "Test12@123@A";   
+$dbname     = "ednaiovn_iotdb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {

@@ -3,8 +3,8 @@
 static const char *TAG = "WiFi";
 static bool s_wifi_connected = false;
 
-#define WIFI_SSID      "GA"
-#define WIFI_PASS      "0816153552"
+#define WIFI_SSID      "DEAN"
+#define WIFI_PASS      "ronaldo123"
 
 /* Hàm xử lý sự kiện Wi-Fi và IP */
 static void event_handler(void* arg, esp_event_base_t event_base,

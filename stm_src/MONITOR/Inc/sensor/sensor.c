@@ -1,9 +1,6 @@
 #include "sensor.h"
 #include <stdlib.h> // Cần cho hàm abs()
 #define NTU_CLEAR_FP  (320L * 1000L)
-// ====================================================================
-// HÀM TÍNH TOÁN FIXED-POINT (Giữ nguyên)
-// ====================================================================
 
 int32_t raw_to_v_fp(uint16_t adc_raw) {
     int64_t numerator = (int64_t)adc_raw * V_REF_VOLTAGE_FIXED;
@@ -116,10 +113,6 @@ int32_t calc_turb_fp(uint16_t adc_raw)
     return (int32_t)ntu_fp64; // NTU*1000
 }
 
-
-// ====================================================================
-// HÀM CHUYỂN ĐỔI KẾT QUẢ VỀ 1 CHỮ SỐ THẬP PHÂN
-// ====================================================================
 
 sensor_value_t convert_fp_to_struct(int32_t fp_value) {
     sensor_value_t result;

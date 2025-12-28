@@ -109,7 +109,9 @@ void send_task(void *pvParameters)
 
         // Gửi lên webserver
         send_data_to_server(temp, ph, tds, ntu);
-        vTaskDelay(pdMS_TO_TICKS(60000));  
+        // ---------------------------------------------------------------------------------------
+        // Delay 5 giây gửi lên server  
+        vTaskDelay(pdMS_TO_TICKS(5000));  
     }
 }
 

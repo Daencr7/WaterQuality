@@ -81,7 +81,6 @@ $stmtAlert = $conn->prepare("
 ");
 
 for ($i = 0; $i < 4; $i++) {
-    // mỗi đoạn 7 ngày
     $startTs = $now - (7 * (4 - $i)) * 86400;
     $endTs   = $now - (7 * (3 - $i)) * 86400;
 

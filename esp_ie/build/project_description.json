@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp_ie",
-    "project_version":    "d037f65-dirty",
+    "project_version":    "56ed6dd-dirty",
     "project_path":       "/home/edna/Souce/ESP_src/esp_ie",
     "idf_path":           "/home/edna/Souce/ESP_src/esp-idf",
     "build_dir":          "/home/edna/Souce/ESP_src/esp_ie/build",

@@ -12,8 +12,8 @@
 #include "./driver/Rtc/rtc3231.h"
 #include "./sensor/sensor.h"
 
-#define GPIODEN (1U<<3) // Dấu cách đã được gõ lại
-#define PIN12 (1U<<13) // Dấu cách đã được gõ lại
+#define GPIODEN (1U<<3)
+#define PIN12 (1U<<13) 
 #define LED_PIN  PIN12
 
 volatile uint16_t pa1;
@@ -53,7 +53,7 @@ static void EXTI0_Init(void)
     SYSCFG->EXTICR[0] &= ~SYSCFG_EXTICR1_EXTI0;   // PA0 -> EXTI0
 
     EXTI->IMR  |= EXTI_IMR_IM0;
-    EXTI->RTSR |= EXTI_RTSR_TR0;      // cạnh lên (vì nút kéo lên VDD)
+    EXTI->RTSR |= EXTI_RTSR_TR0;      // cạnh lên
     EXTI->FTSR &= ~EXTI_FTSR_TR0;
 
     NVIC_SetPriority(EXTI0_IRQn, 2);
@@ -64,9 +64,6 @@ void EXTI0_IRQHandler(void)
 {
     if (EXTI->PR & EXTI_PR_PR0) {
         EXTI->PR = EXTI_PR_PR0;   // clear pending
-
-        // KHÔNG dùng delayms ở đây
-        // chỉ set cờ cho main xử lý
         btn_flag = 1;
     }
 }
@@ -76,8 +73,6 @@ int main(void)
     uart_init();
     DS18B20_Init();
 
-//    SystemInit();
-    /* Init I2C cho DS3231 + OLED */
     I2C1_Init();       // PB8/PB9
     I2C3_Init();       // PA8/PC9
 

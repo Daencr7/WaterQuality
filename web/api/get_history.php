@@ -2,7 +2,7 @@
 header("Content-Type: application/json; charset=utf-8");
 include("db_config.php");
 
-// số giờ cần lấy, mặc định 24
+
 $hours = isset($_GET["hours"]) ? intval($_GET["hours"]) : 24;
 if ($hours <= 0)  $hours = 1;
 if ($hours > 168) $hours = 168;   // tối đa 7 ngày
@@ -33,7 +33,7 @@ echo json_encode([
     "tds"    => $tdsArr,
     "ntu"    => $ntuArr,
     "temp"   => $tempArr,
-    "level"  => $lvArr      // nếu muốn tô màu theo level
+    "level"  => $lvArr     
 ]);
 
 $conn->close();

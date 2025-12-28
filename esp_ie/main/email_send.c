@@ -7,7 +7,6 @@
 
 static const char *TAG_MAIL = "MAIL";
 
-// Hàm encode đơn giản cho form POST (chỉ encode ký tự lạ)
 static void url_encode(const char *src, char *dst, size_t dst_size)
 {
     const char *hex = "0123456789ABCDEF";

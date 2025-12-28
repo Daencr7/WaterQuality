@@ -37,11 +37,9 @@ if ($subject === '' || $message === '') {
 
 /* =============== CẤU HÌNH MAIL =============== */
 
-// !!! SỬA DÒNG NÀY THÀNH MAIL CỦA BẠN !!!
-$to = "teednaa6@gmail.com";   // ví dụ: "tenban@gmail.com"
+$to = "teednaa6@gmail.com"; 
 
-// NÊN dùng 1 email tồn tại trên host này, tạo trong cPanel (Email Accounts)
-$from_email = "alert@edna.io.vn"; // nhớ tạo mailbox này hoặc đổi thành cái đang có
+$from_email = "alert@edna.io.vn";
 $from_name  = "He thong giam sat nuoc thai";
 
 $mail_subject = "[CANH BAO NUOC THAI] " . $subject;
@@ -53,7 +51,6 @@ $headers  = "From: $from_name <$from_email>\r\n";
 $headers .= "Reply-To: $from_email\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
-// Ghi log trước khi gửi để kiểm tra
 $log_line  = date('Y-m-d H:i:s') . " | TO=$to | SUBJ=$mail_subject\n";
 $log_line .= "BODY: " . str_replace("\n", "\\n", $body) . "\n";
 

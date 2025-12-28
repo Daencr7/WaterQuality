@@ -31,7 +31,6 @@ if ($ph === null || $tds === null || $ntu === null || $temp === null) {
 /* ================== HÀM TÍNH MỨC CẢNH BÁO ================== */
 
 /*
-   Ngưỡng theo đề bài:
    Level 1:
        pH > 9.35 hoặc pH < 5.4
        NTU > 110
